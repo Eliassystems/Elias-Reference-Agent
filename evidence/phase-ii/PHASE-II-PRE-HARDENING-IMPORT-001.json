@@ -1,0 +1,24 @@
+﻿{
+    "object_id":  "PHASE-II-PRE-HARDENING-IMPORT-001",
+    "classification":  "VERIFIED_PRE_HARDENING_IMPLEMENTATION_IMPORT",
+    "constituted_at_utc":  "2026-09-14T20:51:17.9741532Z",
+    "phase_two_branch":  "phase-two-hardening",
+    "phase_i_parent_commit":  "646d30b",
+    "phase_i_baseline_tag":  "ERA-Phase-I-v1.0-baseline",
+    "source":  "Elias-Reference-Agent working implementation",
+    "admitted_file_count":  48,
+    "excluded_cache_file_count":  17,
+    "potential_secret_hits":  0,
+    "source_snapshot_sha256":  "91954D1A6AEEA85F3D9E7B4AA2EA485E9D8029565527B142FE7E2CB8178A5EE2",
+    "destination_snapshot_sha256":  "91954D1A6AEEA85F3D9E7B4AA2EA485E9D8029565527B142FE7E2CB8178A5EE2",
+    "source_equals_destination":  true,
+    "imported_directories":  [
+                                 "agent",
+                                 "constitution",
+                                 "core",
+                                 "demos",
+                                 "tools",
+                                 "witness"
+                             ],
+    "nonclaim":  "This record establishes exact import identity only. It does not establish Phase Two hardening performance."
+}
