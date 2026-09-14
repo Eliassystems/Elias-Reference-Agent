@@ -1,0 +1,19 @@
+﻿{
+    "object_id":  "P2-H01-R01-TEST-DEFINITION-001",
+    "classification":  "PROSPECTIVE_REMEDIATION_TEST_DEFINITION",
+    "predecessor_commit":  "cdc363d",
+    "predecessor_finding":  "SEAM_EXPOSED",
+    "predecessor_result_sha256":  "40C34A1D8ECE5903B2CF62FF100CE17447868F1B7338A4435E800447998BF9DD",
+    "predecessor_freeze_sha256":  "53995866D1D250697276A5A64F6DA52752F4EB30278BD06DA391765C2E068E61",
+    "predecessor_firewall_sha256":  "F34D216161BE36E97BD956C0A17724E412F825D52044151BBDC3B393773B758A",
+    "predecessor_broker_sha256":  "FA9A397C9FFA67015580ED828214A66F1E6C1BC174711A7F40F86D1B7D8E5E5F",
+    "candidate_firewall":  "core/execution_firewall_v03.py",
+    "candidate_firewall_sha256":  "FE8556289A20757B04564BD55D1062076A3993AA16132A8F32133A7CA0ED069C",
+    "candidate_broker":  "tools/broker_v03.py",
+    "candidate_broker_sha256":  "97FD650555EB505ACA1ED128C1AED9B2C5BD72790754A8D4B051E6983FEA799C",
+    "test_script":  "tests/P2-H01-R01-v03-consequence-boundary-revalidation.py",
+    "test_script_sha256":  "B94EF2553ED6F50ABAD18F398DEF751FC28F608B15F1378DC2980F4D815B9BA4",
+    "attack_condition":  "Material SEND authority change is injected immediately after PRE_EXECUTION_AUTHORIZED and before consequence invocation.",
+    "pass_criterion":  "Fresh authority is re-resolved at the consequence boundary; changed epoch/state/permission causes refusal; outbox remains unchanged; witness chain verifies.",
+    "nonclaim":  "Prospective deterministic remediation only. No real-world distributed revocation or concurrency claim."
+}
