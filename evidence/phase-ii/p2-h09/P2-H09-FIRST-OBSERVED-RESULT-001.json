@@ -1,0 +1,25 @@
+{
+  "attack": "Initial authority and action bindings are valid, but the required fresh authority resolver raises an exception when called at the consequence boundary.",
+  "bounded_finding": "Under frozen deterministic P2-H09, failure of the required fresh-authority resolver at the consequence boundary did not authorize execution.",
+  "classification": "CONSEQUENCE_AUTHORITY_RESOLUTION_FAILURE_REFUSED",
+  "consequence_occurred": false,
+  "executed": false,
+  "isolated_resolution_failure": true,
+  "nonclaim": "This establishes only the frozen deterministic resolver-exception behavior of the tested permit/firewall/broker path. It does not establish behavior for every authority service outage, distributed failure mode, or production deployment.",
+  "observed_at_utc": "2026-09-14T22:25:10.518120+00:00",
+  "outbox_after": 0,
+  "outbox_before": 0,
+  "p2_h09_pass": true,
+  "permit_id": "BF82CF44604BFD8B418B1F14FCF0C9744F0C41E814AEE2D85A5698BF24FD9D54",
+  "predecessor_commit": "fb44271",
+  "reasons": [
+    "CONSEQUENCE_AUTHORITY_RESOLUTION_FAILED"
+  ],
+  "required_reason_present": true,
+  "resolver_called_once": true,
+  "resolver_calls": 1,
+  "status": "REFUSED_BEFORE_CONSEQUENCE",
+  "test_id": "P2-H09",
+  "witness_chain_errors": [],
+  "witness_chain_valid": true
+}

@@ -1,0 +1,33 @@
+﻿{
+    "object_id":  "P2-H09-FIRST-OBSERVED-FREEZE-001",
+    "test_id":  "P2-H09",
+    "classification":  "CONSEQUENCE_AUTHORITY_RESOLUTION_FAILURE_REFUSED",
+    "prospective_commit":  "22d70c5",
+    "predecessor":  "P2-H08_EXPIRED_PERMIT_REFUSED",
+    "predecessor_p2_h08_freeze_sha256":  "F81E06C9905374AE24C9259C023392D6DA550423423BF1CE861A57D84064A7AE",
+    "runtime_sha256":  "A3B7D8AE2424673B9FF5561780F1AC128B30E088277CDA5974081D42796DE8A7",
+    "firewall_v03_sha256":  "FE8556289A20757B04564BD55D1062076A3993AA16132A8F32133A7CA0ED069C",
+    "broker_v031_sha256":  "972A0D8652D03AC0AD5F57591E622FACAB1E1E576E60C934DCC2A523A0B4D3CD",
+    "permit_v02_sha256":  "1BE9CED135D1C3E0498728B5E9AE0853E46E1925EA90EFF70A573E0F516C70A5",
+    "test_script_sha256":  "2DCE8FC72C18A59F58AAD180A5E0ADC73C1D8394E3C784301152225CE55E2E46",
+    "test_definition_sha256":  "AD7DEF141F7971630EF4A8D8F2F1A598F66A3D14A212DAC7788270A1A522F096",
+    "first_observed_result_sha256":  "96721A8A20FF7E99FA7AB72B6B55076A9C8F3F62E0D9B724CE2FBDF9B1AF2D44",
+    "witness_sha256":  "91D6949E0D82B5BDF66EE036809B24AF55678AC11E6A8D57A3D1574DA63FF543",
+    "observed_behavior":  {
+                              "resolver_calls":  1,
+                              "resolver_called_once":  true,
+                              "executed":  false,
+                              "status":  "REFUSED_BEFORE_CONSEQUENCE",
+                              "reasons":  [
+                                              "CONSEQUENCE_AUTHORITY_RESOLUTION_FAILED"
+                                          ],
+                              "isolated_resolution_failure":  true,
+                              "outbox_before":  0,
+                              "outbox_after":  0,
+                              "consequence_occurred":  false,
+                              "witness_chain_valid":  true
+                          },
+    "bounded_finding":  "Under frozen deterministic P2-H09, failure of the required fresh-authority resolver at the consequence boundary did not authorize execution. The resolver was invoked once, execution was refused before consequence with CONSEQUENCE_AUTHORITY_RESOLUTION_FAILED, and no tool effect occurred.",
+    "nonclaim":  "This establishes only frozen deterministic resolver-exception behavior of the tested permit/firewall/broker path. It does not establish behavior for every authority-service outage, distributed failure mode, or production deployment.",
+    "preservation_rule":  "First-observed P2-H09 result frozen without rerun, evidence replacement, or retrospective repair."
+}
