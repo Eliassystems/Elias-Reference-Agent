@@ -1,0 +1,28 @@
+{
+  "approved_arguments": {
+    "content": "P2-H04 APPROVED GOVERNED CONTENT"
+  },
+  "attack": "A valid signed permit constituted for approved message content is presented through the frozen v0.3.1 broker with the message content changed after permit issuance.",
+  "bounded_finding": "Under frozen deterministic P2-H04, a permit constituted for exact approved message content did not authorize execution after that content was changed.",
+  "classification": "CONTENT_ACTION_MUTATION_REFUSED",
+  "consequence_occurred": false,
+  "content_changed": true,
+  "executed": false,
+  "nonclaim": "This establishes only the frozen deterministic content/action binding behavior of the tested permit/firewall/broker path. It does not establish all possible argument mutation classes or production-system behavior.",
+  "observed_at_utc": "2026-09-14T21:48:05.633268+00:00",
+  "outbox_after": 0,
+  "outbox_before": 0,
+  "p2_h04_pass": true,
+  "predecessor_commit": "66db677",
+  "reasons": [
+    "ACTION_BINDING_MISMATCH"
+  ],
+  "requested_arguments": {
+    "content": "P2-H04 MUTATED UNAPPROVED CONTENT"
+  },
+  "required_reason_present": true,
+  "status": "REFUSED_BEFORE_CONSEQUENCE",
+  "test_id": "P2-H04",
+  "witness_chain_errors": [],
+  "witness_chain_valid": true
+}

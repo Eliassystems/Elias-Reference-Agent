@@ -1,0 +1,32 @@
+﻿{
+    "object_id":  "P2-H04-FIRST-OBSERVED-FREEZE-001",
+    "test_id":  "P2-H04",
+    "classification":  "CONTENT_ACTION_MUTATION_REFUSED",
+    "prospective_commit":  "831922e",
+    "predecessor":  "P2-H03_CONSEQUENCE_CLASS_ESCALATION_REFUSED",
+    "predecessor_p2_h03_freeze_sha256":  "0242503379484F80B22CC0EDF6C6EA3A2AC7A7221482323271DCA94A71A5BB64",
+    "runtime_sha256":  "A3B7D8AE2424673B9FF5561780F1AC128B30E088277CDA5974081D42796DE8A7",
+    "firewall_v03_sha256":  "FE8556289A20757B04564BD55D1062076A3993AA16132A8F32133A7CA0ED069C",
+    "broker_v031_sha256":  "972A0D8652D03AC0AD5F57591E622FACAB1E1E576E60C934DCC2A523A0B4D3CD",
+    "test_script_sha256":  "863D6E975195ACE03809F17BBE8AF8B1BDFA6C4566534BE2DBB1095E4936CC87",
+    "test_definition_sha256":  "B99A92DCDA421DF8A1351D55A1CEAD3B755CD9C5E4B1467957ACBC6BBC7F6B5C",
+    "first_observed_result_sha256":  "F31398394DE57BC224AEDEF6340233C37378BED5D1CB0390AF957C34A6F8B81C",
+    "witness_sha256":  "5770AB9BA1B8AC71C092E194FCEC8D8AE2D9BF5EC7AF06B852AE8AC2FA336D7B",
+    "observed_behavior":  {
+                              "approved_content":  "P2-H04 APPROVED GOVERNED CONTENT",
+                              "requested_content":  "P2-H04 MUTATED UNAPPROVED CONTENT",
+                              "content_changed":  true,
+                              "executed":  false,
+                              "status":  "REFUSED_BEFORE_CONSEQUENCE",
+                              "reasons":  [
+                                              "ACTION_BINDING_MISMATCH"
+                                          ],
+                              "outbox_before":  0,
+                              "outbox_after":  0,
+                              "consequence_occurred":  false,
+                              "witness_chain_valid":  true
+                          },
+    "bounded_finding":  "Under frozen deterministic P2-H04, a signed permit constituted for exact approved message content did not authorize execution after the content was substituted. The verifier refused the request before consequence and no tool effect occurred.",
+    "nonclaim":  "This establishes only the frozen deterministic content/action binding behavior of the tested permit/firewall/broker path. It does not establish every possible argument mutation class or production-system behavior.",
+    "preservation_rule":  "First-observed P2-H04 result frozen before any additional adversarial testing or implementation change."
+}
