@@ -1,0 +1,16 @@
+﻿{
+    "object_id":  "P2-H06-TEST-DEFINITION-001",
+    "classification":  "PROSPECTIVE_PERMIT_REPLAY_TEST",
+    "predecessor_commit":  "e6c0b0c",
+    "predecessor_p2_h05_classification":  "POLICY_VERSION_MUTATION_REFUSED",
+    "predecessor_p2_h05_freeze_sha256":  "74393A84B0E7494B58D209DA2E09545A017EB608C212F9856E796FA7FDB038B7",
+    "runtime_sha256":  "A3B7D8AE2424673B9FF5561780F1AC128B30E088277CDA5974081D42796DE8A7",
+    "firewall_v03_sha256":  "FE8556289A20757B04564BD55D1062076A3993AA16132A8F32133A7CA0ED069C",
+    "broker_v031_sha256":  "972A0D8652D03AC0AD5F57591E622FACAB1E1E576E60C934DCC2A523A0B4D3CD",
+    "test_script":  "tests/P2-H06-permit-replay.py",
+    "test_script_sha256":  "0ADB0121309ED43D56FFB5A06B1CB1D8E519EF544E2ED6CE109320473814DF81",
+    "attack_condition":  "One valid signed permit is consumed successfully, then the exact same permit/request is presented a second time.",
+    "required_replay_reason":  "PERMIT_ALREADY_CONSUMED",
+    "pass_criterion":  "First presentation executes exactly once; replay is refused before consequence with PERMIT_ALREADY_CONSUMED; outbox remains at one item after replay; witness-chain verification succeeds.",
+    "nonclaim":  "Deterministic same-process replay only; no claim over distributed single-use coordination or production deployment."
+}
