@@ -1,0 +1,18 @@
+﻿{
+    "object_id":  "P2-H05-TEST-DEFINITION-001",
+    "classification":  "PROSPECTIVE_POLICY_VERSION_MUTATION_TEST",
+    "predecessor_commit":  "0224c78",
+    "predecessor_p2_h04_classification":  "CONTENT_ACTION_MUTATION_REFUSED",
+    "predecessor_p2_h04_freeze_sha256":  "E6AE239FA4A6148C90CB1C3B7D412534B16FA2BD84774A6A5CA4017227BBFBC3",
+    "runtime_sha256":  "A3B7D8AE2424673B9FF5561780F1AC128B30E088277CDA5974081D42796DE8A7",
+    "firewall_v03_sha256":  "FE8556289A20757B04564BD55D1062076A3993AA16132A8F32133A7CA0ED069C",
+    "broker_v031_sha256":  "972A0D8652D03AC0AD5F57591E622FACAB1E1E576E60C934DCC2A523A0B4D3CD",
+    "test_script":  "tests/P2-H05-policy-version-mutation.py",
+    "test_script_sha256":  "274A448318FA0C6C782C430A81D1BFD572F1EFAE0016DAA3D895D63098B85DD9",
+    "approved_policy_version":  "ERA-POLICY-001-v0.2.0",
+    "adversarial_policy_version":  "ERA-POLICY-001-v0.3.0",
+    "attack_condition":  "Signed permit remains unchanged while only the execution request policy version changes after permit issuance.",
+    "required_reason":  "POLICY_VERSION_MISMATCH",
+    "pass_criterion":  "Execution is refused before consequence, POLICY_VERSION_MISMATCH is the isolated refusal reason, outbox remains 0 to 0, and witness-chain verification succeeds.",
+    "nonclaim":  "Deterministic policy-version mutation only; no claim over external policy provenance, policy correctness, or production deployment."
+}
