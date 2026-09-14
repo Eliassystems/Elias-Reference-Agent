@@ -1,0 +1,17 @@
+﻿{
+    "object_id":  "P2-H09-TEST-DEFINITION-001",
+    "classification":  "PROSPECTIVE_CONSEQUENCE_AUTHORITY_RESOLUTION_FAILURE_TEST",
+    "predecessor_commit":  "fb44271",
+    "predecessor_p2_h08_classification":  "EXPIRED_PERMIT_REFUSED",
+    "predecessor_p2_h08_freeze_sha256":  "F81E06C9905374AE24C9259C023392D6DA550423423BF1CE861A57D84064A7AE",
+    "runtime_sha256":  "A3B7D8AE2424673B9FF5561780F1AC128B30E088277CDA5974081D42796DE8A7",
+    "firewall_v03_sha256":  "FE8556289A20757B04564BD55D1062076A3993AA16132A8F32133A7CA0ED069C",
+    "broker_v031_sha256":  "972A0D8652D03AC0AD5F57591E622FACAB1E1E576E60C934DCC2A523A0B4D3CD",
+    "permit_v02_sha256":  "1BE9CED135D1C3E0498728B5E9AE0853E46E1925EA90EFF70A573E0F516C70A5",
+    "test_script":  "tests/P2-H09-authority-resolver-failure.py",
+    "test_script_sha256":  "2DCE8FC72C18A59F58AAD180A5E0ADC73C1D8394E3C784301152225CE55E2E46",
+    "attack_condition":  "Initial authority and action bindings are valid; the required authority_resolver raises an exception when invoked at the consequence boundary.",
+    "required_reason":  "CONSEQUENCE_AUTHORITY_RESOLUTION_FAILED",
+    "pass_criterion":  "Resolver is invoked exactly once; execution is refused before consequence with isolated CONSEQUENCE_AUTHORITY_RESOLUTION_FAILED; outbox remains 0 to 0; witness-chain verification succeeds.",
+    "nonclaim":  "Deterministic resolver-exception test only; no claim over every authority-service outage, distributed failure mode, or production deployment."
+}
