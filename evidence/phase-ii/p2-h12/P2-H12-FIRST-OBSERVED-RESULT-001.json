@@ -1,0 +1,33 @@
+{
+  "action_hash_unchanged": true,
+  "attack": "A normally issued valid permit is cloned with only permit_id changed. The unsigned payload, signature, action hash and authority-state hash remain unchanged.",
+  "authority_state_hash_unchanged": true,
+  "bounded_finding": "Under frozen deterministic P2-H12, changing only the permit identifier did not alter the signed unsigned payload but was independently detected as PERMIT_ID_INVALID before execution.",
+  "classification": "PERMIT_ID_TAMPER_REFUSED",
+  "consequence_occurred": false,
+  "executed": false,
+  "isolated_permit_id_reason": true,
+  "nonclaim": "This establishes only the frozen deterministic permit-identifier validation behavior of the tested permit/firewall/broker path. It does not establish all cryptographic identity, key-management, transport-integrity, or production-system properties.",
+  "observed_at_utc": "2026-09-14T22:46:55.490270+00:00",
+  "original_permit_id": "0D80673BF2095C5F930B57E3F3A3FCFD1D1EE848C87A8D6D8407E4A6C62074DE",
+  "outbox_after": 0,
+  "outbox_before": 0,
+  "p2_h12_pass": true,
+  "permit_id_changed": true,
+  "permit_id_length_unchanged": true,
+  "predecessor_commit": "9294b00",
+  "reasons": [
+    "PERMIT_ID_INVALID"
+  ],
+  "required_reason_present": true,
+  "resolver_calls": 0,
+  "resolver_not_called": true,
+  "signature_invalid_absent": true,
+  "signature_unchanged": true,
+  "status": "REFUSED_BEFORE_CONSEQUENCE",
+  "tampered_permit_id": "1D80673BF2095C5F930B57E3F3A3FCFD1D1EE848C87A8D6D8407E4A6C62074DE",
+  "test_id": "P2-H12",
+  "unsigned_payload_unchanged": true,
+  "witness_chain_errors": [],
+  "witness_chain_valid": true
+}

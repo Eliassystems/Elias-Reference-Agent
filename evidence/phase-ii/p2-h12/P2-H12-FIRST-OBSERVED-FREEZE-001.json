@@ -1,0 +1,42 @@
+﻿{
+    "object_id":  "P2-H12-FIRST-OBSERVED-FREEZE-001",
+    "test_id":  "P2-H12",
+    "classification":  "PERMIT_ID_TAMPER_REFUSED",
+    "prospective_commit":  "c1dc8f4",
+    "predecessor":  "P2-H11_TYPE_CORRECT_REVOKED_AUTHORITY_REFUSED",
+    "predecessor_p2_h11_freeze_sha256":  "6228406A8F09E64854E93E8F347FF001AE15261894A994C3F86AB0275BC10126",
+    "runtime_sha256":  "A3B7D8AE2424673B9FF5561780F1AC128B30E088277CDA5974081D42796DE8A7",
+    "authority_sha256":  "E949C5C9E75DCB65301701363363AC6D118CD64D3AB38018957DA086EBB6B85C",
+    "permit_v02_sha256":  "1BE9CED135D1C3E0498728B5E9AE0853E46E1925EA90EFF70A573E0F516C70A5",
+    "firewall_v03_sha256":  "FE8556289A20757B04564BD55D1062076A3993AA16132A8F32133A7CA0ED069C",
+    "broker_v031_sha256":  "972A0D8652D03AC0AD5F57591E622FACAB1E1E576E60C934DCC2A523A0B4D3CD",
+    "test_script_sha256":  "8457554ECD3DE54E68A81128E0A78C4EAC7E3B1F1EBDC0E0F00EAE51523A20A9",
+    "test_definition_sha256":  "9BEBB906467A30DD960693E8EC000352BA9A3D8F3707064FA6E751826183AC8F",
+    "first_observed_result_sha256":  "00A355F5AB230AF8D25240BAB85A58588345E035D8A0DC8E3E8ABDC79E9BFC8A",
+    "witness_sha256":  "49F84802B9D2247564CB5E1765A162B6FC9A433E2B1027B87251B201FB203CBF",
+    "observed_behavior":  {
+                              "original_permit_id":  "0D80673BF2095C5F930B57E3F3A3FCFD1D1EE848C87A8D6D8407E4A6C62074DE",
+                              "tampered_permit_id":  "1D80673BF2095C5F930B57E3F3A3FCFD1D1EE848C87A8D6D8407E4A6C62074DE",
+                              "permit_id_changed":  true,
+                              "permit_id_length_unchanged":  true,
+                              "unsigned_payload_unchanged":  true,
+                              "signature_unchanged":  true,
+                              "action_hash_unchanged":  true,
+                              "authority_state_hash_unchanged":  true,
+                              "reasons":  [
+                                              "PERMIT_ID_INVALID"
+                                          ],
+                              "signature_invalid_absent":  true,
+                              "resolver_calls":  0,
+                              "resolver_not_called":  true,
+                              "executed":  false,
+                              "status":  "REFUSED_BEFORE_CONSEQUENCE",
+                              "outbox_before":  0,
+                              "outbox_after":  0,
+                              "consequence_occurred":  false,
+                              "witness_chain_valid":  true
+                          },
+    "bounded_finding":  "Under frozen deterministic P2-H12, changing only the permit identifier while preserving the unsigned payload, signature, action hash and authority-state hash was independently detected as PERMIT_ID_INVALID before execution. The consequence-boundary resolver was not reached and no consequence occurred.",
+    "nonclaim":  "This establishes only the frozen deterministic permit-identifier validation behavior of the tested permit/firewall/broker path. It does not establish all cryptographic identity, key-management, transport-integrity, distributed-system, or production-system properties.",
+    "preservation_rule":  "First-observed P2-H12 result frozen without rerun, evidence replacement, or retrospective repair."
+}
