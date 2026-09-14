@@ -1,0 +1,16 @@
+﻿{
+    "object_id":  "RG01-TEST-DEFINITION-001",
+    "classification":  "PROSPECTIVE_RUNTIME_REGRESSION_TEST_DEFINITION",
+    "predecessor_commit":  "ef5ca92",
+    "predecessor_classification":  "RUNTIME_MIGRATION_PASS",
+    "predecessor_freeze_sha256":  "152F544E26212EE421D4C6E819AE0275D45B21E24B2C3BE1C6B583494913966E",
+    "runtime_sha256":  "A3B7D8AE2424673B9FF5561780F1AC128B30E088277CDA5974081D42796DE8A7",
+    "firewall_v03_sha256":  "FE8556289A20757B04564BD55D1062076A3993AA16132A8F32133A7CA0ED069C",
+    "broker_v031_sha256":  "972A0D8652D03AC0AD5F57591E622FACAB1E1E576E60C934DCC2A523A0B4D3CD",
+    "test_script":  "tests/RG01-runtime-normal-behavior-regression.py",
+    "test_script_sha256":  "D52E9283FDDFA6B286B173E5ECA2DF9C93B1783004518D91353B09B9F4489177",
+    "case_a":  "Valid SEND authority: intelligence runs and one consequence is permitted.",
+    "case_b":  "Missing SEND authority: refusal occurs before intelligence and no consequence occurs.",
+    "pass_criterion":  "Both bounded cases pass and witness-chain verification succeeds.",
+    "nonclaim":  "Deterministic regression only; no expansion of the frozen P2-H01 claim."
+}
