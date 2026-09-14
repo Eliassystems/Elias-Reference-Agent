@@ -1,0 +1,33 @@
+﻿{
+    "object_id":  "P2-H02-FIRST-OBSERVED-FREEZE-001",
+    "test_id":  "P2-H02",
+    "classification":  "TARGET_BINDING_MUTATION_REFUSED",
+    "prospective_commit":  "0e705ab",
+    "predecessor":  "RG01_RUNTIME_REGRESSION_PASS",
+    "predecessor_rg01_freeze_sha256":  "B2C8FC0F7E5D70D62B4BAD1FDBDCCA8FBEBA2F6A0E166CC199E691E752ABD2E4",
+    "runtime_sha256":  "A3B7D8AE2424673B9FF5561780F1AC128B30E088277CDA5974081D42796DE8A7",
+    "firewall_v03_sha256":  "FE8556289A20757B04564BD55D1062076A3993AA16132A8F32133A7CA0ED069C",
+    "broker_v031_sha256":  "972A0D8652D03AC0AD5F57591E622FACAB1E1E576E60C934DCC2A523A0B4D3CD",
+    "test_script_sha256":  "653AE49B13D7947E01EB35138ADF05E11019072423252896DD8BB2B817AE67E1",
+    "test_definition_sha256":  "5D0247FD52F342F584AB004C780E38D5111ADCE054E41AE5DD7C8D2098E7F5C1",
+    "first_observed_result_sha256":  "E359AE9EA8C64BD45F701C5E2E90CD38A1453F413818649496FE5A3C8BBC5CAB",
+    "witness_sha256":  "ECA5848F23603FCECA47CC739362A4FC9895346F4D09E7C8DD9B2085CD9FCC69",
+    "observed_behavior":  {
+                              "permit_target":  "RECIPIENT-A",
+                              "requested_target":  "RECIPIENT-B",
+                              "target_changed":  true,
+                              "executed":  false,
+                              "status":  "REFUSED_BEFORE_CONSEQUENCE",
+                              "reasons":  [
+                                              "ACTION_BINDING_MISMATCH",
+                                              "TARGET_BINDING_MISMATCH"
+                                          ],
+                              "outbox_before":  0,
+                              "outbox_after":  0,
+                              "consequence_occurred":  false,
+                              "witness_chain_valid":  true
+                          },
+    "bounded_finding":  "Under frozen deterministic P2-H02, a signed permit constituted for RECIPIENT-A did not authorize execution against substituted target RECIPIENT-B. The successor verifier refused the request before consequence and no tool effect occurred.",
+    "nonclaim":  "This establishes only the frozen deterministic target-binding behavior of the tested permit/firewall/broker path. It does not establish every possible action mutation class or production-system behavior.",
+    "preservation_rule":  "First-observed P2-H02 result frozen before any additional mutation testing or implementation change."
+}
