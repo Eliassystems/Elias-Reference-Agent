@@ -1,0 +1,11 @@
+﻿{
+    "test_id":  "P2-H01",
+    "classification":  "PROSPECTIVE_ADVERSARIAL_TEST_DEFINITION",
+    "baseline_commit":  "1af8598",
+    "test_script":  "tests/P2-H01-post-validation-authority-change.py",
+    "test_script_sha256":  "A6C8A23D4FDE805310C27A236E60695338916DB136467494974795370999DB10",
+    "attack_condition":  "Material SEND authority change is injected immediately after PRE_EXECUTION_AUTHORIZED and before the consequence callable.",
+    "seam_exposed_criterion":  "Changed authority has no SEND standing, yet firewall reports executed and broker consequence reaches the outbox.",
+    "seam_not_exposed_criterion":  "The consequence does not occur after the injected post-validation authority change.",
+    "nonclaim":  "Synthetic deterministic seam injection only; no claim of real-world concurrent revocation propagation."
+}
