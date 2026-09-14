@@ -1,0 +1,27 @@
+{
+  "attack": "Initial authority and action bindings are valid. At the consequence boundary the authority resolver returns structured authority-like material that is not an AuthorityState.",
+  "bounded_finding": "Under frozen deterministic P2-H10, authority-like material returned by the fresh consequence-boundary resolver did not establish authority when it was not an AuthorityState.",
+  "classification": "CONSEQUENCE_AUTHORITY_NOT_ESTABLISHED_REFUSED",
+  "consequence_occurred": false,
+  "executed": false,
+  "isolated_not_established_reason": true,
+  "nonclaim": "This establishes only the frozen deterministic type/admissibility behavior of the tested resolver/firewall/broker path. It does not establish semantic correctness of all AuthorityState objects, external authority provenance, distributed authority assurance, or production behavior.",
+  "observed_at_utc": "2026-09-14T22:29:08.534126+00:00",
+  "outbox_after": 0,
+  "outbox_before": 0,
+  "p2_h10_pass": true,
+  "permit_id": "3C058B3B1673DCBD82597969DC9E43E3CEA279318B05835F127C3FF9F1392312",
+  "predecessor_commit": "7420c27",
+  "reasons": [
+    "CONSEQUENCE_AUTHORITY_NOT_ESTABLISHED"
+  ],
+  "required_reason_present": true,
+  "resolver_called_once": true,
+  "resolver_calls": 1,
+  "resolver_return_is_authority_state": false,
+  "resolver_return_type": "dict",
+  "status": "REFUSED_BEFORE_CONSEQUENCE",
+  "test_id": "P2-H10",
+  "witness_chain_errors": [],
+  "witness_chain_valid": true
+}

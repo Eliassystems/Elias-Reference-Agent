@@ -1,0 +1,35 @@
+﻿{
+    "object_id":  "P2-H10-FIRST-OBSERVED-FREEZE-001",
+    "test_id":  "P2-H10",
+    "classification":  "CONSEQUENCE_AUTHORITY_NOT_ESTABLISHED_REFUSED",
+    "prospective_commit":  "1b8074c",
+    "predecessor":  "P2-H09_CONSEQUENCE_AUTHORITY_RESOLUTION_FAILURE_REFUSED",
+    "predecessor_p2_h09_freeze_sha256":  "F59DF6A1CE57FE6FFB5DA60933E21A789B13AC6D5278ECE490531FC778E8427C",
+    "runtime_sha256":  "A3B7D8AE2424673B9FF5561780F1AC128B30E088277CDA5974081D42796DE8A7",
+    "firewall_v03_sha256":  "FE8556289A20757B04564BD55D1062076A3993AA16132A8F32133A7CA0ED069C",
+    "broker_v031_sha256":  "972A0D8652D03AC0AD5F57591E622FACAB1E1E576E60C934DCC2A523A0B4D3CD",
+    "permit_v02_sha256":  "1BE9CED135D1C3E0498728B5E9AE0853E46E1925EA90EFF70A573E0F516C70A5",
+    "test_script_sha256":  "3D309F6163EAB8E379DDC0F518CF5730D05529E8EF2F3C3316D7C7354256734B",
+    "test_definition_sha256":  "96D3DB2DDBD41CF777345C7BDD6EEF187DB16A7FB8DDA140C6D12600E0B36D42",
+    "first_observed_result_sha256":  "C38B19DA245E075882BCC247FDD69B148D40FE55D3D230B3E685690789895C5E",
+    "witness_sha256":  "477E3697DB25994091C6142EC375EEE99E481C5842B84FEF2E6BAF22268608A6",
+    "observed_behavior":  {
+                              "resolver_calls":  1,
+                              "resolver_called_once":  true,
+                              "resolver_return_type":  "dict",
+                              "resolver_return_is_authority_state":  false,
+                              "executed":  false,
+                              "status":  "REFUSED_BEFORE_CONSEQUENCE",
+                              "reasons":  [
+                                              "CONSEQUENCE_AUTHORITY_NOT_ESTABLISHED"
+                                          ],
+                              "isolated_not_established_reason":  true,
+                              "outbox_before":  0,
+                              "outbox_after":  0,
+                              "consequence_occurred":  false,
+                              "witness_chain_valid":  true
+                          },
+    "bounded_finding":  "Under frozen deterministic P2-H10, structured authority-like material returned by the fresh consequence-boundary resolver did not establish execution authority when the returned object was not an AuthorityState. Execution was refused before consequence with CONSEQUENCE_AUTHORITY_NOT_ESTABLISHED and no tool effect occurred.",
+    "nonclaim":  "This establishes only frozen deterministic non-AuthorityState resolver-return behavior of the tested resolver/firewall/broker path. It does not establish semantic correctness of every AuthorityState, external authority provenance, distributed authority assurance, or production-system behavior.",
+    "preservation_rule":  "First-observed P2-H10 result frozen without rerun, evidence replacement, or retrospective repair."
+}
