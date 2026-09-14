@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 from dataclasses import dataclass
 from typing import Callable, Optional, Tuple
@@ -7,9 +7,9 @@ from agent.intent import CanonicalIntent
 from agent.model_adapter import ModelAdapter
 from core.authority import AuthorityState
 from core.permit_v02 import PermitIssuerV02
-from tools.broker_v02 import (
-    ToolBrokerV02,
-    ToolRequestV02,
+from tools.broker_v031 import (
+    ToolBrokerV031,
+    ToolRequestV031,
 )
 from witness.ledger import WitnessLedger
 
@@ -68,13 +68,19 @@ class EliasAgentRuntime:
         *,
         model: ModelAdapter,
         permit_issuer: PermitIssuerV02,
-        broker: ToolBrokerV02,
+        broker: ToolBrokerV031,
         ledger: WitnessLedger,
+        authority_resolver: Optional[
+            Callable[[], AuthorityState]
+        ] = None,
     ):
         self.model = model
         self.permit_issuer = permit_issuer
         self.broker = broker
         self.ledger = ledger
+        self.authority_resolver = (
+            authority_resolver
+        )
 
     def _witness(
         self,
@@ -369,11 +375,20 @@ class EliasAgentRuntime:
         # Firewall re-checks PRESENT standing.
         # -----------------------------------------
 
-        request = ToolRequestV02(
+        request = ToolRequestV031(
             permit=
                 permit,
             current_authority=
                 execution_authority,
+            authority_resolver=(
+                self.authority_resolver
+                if self.authority_resolver
+                is not None
+                else (
+                    lambda:
+                        execution_authority
+                )
+            ),
             intent_hash=
                 intent_hash,
             permission=

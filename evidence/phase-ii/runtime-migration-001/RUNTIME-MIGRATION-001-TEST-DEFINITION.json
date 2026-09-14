@@ -1,0 +1,19 @@
+﻿{
+    "object_id":  "RUNTIME-MIGRATION-001-TEST-DEFINITION",
+    "classification":  "PROSPECTIVE_RUNTIME_MIGRATION_TEST_DEFINITION",
+    "predecessor_commit":  "95184dc",
+    "predecessor_p2_h01_classification":  "REMEDIATION_PASS",
+    "predecessor_p2_h01_freeze_sha256":  "F33B35F7318FC815992FEC9281F88A2898B7FD02E8BA5DA8BC70F5A4FB3994B6",
+    "pre_migration_runtime_sha256":  "6118DD0E0EC41FDCF530B6041D3493415E5095044B6C269CB0AAED72581A183B",
+    "migrated_runtime_sha256":  "A3B7D8AE2424673B9FF5561780F1AC128B30E088277CDA5974081D42796DE8A7",
+    "migrated_deterministic_demo_sha256":  "7491640F856812E74DD9AE980CBB1CDC80A079ED955DF3E37C57F6A00697F6F2",
+    "migrated_openai_demo_sha256":  "C1558D9ACBF09DB33D6003B22B9907CC3A8E502656ED5FAF055834CE0252D341",
+    "frozen_firewall_v03_sha256":  "FE8556289A20757B04564BD55D1062076A3993AA16132A8F32133A7CA0ED069C",
+    "frozen_broker_v031_sha256":  "972A0D8652D03AC0AD5F57591E622FACAB1E1E576E60C934DCC2A523A0B4D3CD",
+    "test_script":  "tests/P2-H01-R04-runtime-consequence-boundary.py",
+    "test_script_sha256":  "D89C2BDE59BE98E5290AB7CE42951D6F57F8E58B14527AF31DCC60093E1B9041",
+    "migration_scope":  "Agent runtime and demo wiring only. Validated firewall v0.3 and broker v0.3.1 unchanged.",
+    "resolver_semantics":  "Runtime accepts an optional external live authority resolver. When supplied, the validated firewall queries it after PRE_EXECUTION_AUTHORIZED at the consequence boundary. Without an external resolver, the runtime supplies its latest locally established execution authority.",
+    "pass_criterion":  "Deterministic model is invoked under valid standing; authority changes after PRE_EXECUTION_AUTHORIZED; boundary resolver returns changed authority; firewall refuses before consequence; outbox remains unchanged; witness chain verifies.",
+    "nonclaim":  "No distributed revocation-propagation, absolute atomicity, or unbounded concurrency claim."
+}

@@ -1,4 +1,4 @@
-﻿from pathlib import Path
+from pathlib import Path
 import hashlib
 import secrets
 import sys
@@ -12,15 +12,15 @@ from agent.openai_adapter import OpenAIModelAdapter
 from agent.runtime import EliasAgentRuntime
 
 from core.authority import AuthorityState
-from core.execution_firewall_v02 import (
-    ExecutionFirewallV02,
+from core.execution_firewall_v03 import (
+    ExecutionFirewallV03,
 )
 from core.permit_v02 import (
     PermitIssuerV02,
     PermitVerifierV02,
 )
 
-from tools.broker_v02 import ToolBrokerV02
+from tools.broker_v031 import ToolBrokerV031
 from tools.messaging_demo import MessagingDemoTool
 from witness.ledger import WitnessLedger
 
@@ -56,7 +56,7 @@ verifier = PermitVerifierV02(
     signing_key
 )
 
-firewall = ExecutionFirewallV02(
+firewall = ExecutionFirewallV03(
     verifier=verifier,
     ledger=ledger,
     constitution_path=(
@@ -68,7 +68,7 @@ firewall = ExecutionFirewallV02(
 
 tool = MessagingDemoTool()
 
-broker = ToolBrokerV02(
+broker = ToolBrokerV031(
     firewall=firewall,
     messaging_tool=tool,
 )
