@@ -1,0 +1,33 @@
+﻿{
+    "object_id":  "P2-H03-FIRST-OBSERVED-FREEZE-001",
+    "test_id":  "P2-H03",
+    "classification":  "CONSEQUENCE_CLASS_ESCALATION_REFUSED",
+    "prospective_commit":  "03cb83e",
+    "predecessor":  "P2-H02_TARGET_BINDING_MUTATION_REFUSED",
+    "predecessor_p2_h02_freeze_sha256":  "676EC8F5EB80F1E5147B2C6280603AC3928EF55669A3A3F21C0B1F1B690F08D7",
+    "runtime_sha256":  "A3B7D8AE2424673B9FF5561780F1AC128B30E088277CDA5974081D42796DE8A7",
+    "firewall_v03_sha256":  "FE8556289A20757B04564BD55D1062076A3993AA16132A8F32133A7CA0ED069C",
+    "broker_v031_sha256":  "972A0D8652D03AC0AD5F57591E622FACAB1E1E576E60C934DCC2A523A0B4D3CD",
+    "test_script_sha256":  "BDCA10E083FF50F68D94751AA851A784CC516F2E741F0E33B979EEFBFA6D31F7",
+    "test_definition_sha256":  "3D2A6B82ED91B4D53172D88E0A2E88361A35E8CD47941A97A1D84B4B5537535E",
+    "first_observed_result_sha256":  "34F35F55D3D09483DB5A387417281200FBD2FF9B4F010BAB33D21CE1C1C7251C",
+    "witness_sha256":  "905B6F411F353410EC6D6AEAEFE6F1039D7778AEF2D0D8FCF6FACBA5AD2B23A1",
+    "observed_behavior":  {
+                              "permit_consequence_class":  "C4",
+                              "requested_consequence_class":  "C5",
+                              "consequence_class_changed":  true,
+                              "executed":  false,
+                              "status":  "REFUSED_BEFORE_CONSEQUENCE",
+                              "reasons":  [
+                                              "ACTION_BINDING_MISMATCH",
+                                              "CONSEQUENCE_BINDING_MISMATCH"
+                                          ],
+                              "outbox_before":  0,
+                              "outbox_after":  0,
+                              "consequence_occurred":  false,
+                              "witness_chain_valid":  true
+                          },
+    "bounded_finding":  "Under frozen deterministic P2-H03, a signed permit constituted for consequence class C4 did not authorize execution when presented as consequence class C5. The successor verifier refused the request before consequence and no tool effect occurred.",
+    "nonclaim":  "This establishes only the frozen deterministic consequence-class binding behavior of the tested permit/firewall/broker path. It does not establish every escalation class or production-system behavior.",
+    "preservation_rule":  "First-observed P2-H03 result frozen before any additional adversarial testing or implementation change."
+}
