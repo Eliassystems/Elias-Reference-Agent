@@ -1,0 +1,16 @@
+﻿{
+    "object_id":  "P2-H01-R03-TEST-DEFINITION-001",
+    "classification":  "PROSPECTIVE_REMEDIATION_SUCCESSOR_TEST_DEFINITION",
+    "predecessor_test":  "P2-H01-R02",
+    "predecessor_classification":  "TEST_NOT_ESTABLISHED_SUCCESSOR_REFERENCE_IMPORT_FAILURE",
+    "predecessor_failure_sha256":  "B332C0DDE5BCAC455BEA8455F9C8ECFA41AC347A9A665EA0A678453AC0D6C55F",
+    "predecessor_commit":  "9991f33",
+    "firewall_v03_sha256":  "FE8556289A20757B04564BD55D1062076A3993AA16132A8F32133A7CA0ED069C",
+    "broker_v031_sha256":  "972A0D8652D03AC0AD5F57591E622FACAB1E1E576E60C934DCC2A523A0B4D3CD",
+    "test_script":  "tests/P2-H01-R03-v031-consequence-boundary-revalidation.py",
+    "test_script_sha256":  "9C73E00624420ED362BC51BA4A60D6E5BC513DF274967704F67D057246629900",
+    "correction_scope":  "Test-harness references only. Firewall v0.3 and broker v0.3.1 unchanged.",
+    "attack_condition":  "Material SEND authority change occurs after PRE_EXECUTION_AUTHORIZED and before consequence invocation.",
+    "pass_criterion":  "Fresh authority is resolved at consequence boundary; changed epoch/state/permission causes refusal; outbox remains unchanged; witness chain verifies.",
+    "nonclaim":  "Frozen deterministic successor test only. No distributed revocation or unbounded concurrency claim."
+}

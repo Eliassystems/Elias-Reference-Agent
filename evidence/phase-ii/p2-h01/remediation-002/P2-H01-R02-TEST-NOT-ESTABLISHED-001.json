@@ -1,0 +1,23 @@
+﻿{
+    "object_id":  "P2-H01-R02-TEST-NOT-ESTABLISHED-001",
+    "test_id":  "P2-H01-R02",
+    "classification":  "TEST_NOT_ESTABLISHED_SUCCESSOR_REFERENCE_IMPORT_FAILURE",
+    "frozen_commit":  "9991f33",
+    "frozen_firewall_v03_sha256":  "FE8556289A20757B04564BD55D1062076A3993AA16132A8F32133A7CA0ED069C",
+    "frozen_broker_v031_sha256":  "972A0D8652D03AC0AD5F57591E622FACAB1E1E576E60C934DCC2A523A0B4D3CD",
+    "frozen_test_sha256":  "C9CA754734B6C235A5002411586D18C61B9B50A7421DE267BBB53751C4C15C61",
+    "frozen_definition_sha256":  "2F1FC713743A69035554E2110CB40177BF5CF1624FD98CCA30D8C2D3BACDA506",
+    "preexecution_gate_detected":  [
+                                       "STALE_IMPORT_tools.broker_v03",
+                                       "STALE_TARGET_p2-h01-r01@example.test"
+                                   ],
+    "execution_command_attempted":  true,
+    "execution_exit_code":  1,
+    "observed_error":  "R02 retained tools.broker_v03 import; broker_v03 imports nonexistent ExecutionPermitV03.",
+    "firewall_reached":  false,
+    "consequence_boundary_reached":  false,
+    "remediation_classification_established":  false,
+    "result_json_created":  false,
+    "witness_created":  false,
+    "preservation_rule":  "No remediation PASS/FAIL attribution. Preserve frozen R02 unchanged and create successor test."
+}
