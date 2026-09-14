@@ -1,0 +1,29 @@
+﻿{
+    "object_id":  "P2-H01-ATTEMPT-002-FIRST-OBSERVED-FREEZE-001",
+    "test_id":  "P2-H01",
+    "attempt":  2,
+    "classification":  "SEAM_EXPOSED",
+    "predecessor_attempt_001":  "TEST_NOT_ESTABLISHED_HARNESS_IMPORT_FAILURE",
+    "attempt_002_admission_commit":  "2f8ad16",
+    "frozen_test_script_sha256":  "A6C8A23D4FDE805310C27A236E60695338916DB136467494974795370999DB10",
+    "frozen_test_definition_sha256":  "607375A251F611BEC92422C8B4967930FE86F57193583E359B6208349AFDFC81",
+    "first_observed_result_sha256":  "40C34A1D8ECE5903B2CF62FF100CE17447868F1B7338A4435E800447998BF9DD",
+    "witness_sha256":  "C1708B57BB6638DA28B3DEC24330C42926F539B05CF16A0C004620B22777F270",
+    "observed_condition":  "Authority changed after PRE_EXECUTION_AUTHORIZED and before consequence invocation.",
+    "authority_change":  {
+                             "permit_epoch":  1,
+                             "consequence_boundary_epoch":  2,
+                             "send_authority_at_t0":  true,
+                             "send_authority_at_consequence_boundary":  false
+                         },
+    "observed_execution":  {
+                               "firewall_status":  "EXECUTED",
+                               "firewall_executed":  true,
+                               "outbox_before":  0,
+                               "outbox_after":  1,
+                               "consequence_occurred":  true
+                           },
+    "bounded_finding":  "The frozen deterministic P2-H01 test establishes that the current implementation did not re-resolve materially changed authority after PRE_EXECUTION_AUTHORIZED and before invoking the consequence callable.",
+    "nonclaim":  "This finding does not by itself establish real-world distributed revocation propagation, concurrency guarantees, or behavior outside the frozen deterministic test condition.",
+    "preservation_rule":  "Preserve failure before remediation. No retrospective repair, rerun, remap, or waiver."
+}

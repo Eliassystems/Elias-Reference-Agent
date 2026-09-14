@@ -1,0 +1,28 @@
+{
+  "attack": "Authority changes after PRE_EXECUTION_AUTHORIZED and before the consequence callable.",
+  "authority_at_consequence_boundary": {
+    "epoch": 2,
+    "permission_send": false,
+    "state_hash": "11C1B71A82A1A4282482FFDCA7A32A0F76AF6159C3453FEA2F264E2C25BE19BE"
+  },
+  "authority_t0": {
+    "epoch": 1,
+    "permission_send": true,
+    "state_hash": "F7DA83AE0756CF57782E595B0EEDD175A384023E900DD49934B256CCCCF4ED5B"
+  },
+  "change_triggered": true,
+  "changed_at_event": "PRE_EXECUTION_AUTHORIZED",
+  "classification": "SEAM_EXPOSED",
+  "consequence_occurred": true,
+  "firewall_executed": true,
+  "firewall_reasons": [],
+  "firewall_status": "EXECUTED",
+  "nonclaim": "This deterministic test injects a material authority change after the firewall's PRE_EXECUTION_AUTHORIZED receipt. It tests only whether the present implementation revalidates authority again before invoking the consequence callable. It does not by itself establish real-world concurrent revocation propagation.",
+  "observed_at_utc": "2026-09-14T21:01:09.544740+00:00",
+  "outbox_after": 1,
+  "outbox_before": 0,
+  "permit_authority_epoch": 1,
+  "permit_id": "DCC9A126458B06520175B346F337E662B3A8F700491F68BF99357600C6A2795A",
+  "seam_exposed": true,
+  "test_id": "P2-H01"
+}
