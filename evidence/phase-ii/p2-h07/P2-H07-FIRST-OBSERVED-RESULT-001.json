@@ -1,0 +1,26 @@
+{
+  "attack": "A valid permit is issued and then only its signature field is replaced while its unsigned payload, permit_id, action, authority, policy, target, tool and consequence class remain unchanged.",
+  "bounded_finding": "Under frozen deterministic P2-H07, altering only the cryptographic signature of an otherwise unchanged permit did not authorize execution.",
+  "classification": "PERMIT_SIGNATURE_TAMPER_REFUSED",
+  "consequence_occurred": false,
+  "executed": false,
+  "isolated_signature_reason": true,
+  "nonclaim": "This establishes only the frozen deterministic signature-verification behavior of the tested permit/firewall/broker path. It does not establish key-management security, resistance to key compromise, or production-system cryptographic security.",
+  "observed_at_utc": "2026-09-14T22:10:26.615744+00:00",
+  "outbox_after": 0,
+  "outbox_before": 0,
+  "p2_h07_pass": true,
+  "permit_id": "15DF533DBFDDBB4606069DACF0A87CEB848E37D5C88F168E7AFFD8136A2DF4A5",
+  "permit_id_unchanged": true,
+  "predecessor_commit": "c42f0a7",
+  "reasons": [
+    "SIGNATURE_INVALID"
+  ],
+  "required_reason_present": true,
+  "signature_changed": true,
+  "status": "REFUSED_BEFORE_CONSEQUENCE",
+  "test_id": "P2-H07",
+  "unsigned_payload_unchanged": true,
+  "witness_chain_errors": [],
+  "witness_chain_valid": true
+}
