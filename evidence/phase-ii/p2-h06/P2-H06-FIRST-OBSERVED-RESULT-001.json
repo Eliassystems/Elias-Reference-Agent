@@ -1,0 +1,32 @@
+{
+  "attack": "A valid signed permit is first consumed by one authorised consequence and then the exact same permit/request is presented a second time.",
+  "bounded_finding": "Under frozen deterministic P2-H06, a permit that successfully authorised one consequence did not authorise a second consequence when the exact same permit/request was replayed.",
+  "classification": "PERMIT_REPLAY_REFUSED",
+  "first_execution": {
+    "executed": true,
+    "outbox_after": 1,
+    "outbox_before": 0,
+    "pass": true,
+    "reasons": [],
+    "status": "EXECUTED"
+  },
+  "nonclaim": "This establishes only the frozen deterministic replay behavior of the tested permit/firewall/broker path. It does not establish distributed single-use coordination or production replay resistance.",
+  "observed_at_utc": "2026-09-14T22:00:40.516237+00:00",
+  "p2_h06_pass": true,
+  "permit_id": "0F4FA4830A60D7403ABAA9B15DB07A0C5A1CE3516D143C3B5066A5A46845BD97",
+  "predecessor_commit": "e6c0b0c",
+  "replay_execution": {
+    "executed": false,
+    "outbox_after": 1,
+    "outbox_before": 1,
+    "reasons": [
+      "PERMIT_ALREADY_CONSUMED"
+    ],
+    "required_reason_present": true,
+    "second_consequence_occurred": false,
+    "status": "REFUSED_BEFORE_CONSEQUENCE"
+  },
+  "test_id": "P2-H06",
+  "witness_chain_errors": [],
+  "witness_chain_valid": true
+}
