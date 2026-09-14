@@ -1,0 +1,25 @@
+{
+  "attack": "A valid signed permit constituted under ERA-POLICY-001-v0.2.0 is presented through the frozen v0.3.1 broker with the execution request claiming ERA-POLICY-001-v0.3.0 while all other tested action fields remain unchanged.",
+  "bounded_finding": "Under frozen deterministic P2-H05, a permit constituted under one policy version did not authorize execution when presented under a different policy version.",
+  "classification": "POLICY_VERSION_MUTATION_REFUSED",
+  "consequence_occurred": false,
+  "executed": false,
+  "isolated_policy_reason": true,
+  "nonclaim": "This establishes only the frozen deterministic policy-version binding behavior of the tested permit/firewall/broker path. It does not establish external policy provenance, policy correctness, or production-system behavior.",
+  "observed_at_utc": "2026-09-14T21:53:38.101067+00:00",
+  "outbox_after": 0,
+  "outbox_before": 0,
+  "p2_h05_pass": true,
+  "permit_policy_version": "ERA-POLICY-001-v0.2.0",
+  "policy_version_changed": true,
+  "predecessor_commit": "0224c78",
+  "reasons": [
+    "POLICY_VERSION_MISMATCH"
+  ],
+  "requested_policy_version": "ERA-POLICY-001-v0.3.0",
+  "required_reason_present": true,
+  "status": "REFUSED_BEFORE_CONSEQUENCE",
+  "test_id": "P2-H05",
+  "witness_chain_errors": [],
+  "witness_chain_valid": true
+}

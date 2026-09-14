@@ -1,0 +1,33 @@
+﻿{
+    "object_id":  "P2-H05-FIRST-OBSERVED-FREEZE-001",
+    "test_id":  "P2-H05",
+    "classification":  "POLICY_VERSION_MUTATION_REFUSED",
+    "prospective_commit":  "39058cc",
+    "predecessor":  "P2-H04_CONTENT_ACTION_MUTATION_REFUSED",
+    "predecessor_p2_h04_freeze_sha256":  "E6AE239FA4A6148C90CB1C3B7D412534B16FA2BD84774A6A5CA4017227BBFBC3",
+    "runtime_sha256":  "A3B7D8AE2424673B9FF5561780F1AC128B30E088277CDA5974081D42796DE8A7",
+    "firewall_v03_sha256":  "FE8556289A20757B04564BD55D1062076A3993AA16132A8F32133A7CA0ED069C",
+    "broker_v031_sha256":  "972A0D8652D03AC0AD5F57591E622FACAB1E1E576E60C934DCC2A523A0B4D3CD",
+    "test_script_sha256":  "274A448318FA0C6C782C430A81D1BFD572F1EFAE0016DAA3D895D63098B85DD9",
+    "test_definition_sha256":  "5A888F1D0DD1EB58C85DE721EB14171DB6A11FE79FE7B572EA21A62661793F88",
+    "first_observed_result_sha256":  "C2301E0594A8A170DB2B9379C2AA100F27C2F78121C9BE9CD027AB4D371A4DDD",
+    "witness_sha256":  "6835669AF930AE6556CA1D11820748808690A59CFD54DB7CA83AAC423E007371",
+    "observed_behavior":  {
+                              "permit_policy_version":  "ERA-POLICY-001-v0.2.0",
+                              "requested_policy_version":  "ERA-POLICY-001-v0.3.0",
+                              "policy_version_changed":  true,
+                              "executed":  false,
+                              "status":  "REFUSED_BEFORE_CONSEQUENCE",
+                              "reasons":  [
+                                              "POLICY_VERSION_MISMATCH"
+                                          ],
+                              "isolated_policy_reason":  true,
+                              "outbox_before":  0,
+                              "outbox_after":  0,
+                              "consequence_occurred":  false,
+                              "witness_chain_valid":  true
+                          },
+    "bounded_finding":  "Under frozen deterministic P2-H05, a signed permit constituted under ERA-POLICY-001-v0.2.0 did not authorize execution when the request presented ERA-POLICY-001-v0.3.0. The request was refused before consequence and no tool effect occurred.",
+    "nonclaim":  "This establishes only frozen deterministic policy-version binding behavior of the tested permit/firewall/broker path. It does not establish external policy provenance, policy correctness, or production-system behavior.",
+    "preservation_rule":  "First-observed P2-H05 result frozen before any additional adversarial testing or implementation change."
+}
