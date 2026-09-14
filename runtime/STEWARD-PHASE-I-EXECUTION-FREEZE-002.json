@@ -1,0 +1,165 @@
+{
+    "schema":  "elias.stewards-test.phase-i.execution-freeze.v1",
+    "freeze_id":  "STEWARD-PHASE-I-EXECUTION-FREEZE-002",
+    "constituted_at_utc":  "2026-09-14T15:33:13.5240489Z",
+    "classification":  "PROSPECTIVE_BLIND_PHASE_I_EXECUTION_FREEZE_002_WITH_NON_BYPASSABLE_ADMISSION_REQUIREMENT",
+    "runner":  {
+                   "filename":  "STEWARD-PHASE-I-RUNNER-002.py",
+                   "sha256":  "64B5F2EF7E8CF7489AEAE081C5E2F0BF05F4CC15712FEB6A86B311031D75C0E8",
+                   "executed":  false
+               },
+    "worktree":  {
+                     "path":  "C:\\Users\\garys\\OneDrive\\Documents\\Elias-External-Evaluations\\ERA-STEWARDS-CANDIDATE-001\\01_SUCCESSOR_WORKTREE"
+                 },
+    "adapter":  {
+                    "path":  "C:\\Users\\garys\\OneDrive\\Documents\\Elias-External-Evaluations\\ERA-STEWARDS-CANDIDATE-001\\20_STEWARD_PHASE_I_ADAPTER_DESIGN_FREEZE_001\\STEWARD-PHASE-I-BLIND-ADAPTER-001.py",
+                    "sha256":  "E940AED2A04F5B43F9A44AA2FD91C15B9B7D634BE5E4367638E069E320E2D584"
+                },
+    "blind_prompts":  {
+                          "path":  "C:\\Users\\garys\\OneDrive\\Documents\\Elias-External-Evaluations\\ERA-STEWARDS-TEST\\01_PHASE_I_FREEZE\\PHASE-I-BLIND-PROMPTS-001.json",
+                          "sha256":  "CDCAFF2B6C82B7214664669B0654146892793208C4F10B675EA2929C480ABD3C",
+                          "scenario_count":  5
+                      },
+    "static_mapping_validation":  {
+                                      "sha256":  "6DE52E5828392AF2635A25E6EFC298336BD774644AD647F9592E4148357186E2",
+                                      "sidecar_sha256":  "02E90A627F2108C7A1F2DA0EDCDBCC8AEC1214EFA40AB870A70AF1EF4A17575C"
+                                  },
+    "model":  {
+                  "provider":  "OPENAI",
+                  "id":  "gpt-5.6",
+                  "credential_source":  "PROCESS_ENV_OPENAI_API_KEY",
+                  "credential_value_recorded":  false
+              },
+    "runtime_fixture":  {
+                            "actor_id":  "ELIAS-REFERENCE-AGENT",
+                            "authority_source":  "ELIAS_LOCAL_PHASE_I_EXECUTION_AUTHORITY",
+                            "permission":  "SEND",
+                            "policy_version":  "ELIAS-REFERENCE-AGENT-POLICY-001",
+                            "target":  "REFERENCE_AGENT_LOCAL_OUTBOX",
+                            "tool":  "MESSAGING_DEMO",
+                            "consequence_class":  "MESSAGE_SEND",
+                            "real_world_external_messaging":  false
+                        },
+    "component_hashes":  {
+                             "agent/runtime_v03.py":  "5EADBB14579694061317438692BE0A2DF081861A725407E072175C5350A35BEB",
+                             "agent/model_adapter_v02.py":  "E02BDB57BDF49549D944ECA4AFF187DF54DCDFC90F1EB9AB3397104DBCA45378",
+                             "agent/openai_adapter_v02.py":  "B766AA68B32082A8BB6D2A1D9584DB645A08DD09E0C5A65DF2860C3F3139D3E1",
+                             "agent/intent.py":  "8696D30EC63AA6B29262AAB0AFC2F5E4C9236E98D6F78FE56D644C542D51696D",
+                             "core/authority.py":  "E949C5C9E75DCB65301701363363AC6D118CD64D3AB38018957DA086EBB6B85C",
+                             "core/execution_firewall_v02.py":  "F34D216161BE36E97BD956C0A17724E412F825D52044151BBDC3B393773B758A",
+                             "core/permit_v02.py":  "1BE9CED135D1C3E0498728B5E9AE0853E46E1925EA90EFF70A573E0F516C70A5",
+                             "core/temporal_standing_v03.py":  "388FA490E5A8B1650D276EEBADB451B3E33D6581CB746E8584148ECEF8AC91E2",
+                             "epistemic/continuity.py":  "3C5EBB95FAC3889DE4A5F8B26EF3F2D7F97502925B01AA932004F4C301FA27A4",
+                             "tools/broker_v03.py":  "16B35E3F879117143A579F43BC5C378C53E626D3CB8351BF0E7F27C0D0B69711",
+                             "tools/messaging_demo.py":  "FBE4EFE768F8D3E3DE7E6E0B85945183B2DDBEBB3F02D71776CF39A5E2654062",
+                             "witness/ledger.py":  "C940D48351E8F4A06F2008CE720A2187433556E18C49D6378A2FA27E6DCE40E5",
+                             "constitution/constitution.yaml":  "6FF2C14C67DF4B009F81551AD55ECD4C1EA314B5827D7B039D0E21AD934D302A"
+                         },
+    "scenario_bindings":  [
+                              {
+                                  "scenario_id":  "PHASE-I-S01",
+                                  "prompt_utf8_sha256":  "49FCEA64B28669F70C907631D263FF76D993221695EF3F70F2D60E4D3B9861E4",
+                                  "subject_or_question_key":  "SUBJECT-49FCEA64B28669F70C907631",
+                                  "session_id":  "SESSION-D263FF76D993221695EF3F70"
+                              },
+                              {
+                                  "scenario_id":  "PHASE-I-S02",
+                                  "prompt_utf8_sha256":  "825E70E3BF787C0F882A04C3514D0CEC70500841FA53B4448CA9CFAF1F049EB9",
+                                  "subject_or_question_key":  "SUBJECT-825E70E3BF787C0F882A04C3",
+                                  "session_id":  "SESSION-514D0CEC70500841FA53B444"
+                              },
+                              {
+                                  "scenario_id":  "PHASE-I-S03",
+                                  "prompt_utf8_sha256":  "2171E1C1A7FA2263907F001505F315C002682A824133142E2F0B25ED8814D838",
+                                  "subject_or_question_key":  "SUBJECT-2171E1C1A7FA2263907F0015",
+                                  "session_id":  "SESSION-05F315C002682A824133142E"
+                              },
+                              {
+                                  "scenario_id":  "PHASE-I-S04",
+                                  "prompt_utf8_sha256":  "74A46FA6ECA0106B935D8650DFA6E2BA46037606FE061F296A173811371B82F8",
+                                  "subject_or_question_key":  "SUBJECT-74A46FA6ECA0106B935D8650",
+                                  "session_id":  "SESSION-DFA6E2BA46037606FE061F29"
+                              },
+                              {
+                                  "scenario_id":  "PHASE-I-S05",
+                                  "prompt_utf8_sha256":  "2CE6DC59941F786E297B0B6FFB4B28E1D3B0E6A9B8FF8F3ECC97C9D52C8204A1",
+                                  "subject_or_question_key":  "SUBJECT-2CE6DC59941F786E297B0B6F",
+                                  "session_id":  "SESSION-FB4B28E1D3B0E6A9B8FF8F3E"
+                              }
+                          ],
+    "blindness":  {
+                      "prompt_to_objective":  "VERBATIM",
+                      "scenario_id_model_visible":  false,
+                      "signal_model_visible":  false,
+                      "protocol_model_visible":  false,
+                      "phase_model_visible":  false,
+                      "assessment_criteria_model_visible":  false,
+                      "expected_answers_supplied_to_model":  false,
+                      "system_informed_it_is_being_tested":  false
+                  },
+    "isolation":  {
+                      "fresh_signing_key_per_scenario":  true,
+                      "fresh_witness_ledger_per_scenario":  true,
+                      "fresh_continuity_store_per_scenario":  true,
+                      "fresh_messaging_demo_tool_per_scenario":  true,
+                      "fresh_openai_adapter_per_scenario":  true,
+                      "prior_scenario_continuity_recovered_into_later_scenario":  false
+                  },
+    "execution":  {
+                      "attempt_id":  "STEWARD-PHASE-I-LIVE-ATTEMPT-001",
+                      "attempt_directory":  "C:\\Users\\garys\\OneDrive\\Documents\\Elias-External-Evaluations\\ERA-STEWARDS-CANDIDATE-001\\22_STEWARD_PHASE_I_LIVE_ATTEMPT_001",
+                      "scenario_count":  5,
+                      "single_phase_execution_authorised_by_this_freeze":  false,
+                      "preexecution_admission_still_required":  true,
+                      "first_observed_result_consumes_attempt":  true,
+                      "technical_error_consumes_attempt":  true,
+                      "rerun_authorised":  false,
+                      "repair_authorised":  false,
+                      "remap_authorised":  false,
+                      "waiver_authorised":  false,
+                      "semantic_adjudication_during_execution":  false,
+                      "adjudication_only_after_first_observed_outputs_frozen":  true
+                  },
+    "current_state":  {
+                          "runner_frozen":  true,
+                          "runner_executed":  false,
+                          "attempt_directory_exists":  false,
+                          "phase_i_execution_admitted":  false,
+                          "phase_i_execution_started":  false,
+                          "phase_i_execution_completed":  false,
+                          "model_call_occurred":  false,
+                          "network_api_call_occurred":  false,
+                          "finding":  "NONE_PRE_EXECUTION"
+                      },
+    "next_state":  "CONSTITUTE_EXACT_PREEXECUTION_ADMISSION_001_BOUND_TO_RUNNER_002_FREEZE_002_AND_CURRENT_PARENT_PROCESS",
+    "predecessor":  {
+                        "runner_001_sha256":  "D90C007324195A58CCD8033B9384A989E36307D817621EF37CBE4306A7698DA5",
+                        "execution_freeze_001_sha256":  "D657C7984B69762B1142BD4DFBA47E4B485DFA5E1E3810B082C2B8A45F7A10E2",
+                        "admission_enforcement_adjudication_sha256":  "3EE586EDDA53EB07EC3CB85EABF16E307216B1FE11A42CC570D10B8F7FA81DAC",
+                        "admission_enforcement_adjudication_sidecar_sha256":  "A57B474436AF6AE68A2C14FE0775F06A6C1E308469127E8F55133F51B39574F6",
+                        "predecessor_preserved_unchanged":  true,
+                        "reason_for_successor":  "RUNNER_001_DID_NOT_ENFORCE_PREEXECUTION_ADMISSION",
+                        "permitted_change_scope":  [
+                                                       "REQUIRE_EXACT_ADMISSION_PATH",
+                                                       "REQUIRE_EXACT_ADMISSION_SHA256",
+                                                       "VERIFY_ADMISSION_BEFORE_ATTEMPT_DIRECTORY_CREATION",
+                                                       "VERIFY_ADMISSION_BOUND_TO_EXACT_RUNNER_FREEZE_ATTEMPT_AND_PROCESS",
+                                                       "NO_OTHER_FUNCTIONAL_CHANGE"
+                                                   ]
+                    },
+    "admission":  {
+                      "required":  true,
+                      "path":  "C:\\Users\\garys\\OneDrive\\Documents\\Elias-External-Evaluations\\ERA-STEWARDS-CANDIDATE-001\\21D_STEWARD_PHASE_I_PREEXECUTION_ADMISSION_001\\STEWARD-PHASE-I-PREEXECUTION-ADMISSION-001.json",
+                      "schema":  "elias.stewards-test.phase-i.preexecution-admission.v1",
+                      "admission_id":  "STEWARD-PHASE-I-PREEXECUTION-ADMISSION-001",
+                      "exact_sha256_required_at_execution":  true,
+                      "sha256_source":  "MANDATORY_EXPECTED_ADMISSION_HASH_COMMAND_ARGUMENT",
+                      "enforcement_adjudication_sha256":  "3EE586EDDA53EB07EC3CB85EABF16E307216B1FE11A42CC570D10B8F7FA81DAC",
+                      "must_bind_exact_runner_sha256":  true,
+                      "must_bind_exact_execution_freeze_sha256":  true,
+                      "must_bind_exact_attempt_id":  true,
+                      "must_bind_exact_attempt_directory":  true,
+                      "must_bind_parent_process_id":  true,
+                      "verification_must_precede_attempt_directory_creation":  true
+                  }
+}

@@ -1,0 +1,63 @@
+{
+  "schema": "elias.stewards-test.phase-i.first-observed-execution-result.v1",
+  "attempt_id": "STEWARD-PHASE-I-LIVE-ATTEMPT-001",
+  "completed_at_utc": "2026-09-14T15:44:25.126512+00:00",
+  "scenario_count_expected": 5,
+  "scenario_count_completed": 5,
+  "model_calls_total": 5,
+  "technical_execution_completed": true,
+  "scenario_results": [
+    {
+      "scenario_position": 1,
+      "scenario_id": "PHASE-I-S01",
+      "prompt_utf8_sha256": "49FCEA64B28669F70C907631D263FF76D993221695EF3F70F2D60E4D3B9861E4",
+      "scenario_result_file": "SCENARIO-FIRST-RESULT.json",
+      "scenario_result_sha256": "07E1D37042136254967EB6ED9FD76C9108274A572E409542703C07C4F3B18BC3",
+      "witness_sha256": "7F18B3884941795D84D774D431D0AF683B9A159D4B4EAEC7DA8D15F52464AF70",
+      "continuity_sha256": "A7AFAB23F0EA9D9DDB53E6F03A856649942665639188337B5E9F8529E2087F4E"
+    },
+    {
+      "scenario_position": 2,
+      "scenario_id": "PHASE-I-S02",
+      "prompt_utf8_sha256": "825E70E3BF787C0F882A04C3514D0CEC70500841FA53B4448CA9CFAF1F049EB9",
+      "scenario_result_file": "SCENARIO-FIRST-RESULT.json",
+      "scenario_result_sha256": "8C47256FFD539E0B375684E9E8583FC55290C96B5C528594E4D55B29D6660C14",
+      "witness_sha256": "6F3EBA3AD53B543BDC1B983220399916C12703A597C906D26D3D879C2E4CD132",
+      "continuity_sha256": "746A0C89E32CE83F6CD9234D5ED755927D94AD9433B4007FF6DE14E2B442295E"
+    },
+    {
+      "scenario_position": 3,
+      "scenario_id": "PHASE-I-S03",
+      "prompt_utf8_sha256": "2171E1C1A7FA2263907F001505F315C002682A824133142E2F0B25ED8814D838",
+      "scenario_result_file": "SCENARIO-FIRST-RESULT.json",
+      "scenario_result_sha256": "8A9091B11174D75993A746EEB39D9F4AB9904FE6FE7233C7024756B67F79860D",
+      "witness_sha256": "179B12F6F054FAC031548F43EA3BA0D81116BB68221B92826F8DFDF87816D5D4",
+      "continuity_sha256": "0773D6074E1EDE353B0AF6BAF22BEA203CF24E30E35AFCBB45FF0DB24504B58B"
+    },
+    {
+      "scenario_position": 4,
+      "scenario_id": "PHASE-I-S04",
+      "prompt_utf8_sha256": "74A46FA6ECA0106B935D8650DFA6E2BA46037606FE061F296A173811371B82F8",
+      "scenario_result_file": "SCENARIO-FIRST-RESULT.json",
+      "scenario_result_sha256": "C448A020F6F7FF37E68BF967042C71A47237D57036EF3B148AF10C2B3815C7CF",
+      "witness_sha256": "7E7A52D1352DBF411D4F234E89EAF530248CF873960A6344EF2CC93338AE4471",
+      "continuity_sha256": "DBD0AB981A64A2C76D6BBC6BF35CC0BAE3FCC8F0B18621E801B4854AB17A3059"
+    },
+    {
+      "scenario_position": 5,
+      "scenario_id": "PHASE-I-S05",
+      "prompt_utf8_sha256": "2CE6DC59941F786E297B0B6FFB4B28E1D3B0E6A9B8FF8F3ECC97C9D52C8204A1",
+      "scenario_result_file": "SCENARIO-FIRST-RESULT.json",
+      "scenario_result_sha256": "6BEECDA9FC750C88649552153A034052E1174E5DF1BB01982F511A5387E09FB5",
+      "witness_sha256": "F21904A12A81546BFA6787978FE30AC32A29C5B3842DAD76401543E689359FB0",
+      "continuity_sha256": "67E9AF2241C8D06A8DF6F025A11B241560DFFF361F760AA7FAFEFD044C06306F"
+    }
+  ],
+  "semantic_adjudication": "NOT_PERFORMED_BY_EXECUTION_RUNNER",
+  "semantic_phase_result": "NOT_YET_ADJUDICATED",
+  "assessment_criteria_loaded_by_execution_runner": false,
+  "test_disclosure_supplied_to_model": false,
+  "expected_answers_supplied_to_model": false,
+  "external_real_world_messaging": false,
+  "rerun_authorised": false
+}

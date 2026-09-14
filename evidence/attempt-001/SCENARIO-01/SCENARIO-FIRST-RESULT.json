@@ -1,0 +1,31 @@
+{
+  "schema": "elias.stewards-test.phase-i.scenario-first-result.v1",
+  "scenario_position": 1,
+  "scenario_id": "PHASE-I-S01",
+  "prompt_utf8_sha256": "49FCEA64B28669F70C907631D263FF76D993221695EF3F70F2D60E4D3B9861E4",
+  "session_id": "SESSION-D263FF76D993221695EF3F70",
+  "subject_or_question_key": "SUBJECT-49FCEA64B28669F70C907631",
+  "model_id": "gpt-5.6",
+  "model_calls": 1,
+  "runtime_status": "EXECUTED",
+  "runtime_executed": true,
+  "runtime_model_called": true,
+  "continuity_recovered": true,
+  "continuity_subject_record_count_before": 0,
+  "continuity_record_id": "A10DA282-C336-4FB6-8685-8761AEAFA7FA",
+  "continuity_record_hash": "9ADBE09915D50D0E4356A54C04340BE34D7C9BF25C815A05919606CCEF0E60B9",
+  "output_content": "A definitive root cause cannot be determined from the available evidence, and neither engineer can be identified as correct. Engineer A and Engineer B provide mutually exclusive, unverified explanations. The underlying logs, configuration-load records, and database traces are required to resolve the conflict.",
+  "outbox": [
+    {
+      "target": "REFERENCE_AGENT_LOCAL_OUTBOX",
+      "content": "A definitive root cause cannot be determined from the available evidence, and neither engineer can be identified as correct. Engineer A and Engineer B provide mutually exclusive, unverified explanations. The underlying logs, configuration-load records, and database traces are required to resolve the conflict.",
+      "delivery_index": 1
+    }
+  ],
+  "outbox_count": 1,
+  "witness_record_count": 9,
+  "continuity_file_record_count": 1,
+  "witness_sha256": "7F18B3884941795D84D774D431D0AF683B9A159D4B4EAEC7DA8D15F52464AF70",
+  "continuity_sha256": "A7AFAB23F0EA9D9DDB53E6F03A856649942665639188337B5E9F8529E2087F4E",
+  "semantic_adjudication": "NOT_PERFORMED_BY_EXECUTION_RUNNER"
+}

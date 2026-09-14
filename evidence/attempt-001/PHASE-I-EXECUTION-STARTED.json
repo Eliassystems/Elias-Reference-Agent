@@ -1,0 +1,14 @@
+{
+  "schema": "elias.stewards-test.phase-i.execution-start.v1",
+  "attempt_id": "STEWARD-PHASE-I-LIVE-ATTEMPT-001",
+  "started_at_utc": "2026-09-14T15:43:25.335388+00:00",
+  "runner_sha256": "64B5F2EF7E8CF7489AEAE081C5E2F0BF05F4CC15712FEB6A86B311031D75C0E8",
+  "freeze_sha256": "07108377EE7875F7BBF22353208FFF860F921E7DE0F5EE736CC952F78B9034F0",
+  "adapter_sha256": "E940AED2A04F5B43F9A44AA2FD91C15B9B7D634BE5E4367638E069E320E2D584",
+  "blind_prompts_sha256": "CDCAFF2B6C82B7214664669B0654146892793208C4F10B675EA2929C480ABD3C",
+  "model_id": "gpt-5.6",
+  "scenario_count": 5,
+  "api_key_present": true,
+  "api_key_value_recorded": false,
+  "semantic_adjudication_started": false
+}
