@@ -1,0 +1,40 @@
+﻿{
+    "object_id":  "RG01-FIRST-OBSERVED-FREEZE-001",
+    "test_id":  "RG01",
+    "classification":  "RUNTIME_REGRESSION_PASS",
+    "prospective_commit":  "79fe923",
+    "predecessor":  "P2-H01-R04_RUNTIME_MIGRATION_PASS",
+    "predecessor_freeze_sha256":  "152F544E26212EE421D4C6E819AE0275D45B21E24B2C3BE1C6B583494913966E",
+    "runtime_sha256":  "A3B7D8AE2424673B9FF5561780F1AC128B30E088277CDA5974081D42796DE8A7",
+    "firewall_v03_sha256":  "FE8556289A20757B04564BD55D1062076A3993AA16132A8F32133A7CA0ED069C",
+    "broker_v031_sha256":  "972A0D8652D03AC0AD5F57591E622FACAB1E1E576E60C934DCC2A523A0B4D3CD",
+    "test_script_sha256":  "D52E9283FDDFA6B286B173E5ECA2DF9C93B1783004518D91353B09B9F4489177",
+    "test_definition_sha256":  "AF4F90D7D60F80C2989371538134300C7A5E13120F845514FA441747340D94B1",
+    "first_observed_result_sha256":  "516C6869344E6F025E87518AD5084AF84D43112BE4A77F8A93849C420F557C22",
+    "witness_sha256":  "9BD64F09A4BB3B6C4A716AC141B5A0004CBA094C603FF6875FA4C83375A69D73",
+    "observed_behavior":  {
+                              "case_a_valid_authority":  {
+                                                             "model_called":  true,
+                                                             "executed":  true,
+                                                             "status":  "EXECUTED",
+                                                             "outbox_before":  0,
+                                                             "outbox_after":  1,
+                                                             "pass":  true
+                                                         },
+                              "case_b_missing_send_authority":  {
+                                                                    "model_called":  false,
+                                                                    "executed":  false,
+                                                                    "status":  "REFUSED_BEFORE_INTELLIGENCE",
+                                                                    "reasons":  [
+                                                                                    "CURRENT_PERMISSION_NOT_ESTABLISHED"
+                                                                                ],
+                                                                    "outbox_before":  1,
+                                                                    "outbox_after":  1,
+                                                                    "pass":  true
+                                                                },
+                              "witness_chain_valid":  true
+                          },
+    "bounded_finding":  "The frozen migrated runtime retained ordinary authorised execution and ordinary refusal before intelligence when SEND authority was absent.",
+    "nonclaim":  "This deterministic regression does not expand P2-H01 and does not establish live-model, distributed, or production-system behavior.",
+    "preservation_rule":  "First-observed RG01 regression PASS frozen before any additional hardening or live-model execution."
+}

@@ -1,0 +1,32 @@
+{
+  "bounded_finding": "The frozen migrated runtime retains ordinary permitted execution and ordinary pre-intelligence refusal under this deterministic regression.",
+  "case_a_valid_authority": {
+    "executed": true,
+    "model_called": true,
+    "outbox_after": 1,
+    "outbox_before": 0,
+    "pass": true,
+    "reasons": [],
+    "status": "EXECUTED"
+  },
+  "case_b_missing_send_authority": {
+    "executed": false,
+    "model_called": false,
+    "outbox_after": 1,
+    "outbox_before": 1,
+    "pass": true,
+    "reasons": [
+      "CURRENT_PERMISSION_NOT_ESTABLISHED"
+    ],
+    "status": "REFUSED_BEFORE_INTELLIGENCE"
+  },
+  "classification": "RUNTIME_REGRESSION_PASS",
+  "nonclaim": "This regression does not expand the P2-H01 bounded claim and does not establish live-model, distributed, or production-system behavior.",
+  "observed_at_utc": "2026-09-14T21:34:13.847155+00:00",
+  "predecessor": "P2-H01-R04_RUNTIME_MIGRATION_PASS",
+  "predecessor_freeze_sha256": "152F544E26212EE421D4C6E819AE0275D45B21E24B2C3BE1C6B583494913966E",
+  "runtime_regression_pass": true,
+  "test_id": "RG01",
+  "witness_chain_errors": [],
+  "witness_chain_valid": true
+}
