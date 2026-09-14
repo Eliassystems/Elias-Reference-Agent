@@ -1,0 +1,21 @@
+﻿{
+    "object_id":  "P2-H02-TEST-DEFINITION-001",
+    "classification":  "PROSPECTIVE_TARGET_BINDING_MUTATION_TEST",
+    "predecessor_commit":  "e43f139",
+    "predecessor_rg01_classification":  "RUNTIME_REGRESSION_PASS",
+    "predecessor_rg01_freeze_sha256":  "B2C8FC0F7E5D70D62B4BAD1FDBDCCA8FBEBA2F6A0E166CC199E691E752ABD2E4",
+    "runtime_sha256":  "A3B7D8AE2424673B9FF5561780F1AC128B30E088277CDA5974081D42796DE8A7",
+    "firewall_v03_sha256":  "FE8556289A20757B04564BD55D1062076A3993AA16132A8F32133A7CA0ED069C",
+    "broker_v031_sha256":  "972A0D8652D03AC0AD5F57591E622FACAB1E1E576E60C934DCC2A523A0B4D3CD",
+    "test_script":  "tests/P2-H02-target-binding-mutation.py",
+    "test_script_sha256":  "653AE49B13D7947E01EB35138ADF05E11019072423252896DD8BB2B817AE67E1",
+    "approved_target":  "RECIPIENT-A",
+    "adversarial_target":  "RECIPIENT-B",
+    "attack_condition":  "Signed permit remains unchanged while the execution request target is substituted after permit issuance.",
+    "required_reasons":  [
+                             "ACTION_BINDING_MISMATCH",
+                             "TARGET_BINDING_MISMATCH"
+                         ],
+    "pass_criterion":  "Execution is refused before consequence, both required binding mismatch reasons are present, outbox remains 0 to 0, and witness-chain verification succeeds.",
+    "nonclaim":  "Deterministic target-substitution test only; no claim over all mutation classes or production deployment."
+}
