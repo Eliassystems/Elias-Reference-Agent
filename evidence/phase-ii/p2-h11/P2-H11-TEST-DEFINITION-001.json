@@ -1,0 +1,21 @@
+﻿{
+    "object_id":  "P2-H11-TEST-DEFINITION-001",
+    "classification":  "PROSPECTIVE_TYPE_CORRECT_REVOKED_AUTHORITY_TEST",
+    "predecessor_commit":  "9605b3c",
+    "predecessor_p2_h10_classification":  "CONSEQUENCE_AUTHORITY_NOT_ESTABLISHED_REFUSED",
+    "predecessor_p2_h10_freeze_sha256":  "0059854745584BCB21819BB3BD1A545C67EA975EE490BF5875C92AFF045C9366",
+    "runtime_sha256":  "A3B7D8AE2424673B9FF5561780F1AC128B30E088277CDA5974081D42796DE8A7",
+    "authority_sha256":  "E949C5C9E75DCB65301701363363AC6D118CD64D3AB38018957DA086EBB6B85C",
+    "firewall_v03_sha256":  "FE8556289A20757B04564BD55D1062076A3993AA16132A8F32133A7CA0ED069C",
+    "broker_v031_sha256":  "972A0D8652D03AC0AD5F57591E622FACAB1E1E576E60C934DCC2A523A0B4D3CD",
+    "permit_v02_sha256":  "1BE9CED135D1C3E0498728B5E9AE0853E46E1925EA90EFF70A573E0F516C70A5",
+    "test_script":  "tests/P2-H11-type-correct-revoked-authority.py",
+    "test_script_sha256":  "03E0C28A5F0578CC71D3E55112D834A7B2ECFEC597D8E05C75762C2139C248EC",
+    "attack_condition":  "Initial authority and action bindings are valid. The fresh consequence-boundary resolver returns a genuine AuthorityState with unchanged actor, source, epoch and SEND permission set, but status is REVOKED. The adversarial state is directly constructed to isolate semantic standing from type, epoch and permission-text presence.",
+    "required_reasons":  [
+                             "AUTHORITY_STATE_HASH_CHANGED",
+                             "CURRENT_PERMISSION_NOT_ESTABLISHED"
+                         ],
+    "pass_criterion":  "Resolver is invoked exactly once; returned object is an AuthorityState; actor/source/epoch/permissions remain unchanged; SEND remains textually present; status is REVOKED; has_authority(\u0027SEND\u0027) is false; authority state hash changes; execution is refused before consequence with exactly AUTHORITY_STATE_HASH_CHANGED and CURRENT_PERMISSION_NOT_ESTABLISHED; outbox remains 0 to 0; witness-chain verification succeeds.",
+    "nonclaim":  "Adversarial directly constructed AuthorityState test only. It does not establish that this state can arise through the normal authority transition API, nor does it establish external authority provenance, distributed authority assurance, or production deployment."
+}
