@@ -1,0 +1,17 @@
+﻿{
+    "object_id":  "P2-H08-TEST-DEFINITION-001",
+    "classification":  "PROSPECTIVE_EXPIRED_PERMIT_TEST",
+    "predecessor_commit":  "a40b67a",
+    "predecessor_p2_h07_classification":  "PERMIT_SIGNATURE_TAMPER_REFUSED",
+    "predecessor_p2_h07_freeze_sha256":  "1E7D8BD83F9340F0A074D108A790477AECB4DBF068BFB48C5C126617AF19841F",
+    "runtime_sha256":  "A3B7D8AE2424673B9FF5561780F1AC128B30E088277CDA5974081D42796DE8A7",
+    "firewall_v03_sha256":  "FE8556289A20757B04564BD55D1062076A3993AA16132A8F32133A7CA0ED069C",
+    "broker_v031_sha256":  "972A0D8652D03AC0AD5F57591E622FACAB1E1E576E60C934DCC2A523A0B4D3CD",
+    "permit_v02_sha256":  "1BE9CED135D1C3E0498728B5E9AE0853E46E1925EA90EFF70A573E0F516C70A5",
+    "test_script":  "tests/P2-H08-expired-permit.py",
+    "test_script_sha256":  "A9DDE09CFECCFDE504B63C4D363867741C145660BBAE67DB3A6BE7BDD39B3342",
+    "attack_condition":  "A valid correctly signed permit is presented after its signed expires_at boundary has passed while tested authority/action bindings remain otherwise unchanged.",
+    "required_reason":  "PERMIT_EXPIRED",
+    "pass_criterion":  "Execution is refused before consequence with isolated PERMIT_EXPIRED; outbox remains 0 to 0; witness-chain verification succeeds.",
+    "nonclaim":  "Deterministic local-time expiry test only; no claim over distributed clock synchronization, trusted time infrastructure, or production deployment."
+}
