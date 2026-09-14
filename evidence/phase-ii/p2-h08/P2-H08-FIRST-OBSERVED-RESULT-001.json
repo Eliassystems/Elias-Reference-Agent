@@ -1,0 +1,25 @@
+{
+  "attack": "A correctly signed and otherwise matching permit is presented only after its signed expiry boundary has passed.",
+  "bounded_finding": "Under frozen deterministic P2-H08, a correctly signed permit whose expiry boundary had already passed did not authorize execution.",
+  "classification": "EXPIRED_PERMIT_REFUSED",
+  "consequence_occurred": false,
+  "executed": false,
+  "isolated_expiry_reason": true,
+  "nonclaim": "This establishes only the frozen deterministic permit-expiry behavior of the tested permit/firewall/broker path. It does not establish distributed clock synchronization, trusted-time infrastructure, or production behavior.",
+  "observed_at_utc": "2026-09-14T22:19:12.887261+00:00",
+  "outbox_after": 0,
+  "outbox_before": 0,
+  "p2_h08_pass": true,
+  "permit_expires_at": "2026-09-14T22:10:12.883133Z",
+  "permit_id": "97555A64CC03B74E1B6B99B9D8A92A19CD2169A98879DB4F921D0E9C00CB68A8",
+  "permit_issued_at": "2026-09-14T22:09:12.883133Z",
+  "predecessor_commit": "a40b67a",
+  "reasons": [
+    "PERMIT_EXPIRED"
+  ],
+  "required_reason_present": true,
+  "status": "REFUSED_BEFORE_CONSEQUENCE",
+  "test_id": "P2-H08",
+  "witness_chain_errors": [],
+  "witness_chain_valid": true
+}

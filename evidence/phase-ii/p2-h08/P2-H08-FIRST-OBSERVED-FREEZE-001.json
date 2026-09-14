@@ -1,0 +1,33 @@
+﻿{
+    "object_id":  "P2-H08-FIRST-OBSERVED-FREEZE-001",
+    "test_id":  "P2-H08",
+    "classification":  "EXPIRED_PERMIT_REFUSED",
+    "prospective_commit":  "109fcf6",
+    "predecessor":  "P2-H07_PERMIT_SIGNATURE_TAMPER_REFUSED",
+    "predecessor_p2_h07_freeze_sha256":  "1E7D8BD83F9340F0A074D108A790477AECB4DBF068BFB48C5C126617AF19841F",
+    "runtime_sha256":  "A3B7D8AE2424673B9FF5561780F1AC128B30E088277CDA5974081D42796DE8A7",
+    "firewall_v03_sha256":  "FE8556289A20757B04564BD55D1062076A3993AA16132A8F32133A7CA0ED069C",
+    "broker_v031_sha256":  "972A0D8652D03AC0AD5F57591E622FACAB1E1E576E60C934DCC2A523A0B4D3CD",
+    "permit_v02_sha256":  "1BE9CED135D1C3E0498728B5E9AE0853E46E1925EA90EFF70A573E0F516C70A5",
+    "test_script_sha256":  "A9DDE09CFECCFDE504B63C4D363867741C145660BBAE67DB3A6BE7BDD39B3342",
+    "test_definition_sha256":  "39377C5243167123F82005F7BCEAD14B97CD97ED3408DB18DE1B56B96ECF93A7",
+    "first_observed_result_sha256":  "1008C63E4E6E15D46A1DA57347F28F5CEB91FCF77A9CFC47A608B48FA62A6570",
+    "witness_sha256":  "4555414CE422144DDC4641854011E990E3B510E67241996D3B4B3652302E4910",
+    "observed_behavior":  {
+                              "permit_issued_at":  "2026-09-14T22:09:12.883133Z",
+                              "permit_expires_at":  "2026-09-14T22:10:12.883133Z",
+                              "executed":  false,
+                              "status":  "REFUSED_BEFORE_CONSEQUENCE",
+                              "reasons":  [
+                                              "PERMIT_EXPIRED"
+                                          ],
+                              "isolated_expiry_reason":  true,
+                              "outbox_before":  0,
+                              "outbox_after":  0,
+                              "consequence_occurred":  false,
+                              "witness_chain_valid":  true
+                          },
+    "bounded_finding":  "Under frozen deterministic P2-H08, a correctly signed and otherwise matching permit whose signed expiry boundary had already passed did not authorize execution. It was refused before consequence with PERMIT_EXPIRED and no tool effect occurred.",
+    "nonclaim":  "This establishes only frozen deterministic permit-expiry behavior of the tested permit/firewall/broker path. It does not establish distributed clock synchronization, trusted-time infrastructure, or production-system behavior.",
+    "preservation_rule":  "First-observed P2-H08 result frozen without rerun, evidence replacement, or retrospective repair."
+}
