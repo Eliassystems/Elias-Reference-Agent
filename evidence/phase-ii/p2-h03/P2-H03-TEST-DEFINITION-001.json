@@ -1,0 +1,21 @@
+﻿{
+    "object_id":  "P2-H03-TEST-DEFINITION-001",
+    "classification":  "PROSPECTIVE_CONSEQUENCE_CLASS_ESCALATION_TEST",
+    "predecessor_commit":  "e7d6420",
+    "predecessor_p2_h02_classification":  "TARGET_BINDING_MUTATION_REFUSED",
+    "predecessor_p2_h02_freeze_sha256":  "676EC8F5EB80F1E5147B2C6280603AC3928EF55669A3A3F21C0B1F1B690F08D7",
+    "runtime_sha256":  "A3B7D8AE2424673B9FF5561780F1AC128B30E088277CDA5974081D42796DE8A7",
+    "firewall_v03_sha256":  "FE8556289A20757B04564BD55D1062076A3993AA16132A8F32133A7CA0ED069C",
+    "broker_v031_sha256":  "972A0D8652D03AC0AD5F57591E622FACAB1E1E576E60C934DCC2A523A0B4D3CD",
+    "test_script":  "tests/P2-H03-consequence-class-escalation.py",
+    "test_script_sha256":  "BDCA10E083FF50F68D94751AA851A784CC516F2E741F0E33B979EEFBFA6D31F7",
+    "approved_consequence_class":  "C4",
+    "adversarial_consequence_class":  "C5",
+    "attack_condition":  "Signed permit remains unchanged while the execution request consequence class is changed from C4 to C5 after permit issuance.",
+    "required_reasons":  [
+                             "ACTION_BINDING_MISMATCH",
+                             "CONSEQUENCE_BINDING_MISMATCH"
+                         ],
+    "pass_criterion":  "Execution is refused before consequence, both required binding mismatch reasons are present, outbox remains 0 to 0, and witness-chain verification succeeds.",
+    "nonclaim":  "Deterministic consequence-class mutation only; no claim over every escalation class or production deployment."
+}
