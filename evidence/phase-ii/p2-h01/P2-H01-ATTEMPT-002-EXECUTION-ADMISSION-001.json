@@ -1,0 +1,18 @@
+﻿{
+    "object_id":  "P2-H01-ATTEMPT-002-EXECUTION-ADMISSION-001",
+    "test_id":  "P2-H01",
+    "attempt":  2,
+    "predecessor_attempt":  1,
+    "predecessor_classification":  "TEST_NOT_ESTABLISHED_HARNESS_IMPORT_FAILURE",
+    "predecessor_failure_record_sha256":  "27B94F60F2C05F93751DFD62E48DA42F96511832671502F74DB3F6C8A5B3DEAC",
+    "frozen_test_commit":  "7c3c040",
+    "test_script_sha256":  "A6C8A23D4FDE805310C27A236E60695338916DB136467494974795370999DB10",
+    "test_definition_sha256":  "607375A251F611BEC92422C8B4967930FE86F57193583E359B6208349AFDFC81",
+    "test_logic_changed":  false,
+    "firewall_changed":  false,
+    "broker_changed":  false,
+    "permit_logic_changed":  false,
+    "execution_environment_correction":  "Set PYTHONPATH to repository root so frozen test imports resolve.",
+    "admitted_execution":  "py -3 tests/P2-H01-post-validation-authority-change.py",
+    "nonclaim":  "Attempt 002 changes execution environment only. It does not repair or replace Attempt 001 and does not alter the frozen adversarial test."
+}

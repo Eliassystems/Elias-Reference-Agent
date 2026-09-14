@@ -1,0 +1,18 @@
+﻿{
+    "object_id":  "P2-H01-ATTEMPT-001-HARNESS-FAILURE-001",
+    "test_id":  "P2-H01",
+    "attempt":  1,
+    "classification":  "TEST_NOT_ESTABLISHED_HARNESS_IMPORT_FAILURE",
+    "frozen_test_commit":  "7c3c040",
+    "frozen_test_script_sha256":  "A6C8A23D4FDE805310C27A236E60695338916DB136467494974795370999DB10",
+    "frozen_test_definition_sha256":  "607375A251F611BEC92422C8B4967930FE86F57193583E359B6208349AFDFC81",
+    "execution_exit_code":  1,
+    "observed_error":  "ModuleNotFoundError: No module named \u0027core\u0027",
+    "firewall_reached":  false,
+    "consequence_boundary_reached":  false,
+    "seam_classification_established":  false,
+    "result_json_created":  false,
+    "witness_created":  false,
+    "malformed_followon_sha256":  "80BF9E7EF48CE6DDBEB56DDB52FDE8712C2D6B4176B859DA09DB2745194507EF",
+    "preservation_rule":  "No repair, no reinterpretation, no PASS/FAIL attribution."
+}
