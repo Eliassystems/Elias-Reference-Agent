@@ -1,0 +1,29 @@
+{
+  "boundary_revalidated_present": true,
+  "bounded_finding": "P2-H14 records only the first-observed deterministic behavior of the frozen local Reference Agent path when the completion record cannot be persisted after the consequence boundary has been revalidated.",
+  "classification": "POST_ACTION_COMPLETION_RECORD_GAP_OBSERVED",
+  "completion_write_attempted_once": true,
+  "completion_write_attempts": 1,
+  "consequence_occurred": true,
+  "event_types": [
+    "PRE_EXECUTION_AUTHORIZED",
+    "CONSEQUENCE_BOUNDARY_REVALIDATED"
+  ],
+  "exception_captured": true,
+  "exception_message": "P2-H14 deterministic completion-record persistence unavailable",
+  "exception_type": "OSError",
+  "execution_completed_present": false,
+  "nonclaim": "This is a local deterministic software reliability observation only. It does not establish behavior for external services, distributed transactions, operating-system failures, storage hardware, or production deployment.",
+  "observation_established": true,
+  "outbox_after": 1,
+  "outbox_before": 0,
+  "permit_consumed": true,
+  "permit_id": "CE13037AAFBC7A85DCD43CB36F1B9FBCE82EFEAB0EB5A27F3C371F6903F0547F",
+  "pre_execution_authorized_present": true,
+  "predecessor_commit": "0b5d724",
+  "returned_result": null,
+  "scenario": "A normal local governed SEND reaches the frozen execution path. The ordinary witness ledger remains available except that the EXECUTION_COMPLETED record cannot be persisted.",
+  "test_id": "P2-H14",
+  "witness_chain_errors": [],
+  "witness_chain_valid": true
+}
