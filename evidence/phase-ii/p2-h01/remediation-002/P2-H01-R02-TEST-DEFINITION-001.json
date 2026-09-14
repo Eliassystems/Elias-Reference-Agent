@@ -1,0 +1,17 @@
+﻿{
+    "object_id":  "P2-H01-R02-TEST-DEFINITION-001",
+    "classification":  "PROSPECTIVE_REMEDIATION_SUCCESSOR_TEST_DEFINITION",
+    "predecessor_candidate_commit":  "4292345",
+    "predecessor_candidate_classification":  "CANDIDATE_NOT_ADMITTED_BROKER_IMPORT_DEFECT",
+    "predecessor_import_failure_sha256":  "2E7A28A7E1E967BCB57BD93FDE0E549BF1237445D9114D26C19EA4FA01C85FBA",
+    "firewall_v03":  "core/execution_firewall_v03.py",
+    "firewall_v03_sha256":  "FE8556289A20757B04564BD55D1062076A3993AA16132A8F32133A7CA0ED069C",
+    "broker_v031":  "tools/broker_v031.py",
+    "broker_v031_sha256":  "972A0D8652D03AC0AD5F57591E622FACAB1E1E576E60C934DCC2A523A0B4D3CD",
+    "test_script":  "tests/P2-H01-R02-v031-consequence-boundary-revalidation.py",
+    "test_script_sha256":  "C9CA754734B6C235A5002411586D18C61B9B50A7421DE267BBB53751C4C15C61",
+    "correction_scope":  "Broker type/import correction only. Firewall v0.3 behavior unchanged.",
+    "attack_condition":  "Material SEND authority change occurs after PRE_EXECUTION_AUTHORIZED and before consequence invocation.",
+    "pass_criterion":  "Fresh authority is resolved at consequence boundary; changed epoch/state/permission causes refusal; no consequence occurs; witness chain verifies.",
+    "nonclaim":  "Prospective deterministic successor only. No distributed concurrency or revocation-propagation claim."
+}

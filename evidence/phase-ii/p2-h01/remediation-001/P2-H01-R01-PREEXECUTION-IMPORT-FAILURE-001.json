@@ -1,0 +1,20 @@
+﻿{
+    "object_id":  "P2-H01-R01-PREEXECUTION-IMPORT-FAILURE-001",
+    "classification":  "CANDIDATE_NOT_ADMITTED_BROKER_IMPORT_DEFECT",
+    "candidate_commit":  "4292345",
+    "candidate_executed":  false,
+    "adversarial_test_executed":  false,
+    "result_created":  false,
+    "witness_created":  false,
+    "firewall_import":  "PASS",
+    "firewall_import_exit_code":  0,
+    "broker_import":  "FAIL",
+    "broker_import_exit_code":  1,
+    "observed_error":  "ImportError: cannot import name \u0027ExecutionPermitV03\u0027 from \u0027core.permit_v02\u0027",
+    "firewall_v03_sha256":  "FE8556289A20757B04564BD55D1062076A3993AA16132A8F32133A7CA0ED069C",
+    "broker_v03_sha256":  "97FD650555EB505ACA1ED128C1AED9B2C5BD72790754A8D4B051E6983FEA799C",
+    "r01_test_sha256":  "B94EF2553ED6F50ABAD18F398DEF751FC28F608B15F1378DC2980F4D815B9BA4",
+    "r01_definition_sha256":  "286821BF2067D45F60E395730AB4D4964505376256728D8425040D66000DF302",
+    "defect":  "Mechanical V02-to-V03 broker symbol replacement incorrectly renamed ExecutionPermitV02 to nonexistent ExecutionPermitV03.",
+    "preservation_rule":  "Candidate 4292345 remains unchanged. No execution, repair, reinterpretation, or replacement in place."
+}
