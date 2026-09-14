@@ -1,0 +1,37 @@
+{
+  "attack": "Authority changes immediately after PRE_EXECUTION_AUTHORIZED and before the consequence callable.",
+  "authority_at_consequence_boundary": {
+    "epoch": 2,
+    "permission_send": false,
+    "state_hash": "A19CDD9BE3EEC5A9AC67536D85984A321FBD41530E20F9E160EE43A152F6134C"
+  },
+  "authority_t0": {
+    "epoch": 1,
+    "permission_send": true,
+    "state_hash": "2B5E4558BD9B928B79F6D3AFEE8479D9CA1F0AF44F2752592EF813EBC4607D1B"
+  },
+  "change_triggered": true,
+  "changed_at_event": "PRE_EXECUTION_AUTHORIZED",
+  "classification": "REMEDIATION_PASS",
+  "consequence_occurred": false,
+  "firewall_executed": false,
+  "firewall_reasons": [
+    "AUTHORITY_EPOCH_CHANGED",
+    "AUTHORITY_STATE_HASH_CHANGED",
+    "CURRENT_PERMISSION_NOT_ESTABLISHED"
+  ],
+  "firewall_status": "REFUSED_BEFORE_CONSEQUENCE",
+  "nonclaim": "This establishes only the frozen deterministic successor behavior under P2-H01-R03. It does not establish distributed revocation propagation or unbounded real-world concurrency.",
+  "observed_at_utc": "2026-09-14T21:19:43.757002+00:00",
+  "outbox_after": 0,
+  "outbox_before": 0,
+  "permit_authority_epoch": 1,
+  "predecessor_finding": "P2-H01_SEAM_EXPOSED",
+  "predecessor_freeze_sha256": "53995866D1D250697276A5A64F6DA52752F4EB30278BD06DA391765C2E068E61",
+  "predecessor_result_sha256": "40C34A1D8ECE5903B2CF62FF100CE17447868F1B7338A4435E800447998BF9DD",
+  "remediation_pass": true,
+  "required_reasons_present": true,
+  "test_id": "P2-H01-R03",
+  "witness_chain_errors": [],
+  "witness_chain_valid": true
+}

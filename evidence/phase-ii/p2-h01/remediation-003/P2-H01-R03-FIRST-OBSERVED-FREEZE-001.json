@@ -1,0 +1,37 @@
+﻿{
+    "object_id":  "P2-H01-R03-FIRST-OBSERVED-FREEZE-001",
+    "test_id":  "P2-H01-R03",
+    "classification":  "REMEDIATION_PASS",
+    "prospective_commit":  "f7a2720",
+    "predecessor_finding":  "P2-H01_SEAM_EXPOSED",
+    "predecessor_result_sha256":  "40C34A1D8ECE5903B2CF62FF100CE17447868F1B7338A4435E800447998BF9DD",
+    "predecessor_freeze_sha256":  "53995866D1D250697276A5A64F6DA52752F4EB30278BD06DA391765C2E068E61",
+    "firewall_v03_sha256":  "FE8556289A20757B04564BD55D1062076A3993AA16132A8F32133A7CA0ED069C",
+    "broker_v031_sha256":  "972A0D8652D03AC0AD5F57591E622FACAB1E1E576E60C934DCC2A523A0B4D3CD",
+    "test_script_sha256":  "9C73E00624420ED362BC51BA4A60D6E5BC513DF274967704F67D057246629900",
+    "test_definition_sha256":  "F4AE2CCB4ADC96A04D049F99344730978C52E1CBB593986073216611376863C6",
+    "first_observed_result_sha256":  "522B2D7B0739340717DFF7D0CC22D0984D97A4B8A5665BDCAC9C5302E5C99763",
+    "witness_sha256":  "A564D05ADDCEABA30563B3572C84A8F61D416F52CBD34F7444A0B8A20FE6A22A",
+    "observed_authority_transition":  {
+                                          "permit_epoch":  1,
+                                          "consequence_boundary_epoch":  2,
+                                          "send_at_t0":  true,
+                                          "send_at_consequence_boundary":  false
+                                      },
+    "observed_decision":  {
+                              "firewall_status":  "REFUSED_BEFORE_CONSEQUENCE",
+                              "firewall_executed":  false,
+                              "reasons":  [
+                                              "AUTHORITY_EPOCH_CHANGED",
+                                              "AUTHORITY_STATE_HASH_CHANGED",
+                                              "CURRENT_PERMISSION_NOT_ESTABLISHED"
+                                          ],
+                              "outbox_before":  0,
+                              "outbox_after":  0,
+                              "consequence_occurred":  false,
+                              "witness_chain_valid":  true
+                          },
+    "bounded_finding":  "Under frozen deterministic P2-H01-R03, fresh authority was re-resolved after PRE_EXECUTION_AUTHORIZED and before consequence invocation. Materially changed epoch, authority-state identity, and permission caused refusal and the consequence did not occur.",
+    "nonclaim":  "This does not establish distributed revocation propagation, absolute atomicity, or unbounded real-world concurrency behavior.",
+    "preservation_rule":  "First-observed remediation result frozen before runtime migration or further hardening."
+}
