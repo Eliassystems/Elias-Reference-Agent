@@ -1,0 +1,68 @@
+{
+  "bounded_interpretation": "This deterministic local regression test establishes only whether V05 preserves normal permitted execution when the authority resolver explicitly returns an ESTABLISHED AuthorityResolution carrying the current valid AuthorityState.",
+  "classification": "V05_ESTABLISHED_AUTHORITY_NORMAL_EXECUTION_ESTABLISHED",
+  "execution_observation": {
+    "exception_captured": false,
+    "exception_message": "",
+    "exception_type": "",
+    "executed": true,
+    "outbox_after": 1,
+    "outbox_before": 0,
+    "permit_consumed": true,
+    "reasons": [],
+    "resolver_called_once": true,
+    "resolver_calls": 1,
+    "result_returned": true,
+    "status": "EXECUTED"
+  },
+  "native_resolution": {
+    "authority_preserved": true,
+    "canonical_payload": {
+      "authority": {
+        "actor_id": "P3-RG01-HUMAN-001",
+        "authority_source": "HUMAN_SOVEREIGN_AUTHORITY",
+        "epoch": 1,
+        "permissions": [
+          "SEND"
+        ],
+        "reason": "INITIAL_AUTHORITY_STATE",
+        "status": "ACTIVE"
+      },
+      "observations": [
+        {
+          "actor_id": "P3-RG01-HUMAN-001",
+          "authority_source": "HUMAN_SOVEREIGN_AUTHORITY",
+          "epoch": 1,
+          "permissions": [
+            "SEND"
+          ],
+          "reason": "INITIAL_AUTHORITY_STATE",
+          "status": "ACTIVE"
+        }
+      ],
+      "reason": "P3-RG01_CURRENT_AUTHORITY_ESTABLISHED",
+      "status": "ESTABLISHED"
+    },
+    "is_authority_resolution": true,
+    "state_hash": "21EA1088A479C7927C98DEE16D335F16BED7FAB2D77CEBD42C4B922DCE6933AF",
+    "status_is_established": true
+  },
+  "normal_execution_established": true,
+  "observed_at_utc": "2026-09-15T11:00:19.741054+00:00",
+  "test_id": "P3-RG01",
+  "witness_observation": {
+    "boundary_revalidated_present": true,
+    "chain_errors": [],
+    "chain_valid": true,
+    "event_types": [
+      "PRE_EXECUTION_AUTHORIZED",
+      "CONSEQUENCE_BOUNDARY_REVALIDATED",
+      "EXECUTION_COMPLETED"
+    ],
+    "execution_completed_present": true,
+    "no_conflict_event": true,
+    "no_indeterminate_event": true,
+    "no_unavailable_event": true,
+    "pre_execution_present": true
+  }
+}

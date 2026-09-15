@@ -1,0 +1,22 @@
+﻿{
+  "test_id": "P3-RG01",
+  "note_type": "POST_OBSERVATION_PROVENANCE_NOTE",
+  "first_observed_classification": "V05_ESTABLISHED_AUTHORITY_NORMAL_EXECUTION_ESTABLISHED",
+  "event": "A later attempted rerun recreated the test definition and test script before the Python first-observation guard refused execution.",
+  "effect": {
+    "test_definition_content_changed": false,
+    "test_script_content_changed": false,
+    "result_changed": false,
+    "witness_changed": false,
+    "freeze_changed": false,
+    "filesystem_last_write_times_changed_for_definition_and_script": true
+  },
+  "cryptographic_identity_preserved": {
+    "test_definition_sha256": "9D20FECD9D411AB1A47ABB0FA1F8B7B8BEBFA9BDB9B40072A788763B215B46A6",
+    "test_script_sha256": "C573CA4EA2CD31D2A1BE36A9794B82526E9DB768A3179F246746110D792360A8",
+    "result_sha256": "6B3F16C0EE551952A939381EC17F52C5FCD61DFC47B0F4CA75EB2AE2E18A5111",
+    "witness_sha256": "330DE983572A200A782916FC18A953ECA76B9A074567E91F279659276FAB8A67"
+  },
+  "interpretation": "The frozen first-observed result remains cryptographically bound to the same test-definition and test-script bytes. The later attempted rerun changed file metadata timestamps only. No retrospective repair of result, witness, or frozen content occurred.",
+  "process_correction": "Future first-observation wrappers must check for existing evidence before rewriting test-definition or test-script files."
+}

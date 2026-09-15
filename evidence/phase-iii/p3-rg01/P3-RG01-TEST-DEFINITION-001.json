@@ -1,0 +1,27 @@
+﻿{
+  "test_id": "P3-RG01",
+  "phase": "PHASE-III-FALSIFICATION",
+  "title": "V05 Established Authority Normal Execution Regression",
+  "antecedent": "P3-F01-S01",
+  "purpose": "Determine whether the V05 authority-resolution successor preserves legitimate normal execution when present authority is explicitly ESTABLISHED.",
+  "condition": {
+    "authority": "ACTIVE AuthorityState with SEND permission",
+    "resolution": "AuthorityResolutionStatus.ESTABLISHED",
+    "permit": "Valid and unchanged",
+    "target": "Unchanged",
+    "action": "Unchanged"
+  },
+  "required_discriminators": [
+    "Resolver returns native AuthorityResolution",
+    "Resolution status is ESTABLISHED",
+    "Resolution carries the current AuthorityState",
+    "Execution occurs exactly once",
+    "Outbox changes from 0 to 1",
+    "CONSEQUENCE_BOUNDARY_REVALIDATED is recorded",
+    "EXECUTION_COMPLETED is recorded",
+    "No authority-conflict event is recorded",
+    "Witness chain remains valid"
+  ],
+  "predetermined_pass": false,
+  "bounded_claim": "Success establishes only that the V05 successor preserves the deterministic local permitted execution path for an explicitly ESTABLISHED authority resolution."
+}
