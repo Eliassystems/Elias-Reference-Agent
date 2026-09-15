@@ -1,0 +1,36 @@
+{
+    "test_id":  "P3-F06",
+    "title":  "Observationless Established Resolution",
+    "repository_baseline_commit":  "b86a0fb801b23198bf4760014f36b1559f614af4",
+    "governing_question":  "Can the native AuthorityResolution representation and V06 runtime execute a consequential action when the supplied resolution is ESTABLISHED and carries valid executable authority but carries zero observations?",
+    "adversarial_condition":  {
+                                  "resolution_status":  "ESTABLISHED",
+                                  "executable_authority_status":  "ACTIVE",
+                                  "executable_authority_epoch":  1,
+                                  "executable_permission":  "SEND",
+                                  "observation_count":  0,
+                                  "construction_route":  "DIRECT_NATIVE_AUTHORITY_RESOLUTION"
+                              },
+    "positive_representation_control":  "AuthorityResolution.established(active_authority) must continue to produce one observation containing that authority.",
+    "falsification_condition":  "The direct native observationless ESTABLISHED resolution is accepted at both V06 authority-resolution boundaries and a consequential messaging action commits.",
+    "containment_condition":  "The observationless ESTABLISHED resolution is rejected or execution is withheld before consequential commitment.",
+    "failure_classification":  "OBSERVATIONLESS_ESTABLISHED_RESOLUTION_EXECUTED__OBSERVATION_PRESENCE_CONTROL_NOT_ESTABLISHED",
+    "bounded_claim":  "This deterministic test examines only whether the native AuthorityResolution representation and V06 runtime require observation presence for a supplied ESTABLISHED executable authority. It does not establish observation authenticity, resolver correctness, source authority, distributed consensus, jurisdictional freshness, external provenance, or production deployment behavior.",
+    "source_hashes_sha256":  {
+                                 "authority_resolution":  "902E6D4FC93204EE7DC799A5F1F110A1B41AC52AF22276E1F4B308BC525CBFF0",
+                                 "execution_firewall_v06":  "688BCA67810747A053A4251974281AC2D5C435C0CEAC36CBFEF85A65A0D9DEBD",
+                                 "permit_v02":  "1BE9CED135D1C3E0498728B5E9AE0853E46E1925EA90EFF70A573E0F516C70A5",
+                                 "broker_v06":  "B220643B322356345E79EA37359D48BCDE004DCE09727B01F8BEC5E6DFCBE26F",
+                                 "messaging_demo_v06":  "C976315CB420599ACEC8F2D8E5ED0B4FE4FBB9B1B07CBC8CBBA3CBB3E79A67DE",
+                                 "witness_ledger":  "C940D48351E8F4A06F2008CE720A2187433556E18C49D6378A2FA27E6DCE40E5",
+                                 "constitution_yaml":  "6FF2C14C67DF4B009F81551AD55ECD4C1EA314B5827D7B039D0E21AD934D302A"
+                             },
+    "predecessor_context":  {
+                                "predecessor_test":  "P3-F05-S01",
+                                "predecessor_commit":  "b86a0fb801b23198bf4760014f36b1559f614af4",
+                                "predecessor_control":  "Supplied observations in an ESTABLISHED resolution must equal its executable authority.",
+                                "new_seam":  "P3-F05-S01 governs coherence of supplied observations but does not require any observation to be supplied."
+                            },
+    "execute_once":  true,
+    "no_retrospective_repair":  true
+}
