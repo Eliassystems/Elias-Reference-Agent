@@ -1,0 +1,94 @@
+{
+  "bounded_claim": "This deterministic test examines only whether the native AuthorityResolution representation permits a CONFLICT composed solely of identical supplied observations and whether V06 then treats that supplied status as a consequence-boundary conflict. It does not establish observation authenticity, resolver correctness, distributed consensus, jurisdictional freshness, external provenance, or production deployment behavior.",
+  "classification": "HOMOGENEOUS_CONFLICT_ACCEPTED__FALSE_CONFLICT_CAUSED_CONSEQUENCE_REFUSAL",
+  "divergent_conflict_control": {
+    "error": null,
+    "passed": true
+  },
+  "execution": {
+    "attempted": true,
+    "consequence_committed": false,
+    "exception": null,
+    "outbox_after": 0,
+    "outbox_before": 0,
+    "reasons": [
+      "CONSEQUENCE_AUTHORITY_CONFLICT"
+    ],
+    "status": "REFUSED_BEFORE_CONSEQUENCE"
+  },
+  "false_conflict_caused_refusal": true,
+  "homogeneous_conflict": {
+    "constructed": true,
+    "error": null,
+    "observation_count": 2,
+    "observations_identical": true
+  },
+  "repository_baseline_commit": "ed6ffa48d5b99951b9b52673f9802f5dad6f517f",
+  "resolver": {
+    "calls": 1,
+    "observation_counts": [
+      2
+    ],
+    "observation_hashes": [
+      [
+        "C8D473D58DCF061B4D284D08E79F75B6E6D850FF745D5A789EE91919BE5CB565",
+        "C8D473D58DCF061B4D284D08E79F75B6E6D850FF745D5A789EE91919BE5CB565"
+      ]
+    ],
+    "resolution_hashes": [
+      "D8F8B4DBD967213802C251442F43F448D1DAB5CD208802DE22EBF10A128AFEFB"
+    ],
+    "statuses": [
+      "CONFLICT"
+    ]
+  },
+  "source_identity": {
+    "constitution/constitution.yaml": {
+      "actual_sha256": "6FF2C14C67DF4B009F81551AD55ECD4C1EA314B5827D7B039D0E21AD934D302A",
+      "expected_sha256": "6FF2C14C67DF4B009F81551AD55ECD4C1EA314B5827D7B039D0E21AD934D302A",
+      "preserved": true
+    },
+    "core/authority.py": {
+      "actual_sha256": "E949C5C9E75DCB65301701363363AC6D118CD64D3AB38018957DA086EBB6B85C",
+      "expected_sha256": "E949C5C9E75DCB65301701363363AC6D118CD64D3AB38018957DA086EBB6B85C",
+      "preserved": true
+    },
+    "core/authority_resolution.py": {
+      "actual_sha256": "091997310F5A98F2E160CD1FD0A99D251DB55C1800A415C8B4987DA6554F7857",
+      "expected_sha256": "091997310F5A98F2E160CD1FD0A99D251DB55C1800A415C8B4987DA6554F7857",
+      "preserved": true
+    },
+    "core/execution_firewall_v06.py": {
+      "actual_sha256": "688BCA67810747A053A4251974281AC2D5C435C0CEAC36CBFEF85A65A0D9DEBD",
+      "expected_sha256": "688BCA67810747A053A4251974281AC2D5C435C0CEAC36CBFEF85A65A0D9DEBD",
+      "preserved": true
+    },
+    "core/permit_v02.py": {
+      "actual_sha256": "1BE9CED135D1C3E0498728B5E9AE0853E46E1925EA90EFF70A573E0F516C70A5",
+      "expected_sha256": "1BE9CED135D1C3E0498728B5E9AE0853E46E1925EA90EFF70A573E0F516C70A5",
+      "preserved": true
+    },
+    "tools/broker_v06.py": {
+      "actual_sha256": "B220643B322356345E79EA37359D48BCDE004DCE09727B01F8BEC5E6DFCBE26F",
+      "expected_sha256": "B220643B322356345E79EA37359D48BCDE004DCE09727B01F8BEC5E6DFCBE26F",
+      "preserved": true
+    },
+    "tools/messaging_demo_v06.py": {
+      "actual_sha256": "C976315CB420599ACEC8F2D8E5ED0B4FE4FBB9B1B07CBC8CBBA3CBB3E79A67DE",
+      "expected_sha256": "C976315CB420599ACEC8F2D8E5ED0B4FE4FBB9B1B07CBC8CBBA3CBB3E79A67DE",
+      "preserved": true
+    },
+    "witness/ledger.py": {
+      "actual_sha256": "C940D48351E8F4A06F2008CE720A2187433556E18C49D6378A2FA27E6DCE40E5",
+      "expected_sha256": "C940D48351E8F4A06F2008CE720A2187433556E18C49D6378A2FA27E6DCE40E5",
+      "preserved": true
+    }
+  },
+  "source_identity_preserved": true,
+  "test_id": "P3-F07",
+  "witness": {
+    "chain_errors": [],
+    "chain_valid": true,
+    "record_count": 3
+  }
+}

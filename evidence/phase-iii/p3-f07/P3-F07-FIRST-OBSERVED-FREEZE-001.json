@@ -1,0 +1,10 @@
+{
+  "classification": "HOMOGENEOUS_CONFLICT_ACCEPTED__FALSE_CONFLICT_CAUSED_CONSEQUENCE_REFUSAL",
+  "false_conflict_caused_refusal": true,
+  "freeze_type": "FIRST_OBSERVED_RESULT_FREEZE",
+  "homogeneous_conflict_constructed": true,
+  "no_retrospective_repair": true,
+  "repository_baseline_commit": "ed6ffa48d5b99951b9b52673f9802f5dad6f517f",
+  "source_identity_preserved": true,
+  "test_id": "P3-F07"
+}
