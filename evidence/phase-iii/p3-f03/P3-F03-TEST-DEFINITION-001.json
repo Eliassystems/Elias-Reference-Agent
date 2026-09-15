@@ -1,0 +1,29 @@
+﻿{
+  "test_id": "P3-F03",
+  "phase": "PHASE-III-FALSIFICATION",
+  "title": "Native Authority Indeterminate at Consequence Boundary",
+  "antecedent_architecture": "V05",
+  "purpose": "Determine whether V05 natively distinguishes authority information that exists but is insufficient to establish present standing from ESTABLISHED, CONFLICT, or UNAVAILABLE authority states.",
+  "condition": {
+    "initial_authority": "Authentic ACTIVE AuthorityState with SEND permission",
+    "permit": "Validly issued against the observed authority state",
+    "boundary_information": "One authentic authority observation remains available",
+    "freshness_or_currentness": "Not established",
+    "boundary_resolution": "AuthorityResolutionStatus.INDETERMINATE",
+    "current_executable_authority": "Absent"
+  },
+  "required_discriminators": [
+    "Resolver returns native AuthorityResolution",
+    "Resolution status is INDETERMINATE",
+    "At least one authentic authority observation is preserved",
+    "Resolution carries no executable authority",
+    "No consequence occurs",
+    "Refusal reason is CONSEQUENCE_AUTHORITY_INDETERMINATE",
+    "Witness contains AUTHORITY_RESOLUTION_INDETERMINATE exactly once",
+    "Witness preserves the supplied observation hash",
+    "Witness does not misclassify the state as CONFLICT or UNAVAILABLE",
+    "Witness chain remains valid"
+  ],
+  "predetermined_pass": false,
+  "bounded_claim": "Success establishes only native representation and deterministic local consequence containment for an explicitly supplied INDETERMINATE authority-resolution state where authority information exists but present standing is not established."
+}

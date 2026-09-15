@@ -1,0 +1,79 @@
+{
+  "authority_observation": {
+    "canonical_payload": {
+      "actor_id": "P3-F03-HUMAN-001",
+      "authority_source": "HUMAN_SOVEREIGN_AUTHORITY",
+      "epoch": 1,
+      "permissions": [
+        "SEND"
+      ],
+      "reason": "INITIAL_AUTHORITY_STATE",
+      "status": "ACTIVE"
+    },
+    "state_hash": "E0F5178741363DB2353B0E698C9D4B6D566A8485C7ABBBD045B1B0BEA03258AD"
+  },
+  "bounded_interpretation": "This deterministic local test establishes only whether V05 natively represents an explicitly supplied INDETERMINATE authority-resolution state in which authority information exists but present standing is not established, preserves the supplied observation, records that specific governance condition, and withholds consequence.",
+  "classification": "NATIVE_AUTHORITY_INDETERMINATE_REPRESENTATION_AND_CONTAINMENT_ESTABLISHED",
+  "execution_observation": {
+    "consequence_contained": true,
+    "exception_captured": false,
+    "exception_message": "",
+    "exception_type": "",
+    "executed": false,
+    "explicit_indeterminate_reason": true,
+    "outbox_after": 0,
+    "outbox_before": 0,
+    "reasons": [
+      "CONSEQUENCE_AUTHORITY_INDETERMINATE"
+    ],
+    "resolver_called_once": true,
+    "resolver_calls": 1,
+    "result_returned": true,
+    "status": "REFUSED_BEFORE_CONSEQUENCE"
+  },
+  "native_indeterminate_control_established": true,
+  "native_resolution": {
+    "canonical_payload": {
+      "authority": null,
+      "observations": [
+        {
+          "actor_id": "P3-F03-HUMAN-001",
+          "authority_source": "HUMAN_SOVEREIGN_AUTHORITY",
+          "epoch": 1,
+          "permissions": [
+            "SEND"
+          ],
+          "reason": "INITIAL_AUTHORITY_STATE",
+          "status": "ACTIVE"
+        }
+      ],
+      "reason": "AUTHORITY_OBSERVATION_PRESENT_BUT_CURRENTNESS_NOT_ESTABLISHED",
+      "status": "INDETERMINATE"
+    },
+    "executable_authority_absent": true,
+    "is_authority_resolution": true,
+    "one_observation_preserved": true,
+    "state_hash": "367AC6CE3B7873962ADA6044FBC35031BB0D7DD76E3AA49B3A1F68304B639038",
+    "status_is_indeterminate": true
+  },
+  "observed_at_utc": "2026-09-15T11:10:44.764354+00:00",
+  "test_id": "P3-F03",
+  "witness_observation": {
+    "chain_errors": [],
+    "chain_valid": true,
+    "event_types": [
+      "PRE_EXECUTION_AUTHORIZED",
+      "AUTHORITY_RESOLUTION_INDETERMINATE",
+      "EXECUTION_REFUSED"
+    ],
+    "expected_observation_hash": "E0F5178741363DB2353B0E698C9D4B6D566A8485C7ABBBD045B1B0BEA03258AD",
+    "indeterminate_event_present_once": true,
+    "indeterminate_record_truthful": true,
+    "no_conflict_event": true,
+    "no_unavailable_event": true,
+    "observation_hash_preserved": true,
+    "recorded_observation_hashes": [
+      "E0F5178741363DB2353B0E698C9D4B6D566A8485C7ABBBD045B1B0BEA03258AD"
+    ]
+  }
+}
