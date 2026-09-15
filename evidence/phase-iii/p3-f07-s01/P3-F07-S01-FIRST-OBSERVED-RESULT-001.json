@@ -1,0 +1,48 @@
+{
+  "actual_source_sha256": "D1B052E1F413ADAFA71C8B7D3E0AB470817E901CBA28D1CF145BF10EA7A585EF",
+  "antecedent_commit": "7079fe51443c680caa7e73c98cc53ed5b1f71412",
+  "antecedent_source_sha256": "091997310F5A98F2E160CD1FD0A99D251DB55C1800A415C8B4987DA6554F7857",
+  "bounded_claim": "This deterministic successor test establishes only that the native AuthorityResolution representation rejects a CONFLICT whose supplied observations are all identical, while preserving materially divergent CONFLICT representation and the previously established ESTABLISHED presence/coherence controls. It does not establish observation authenticity, resolver correctness, distributed consensus, jurisdictional freshness, external provenance, or production deployment behavior.",
+  "classification": "HOMOGENEOUS_CONFLICT_REJECTED__CONFLICT_DIVERGENCE_CONTROL_ESTABLISHED",
+  "divergent_conflict_control": {
+    "error": null,
+    "passed": true
+  },
+  "established_coherence_control": {
+    "error": {
+      "message": "ESTABLISHED resolution observations must match executable authority",
+      "type": "ValueError"
+    },
+    "preserved": true
+  },
+  "established_observation_presence_control": {
+    "error": {
+      "message": "ESTABLISHED resolution requires at least one observation",
+      "type": "ValueError"
+    },
+    "preserved": true
+  },
+  "established_positive_control": {
+    "error": null,
+    "passed": true
+  },
+  "homogeneous_conflict_control": {
+    "constructed": false,
+    "error": {
+      "message": "CONFLICT resolution requires materially different observations",
+      "type": "ValueError"
+    },
+    "rejected": true
+  },
+  "minimum_conflict_count_control": {
+    "error": {
+      "message": "CONFLICT resolution requires at least two observations",
+      "type": "ValueError"
+    },
+    "preserved": true
+  },
+  "source_identity_preserved": true,
+  "successor_control_established": true,
+  "successor_source_sha256": "D1B052E1F413ADAFA71C8B7D3E0AB470817E901CBA28D1CF145BF10EA7A585EF",
+  "test_id": "P3-F07-S01"
+}

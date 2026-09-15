@@ -1,0 +1,24 @@
+{
+  "antecedent_authority_resolution_sha256": "091997310F5A98F2E160CD1FD0A99D251DB55C1800A415C8B4987DA6554F7857",
+  "antecedent_classification": "HOMOGENEOUS_CONFLICT_ACCEPTED__FALSE_CONFLICT_CAUSED_CONSEQUENCE_REFUSAL",
+  "antecedent_commit": "7079fe51443c680caa7e73c98cc53ed5b1f71412",
+  "antecedent_failure": "P3-F07",
+  "bounded_claim": "This successor test concerns only semantic divergence within supplied CONFLICT observations. It does not establish observation authenticity, resolver correctness, distributed consensus, jurisdictional freshness, external provenance, or production deployment behavior.",
+  "governance": {
+    "first_observed_result_controls": true,
+    "no_retrospective_repair": true,
+    "source_unchanged_at_definition_time": true
+  },
+  "governing_question": "Does the successor AuthorityResolution representation reject a CONFLICT whose supplied observations are all identical, while preserving valid CONFLICT representation when at least two observations materially differ?",
+  "negative_control": "Two identical AuthorityState observations supplied as CONFLICT must be rejected.",
+  "phase": "III",
+  "planned_control": "CONFLICT must retain the existing minimum observation count of two and must contain at least one observation different from another supplied observation.",
+  "positive_controls": [
+    "Two materially different AuthorityState observations remain valid as CONFLICT.",
+    "Existing ESTABLISHED observation-presence control remains preserved.",
+    "Existing ESTABLISHED observation-coherence control remains preserved."
+  ],
+  "status": "PRE_EXECUTION_FROZEN",
+  "test_id": "P3-F07-S01",
+  "title": "Homogeneous Conflict Rejection"
+}

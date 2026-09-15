@@ -1,0 +1,10 @@
+{
+  "antecedent_commit": "7079fe51443c680caa7e73c98cc53ed5b1f71412",
+  "classification": "HOMOGENEOUS_CONFLICT_REJECTED__CONFLICT_DIVERGENCE_CONTROL_ESTABLISHED",
+  "freeze_type": "FIRST_OBSERVED_RESULT_FREEZE",
+  "no_retrospective_repair": true,
+  "source_identity_preserved": true,
+  "successor_control_established": true,
+  "successor_source_sha256": "D1B052E1F413ADAFA71C8B7D3E0AB470817E901CBA28D1CF145BF10EA7A585EF",
+  "test_id": "P3-F07-S01"
+}

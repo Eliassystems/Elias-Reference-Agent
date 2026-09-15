@@ -98,6 +98,18 @@ class AuthorityResolution:
                 "CONFLICT resolution requires at least two observations"
             )
 
+        if (
+            self.status
+            == AuthorityResolutionStatus.CONFLICT
+            and all(
+                observation == self.observations[0]
+                for observation in self.observations[1:]
+            )
+        ):
+            raise ValueError(
+                "CONFLICT resolution requires materially different observations"
+            )
+
     @classmethod
     def established(
         cls,
