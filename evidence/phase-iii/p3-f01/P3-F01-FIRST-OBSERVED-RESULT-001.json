@@ -1,0 +1,56 @@
+{
+  "authority_observation_a": {
+    "canonical_payload": {
+      "actor_id": "P3-F01-HUMAN-001",
+      "authority_source": "HUMAN_SOVEREIGN_AUTHORITY",
+      "epoch": 1,
+      "permissions": [
+        "SEND"
+      ],
+      "reason": "INITIAL_AUTHORITY_STATE",
+      "status": "ACTIVE"
+    },
+    "state_hash": "BDDFC948AB8E5B3589BE8819A525A06747359AD12B4B1A35F507CE65044B4C92"
+  },
+  "authority_observation_b": {
+    "canonical_payload": {
+      "actor_id": "P3-F01-HUMAN-001",
+      "authority_source": "HUMAN_SOVEREIGN_AUTHORITY",
+      "epoch": 2,
+      "permissions": [],
+      "reason": "P3-F01_REPLICA_B_REVOCATION",
+      "status": "REVOKED"
+    },
+    "state_hash": "9558C165B5B416330F3D65E4119F9E816EA7B7B2639A1FB39FE0C31CC092E391"
+  },
+  "bounded_interpretation": "This test distinguishes consequence containment from native representation of conflicting legitimate authority observations. Refusal caused by the existing single-AuthorityState interface does not establish that V04 semantically understands split-brain authority.",
+  "classification": "CONTAINMENT_OBSERVED__CONFLICT_NATIVE_REPRESENTATION_NOT_ESTABLISHED",
+  "consequence_containment_observed": true,
+  "native_conflict_representation_established": false,
+  "observations": {
+    "exception_captured": false,
+    "exception_message": "",
+    "exception_type": "",
+    "executed": false,
+    "outbox_after": 0,
+    "outbox_before": 0,
+    "reasons": [
+      "CONSEQUENCE_AUTHORITY_NOT_ESTABLISHED"
+    ],
+    "resolver_called_once": true,
+    "resolver_calls": 1,
+    "resolver_return_is_authority_state": false,
+    "resolver_return_type": "AuthorityConflictObservation",
+    "result_returned": true,
+    "status": "REFUSED_BEFORE_CONSEQUENCE",
+    "witness_chain_errors": [],
+    "witness_chain_valid": true,
+    "witness_event_types": [
+      "PRE_EXECUTION_AUTHORIZED",
+      "EXECUTION_REFUSED"
+    ]
+  },
+  "observed_at_utc": "2026-09-15T10:48:22.168941+00:00",
+  "test_harness_only_conflict_object": true,
+  "test_id": "P3-F01"
+}

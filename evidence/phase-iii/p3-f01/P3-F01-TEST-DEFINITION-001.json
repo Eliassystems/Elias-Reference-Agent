@@ -1,0 +1,23 @@
+﻿{
+  "test_id": "P3-F01",
+  "phase": "PHASE-III-FALSIFICATION",
+  "title": "Conflicting Legitimate Authority Observations",
+  "purpose": "Determine how the existing V04 execution boundary behaves when two type-correct authority observations from the same legitimate lineage disagree about present standing.",
+  "baseline": "ERA-Phase-II-v1.0-baseline plus README successor state",
+  "adversarial_condition": {
+    "observation_a": "ACTIVE authority with SEND at epoch N",
+    "observation_b": "REVOKED authority at epoch N+1",
+    "relationship": "Both observations derive from the same AuthorityState lineage.",
+    "uncertainty": "The resolver cannot truthfully establish one observation as the single current authoritative state."
+  },
+  "questions": [
+    "Does any real consequence occur?",
+    "Can the current authority-resolution interface represent legitimate conflicting observations as a first-class governance state?",
+    "If conflict cannot be represented natively, how does the existing execution boundary classify it?"
+  ],
+  "predetermined_pass": false,
+  "prohibited_interpretation": [
+    "A refusal alone must not be represented as proof that V04 understands split-brain authority.",
+    "A non-AuthorityState rejection must be distinguished from native conflict representation."
+  ]
+}
