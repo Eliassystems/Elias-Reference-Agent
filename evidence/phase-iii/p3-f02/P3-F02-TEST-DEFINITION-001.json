@@ -1,0 +1,26 @@
+﻿{
+  "test_id": "P3-F02",
+  "phase": "PHASE-III-FALSIFICATION",
+  "title": "Native Authority Unavailable at Consequence Boundary",
+  "antecedent_architecture": "V05",
+  "purpose": "Determine whether V05 natively distinguishes unavailable present-tense authority information from conflict, indeterminacy, or ordinary authority denial and withholds consequence.",
+  "condition": {
+    "initial_authority": "Authentic ACTIVE AuthorityState with SEND permission",
+    "permit": "Validly issued before consequence",
+    "boundary_resolution": "AuthorityResolutionStatus.UNAVAILABLE",
+    "boundary_observations": "None available",
+    "current_executable_authority": "Absent"
+  },
+  "required_discriminators": [
+    "Resolver returns native AuthorityResolution",
+    "Resolution status is UNAVAILABLE",
+    "Resolution carries no executable authority",
+    "No consequence occurs",
+    "Refusal reason is CONSEQUENCE_AUTHORITY_UNAVAILABLE",
+    "Witness contains AUTHORITY_RESOLUTION_UNAVAILABLE exactly once",
+    "Witness does not misclassify the state as CONFLICT or INDETERMINATE",
+    "Witness chain remains valid"
+  ],
+  "predetermined_pass": false,
+  "bounded_claim": "Success establishes only native representation and deterministic local consequence containment for an explicitly supplied UNAVAILABLE authority-resolution state. It does not establish production service availability, distributed consensus, network freshness, or external authority provenance."
+}

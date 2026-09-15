@@ -1,0 +1,50 @@
+{
+  "bounded_interpretation": "This deterministic local test establishes only whether V05 natively represents an explicitly supplied UNAVAILABLE authority-resolution state, records that specific governance condition, and withholds consequence. It does not establish production authority-service availability, distributed consensus, network freshness, or external authority provenance.",
+  "classification": "NATIVE_AUTHORITY_UNAVAILABLE_REPRESENTATION_AND_CONTAINMENT_ESTABLISHED",
+  "execution_observation": {
+    "consequence_contained": true,
+    "exception_captured": false,
+    "exception_message": "",
+    "exception_type": "",
+    "executed": false,
+    "explicit_unavailable_reason": true,
+    "outbox_after": 0,
+    "outbox_before": 0,
+    "reasons": [
+      "CONSEQUENCE_AUTHORITY_UNAVAILABLE"
+    ],
+    "resolver_called_once": true,
+    "resolver_calls": 1,
+    "result_returned": true,
+    "status": "REFUSED_BEFORE_CONSEQUENCE"
+  },
+  "native_resolution": {
+    "canonical_payload": {
+      "authority": null,
+      "observations": [],
+      "reason": "PRESENT_AUTHORITY_INFORMATION_UNAVAILABLE_AT_CONSEQUENCE_BOUNDARY",
+      "status": "UNAVAILABLE"
+    },
+    "executable_authority_absent": true,
+    "is_authority_resolution": true,
+    "state_hash": "97321BFFA0DA7A1286B4E534E8A11D0FC811A2FE0AA1F6B06A1430AF36070373",
+    "status_is_unavailable": true,
+    "zero_observations_preserved": true
+  },
+  "native_unavailable_control_established": true,
+  "observed_at_utc": "2026-09-15T11:05:57.931375+00:00",
+  "test_id": "P3-F02",
+  "witness_observation": {
+    "chain_errors": [],
+    "chain_valid": true,
+    "event_types": [
+      "PRE_EXECUTION_AUTHORIZED",
+      "AUTHORITY_RESOLUTION_UNAVAILABLE",
+      "EXECUTION_REFUSED"
+    ],
+    "no_conflict_event": true,
+    "no_indeterminate_event": true,
+    "unavailable_event_present_once": true,
+    "unavailable_record_truthful": true
+  }
+}
