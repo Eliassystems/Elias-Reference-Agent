@@ -1,0 +1,38 @@
+{
+  "boundary_revalidated_present": true,
+  "bounded_finding": "Under frozen deterministic P2-H14-S01, when the local action returned successfully but the normal EXECUTION_COMPLETED record could not be persisted, the successor attempted a distinct durable uncertainty record and returned an executed=true state marked EXECUTED_EVIDENCE_INCOMPLETE.",
+  "classification": "POST_ACTION_COMPLETION_FAILURE_TRUTHFULLY_WITNESSED",
+  "completion_attempted_once": true,
+  "completion_attempts": 1,
+  "consequence_occurred": true,
+  "event_types": [
+    "PRE_EXECUTION_AUTHORIZED",
+    "CONSEQUENCE_BOUNDARY_REVALIDATED",
+    "EXECUTION_COMPLETION_PERSISTENCE_FAILED"
+  ],
+  "exception_captured": false,
+  "exception_message": "",
+  "exception_type": "",
+  "fallback_attempted_once": true,
+  "fallback_attempts": 1,
+  "fallback_present": true,
+  "fallback_truthful": true,
+  "nonclaim": "This establishes only the deterministic local successor behavior when the normal completion record fails but the fallback witness write remains available. It does not establish recovery when the ledger as a whole is unavailable, nor external, distributed or production transaction assurance.",
+  "normal_completion_absent": true,
+  "outbox_after": 1,
+  "outbox_before": 0,
+  "permit_consumed": true,
+  "pre_execution_authorized_present": true,
+  "predecessor_commit": "e4e6d2e",
+  "result_executed": true,
+  "result_reasons": [
+    "EXECUTION_COMPLETION_RECORD_FAILED"
+  ],
+  "result_returned": true,
+  "result_status": "EXECUTED_EVIDENCE_INCOMPLETE",
+  "result_truthful": true,
+  "successor_pass": true,
+  "test_id": "P2-H14-S01",
+  "witness_chain_errors": [],
+  "witness_chain_valid": true
+}

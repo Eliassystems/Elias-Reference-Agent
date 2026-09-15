@@ -1,0 +1,27 @@
+﻿{
+    "object_id":  "P2-H14-S01-FIRST-OBSERVED-FREEZE-001",
+    "test_id":  "P2-H14-S01",
+    "classification":  "POST_ACTION_COMPLETION_FAILURE_TRUTHFULLY_WITNESSED",
+    "prospective_commit":  "e793eda",
+    "predecessor":  "P2-H14_POST_ACTION_COMPLETION_RECORD_GAP_OBSERVED",
+    "predecessor_p2_h14_freeze_sha256":  "7DB0DCE21DE6A1F883C97BC9E7C0B584CD3578030D3EE41C23E5F0BC1F94E64E",
+    "preserved_firewall_v03_sha256":  "FE8556289A20757B04564BD55D1062076A3993AA16132A8F32133A7CA0ED069C",
+    "successor_firewall_v04_sha256":  "4A9C21160D985911F9B8D8B0A053BA8CC56354CC1FF54D5823BA793CAB682411",
+    "successor_broker_v04_sha256":  "668FC6E6322F97E657E548A6A57DC9C8321B036ACF4BA5116E8E6EDA61B8A516",
+    "test_script_sha256":  "E42280AB9E13D1BCBF8D56B1C14596D7D32863083EBC8455E7053EFD1ACD62DD",
+    "test_definition_sha256":  "F960EAAF834AD1CF98EFC459DB68C7D322F955A9B4EBBE5AE78ABEE074D2D938",
+    "first_observed_result_sha256":  "455D5A4B7A6CE25A014378E2E36F71FD345D2A37047C43DC0F5B94EA06CBA6D8",
+    "witness_sha256":  "89E61FE09D6A15342FE31FB90FE448A619AEE76C4B3FF2DCF0D308BCBE770D79",
+    "observed_behavior":  {
+                              "consequence_occurred":  true,
+                              "executed":  true,
+                              "status":  "EXECUTED_EVIDENCE_INCOMPLETE",
+                              "reason":  "EXECUTION_COMPLETION_RECORD_FAILED",
+                              "completion_record_present":  false,
+                              "fallback_uncertainty_record_present":  true,
+                              "fallback_truthful":  true,
+                              "permit_consumed":  true,
+                              "witness_chain_valid":  true
+                          },
+    "claim_boundary":  "Frozen deterministic local Reference Agent successor behavior only. No claim of total-ledger recovery, distributed transaction assurance, external atomicity, physical-storage recovery, or production deployment."
+}
