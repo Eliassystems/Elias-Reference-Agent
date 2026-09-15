@@ -1,0 +1,13 @@
+{
+  "asserted_authority_locally_constructed": true,
+  "classification": "LOCALLY_ASSERTED_DIVERGENT_CONFLICT_ACCEPTED__CONSEQUENCE_REFUSAL_WITHOUT_NATIVE_PROVENANCE_ESTABLISHMENT",
+  "definition_identity_preserved": true,
+  "divergent_conflict_constructed": true,
+  "freeze_type": "FIRST_OBSERVED_RESULT_FREEZE",
+  "no_retrospective_repair": true,
+  "positive_control_passed": true,
+  "repository_baseline_commit": "3b2a43110bb209d2c121ed8655f7a62e1e7f2d76",
+  "seam_observed": true,
+  "source_identity_preserved": true,
+  "test_id": "P3-F08"
+}

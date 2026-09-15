@@ -1,0 +1,23 @@
+{
+  "adversarial_condition": "Supply a native AuthorityResolution.CONFLICT containing two materially different AuthorityState values that are locally constructible from asserted actor/source/epoch/permission data, without introducing any external signature, issuer attestation, registry proof, or provenance verification.",
+  "antecedent": "P3-F07-S01",
+  "baseline_commit": "3b2a43110bb209d2c121ed8655f7a62e1e7f2d76",
+  "bounded_claim": "This test concerns only the native trust boundary between supplied AuthorityState observations, AuthorityResolution.CONFLICT, and ExecutionFirewallV06 consequence refusal. It does not establish that an external attacker can reach or control an authority resolver in production, does not establish cryptographic forgery, and does not assess external identity registries, signatures, issuer attestations, deployment access controls, or distributed consensus.",
+  "expected_observation": "Determine whether semantic divergence alone is sufficient for native CONFLICT standing and whether V06 consequently emits CONSEQUENCE_AUTHORITY_CONFLICT before consequence.",
+  "governance": {
+    "first_observed_result_controls": true,
+    "no_retrospective_repair": true,
+    "source_unchanged_at_definition_time": true
+  },
+  "governing_question": "Can two materially different, locally constructible AuthorityState assertions whose authenticity or provenance has not been natively established be accepted as a native CONFLICT and thereby cause ExecutionFirewallV06 to withhold an otherwise-authorized consequence?",
+  "phase": "III",
+  "positive_control": "A normal ESTABLISHED resolution carrying the legitimate active authority must preserve the otherwise-authorized consequence path.",
+  "source_hashes_sha256": {
+    "core/authority.py": "E949C5C9E75DCB65301701363363AC6D118CD64D3AB38018957DA086EBB6B85C",
+    "core/authority_resolution.py": "D1B052E1F413ADAFA71C8B7D3E0AB470817E901CBA28D1CF145BF10EA7A585EF",
+    "core/execution_firewall_v06.py": "688BCA67810747A053A4251974281AC2D5C435C0CEAC36CBFEF85A65A0D9DEBD"
+  },
+  "status": "PRE_EXECUTION_FROZEN",
+  "test_id": "P3-F08",
+  "title": "Unauthenticated Divergent Conflict Consequence Refusal"
+}

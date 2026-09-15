@@ -1,0 +1,102 @@
+{
+  "adversarial_execution": {
+    "consequence_committed": false,
+    "exception": null,
+    "outbox_after": 1,
+    "outbox_before": 1,
+    "reasons": [
+      "CONSEQUENCE_AUTHORITY_CONFLICT"
+    ],
+    "resolver_calls": 1,
+    "resolver_statuses": [
+      "CONFLICT"
+    ],
+    "status": "REFUSED_BEFORE_CONSEQUENCE"
+  },
+  "asserted_divergent_observation": {
+    "canonical_payload": {
+      "actor_id": "P3-F08-HUMAN-001",
+      "authority_source": "HUMAN_SOVEREIGN_AUTHORITY",
+      "epoch": 2,
+      "permissions": [
+        "SEND"
+      ],
+      "reason": "INITIAL_AUTHORITY_STATE",
+      "status": "ACTIVE"
+    },
+    "construction_error": null,
+    "locally_constructed": true,
+    "materially_different": true,
+    "native_provenance_proof_supplied": false,
+    "state_hash": "56D08C2FC84A5AF3BC443FCFFB7D3A167229C9AEC9C1A290E4C446B8577883C2"
+  },
+  "bounded_claim": "This deterministic test examines only whether two materially different locally constructible AuthorityState assertions can form a native CONFLICT without native provenance establishment and whether ExecutionFirewallV06 then treats that supplied CONFLICT as sufficient to refuse an otherwise-authorized consequence. It does not establish that an external attacker can reach or control the resolver in production, does not establish cryptographic forgery, and does not assess external registries, signatures, issuer attestations, deployment access controls, or distributed consensus.",
+  "classification": "LOCALLY_ASSERTED_DIVERGENT_CONFLICT_ACCEPTED__CONSEQUENCE_REFUSAL_WITHOUT_NATIVE_PROVENANCE_ESTABLISHMENT",
+  "definition_identity_preserved": true,
+  "divergent_conflict": {
+    "constructed": true,
+    "construction_error": null,
+    "observation_count": 2,
+    "resolution_hash": "0570D75A4B125FCAF132253333AD1217CC4E6916639721DE5C4319F6C266523C"
+  },
+  "positive_control": {
+    "exception": null,
+    "outbox_after": 1,
+    "outbox_before": 0,
+    "passed": true,
+    "reasons": [],
+    "resolver_calls": 2,
+    "status": "EXECUTED"
+  },
+  "repository_baseline_commit": "3b2a43110bb209d2c121ed8655f7a62e1e7f2d76",
+  "seam_observed": true,
+  "source_identity": {
+    "constitution/constitution.yaml": {
+      "actual_sha256": "6FF2C14C67DF4B009F81551AD55ECD4C1EA314B5827D7B039D0E21AD934D302A",
+      "expected_sha256": "6FF2C14C67DF4B009F81551AD55ECD4C1EA314B5827D7B039D0E21AD934D302A",
+      "preserved": true
+    },
+    "core/authority.py": {
+      "actual_sha256": "E949C5C9E75DCB65301701363363AC6D118CD64D3AB38018957DA086EBB6B85C",
+      "expected_sha256": "E949C5C9E75DCB65301701363363AC6D118CD64D3AB38018957DA086EBB6B85C",
+      "preserved": true
+    },
+    "core/authority_resolution.py": {
+      "actual_sha256": "D1B052E1F413ADAFA71C8B7D3E0AB470817E901CBA28D1CF145BF10EA7A585EF",
+      "expected_sha256": "D1B052E1F413ADAFA71C8B7D3E0AB470817E901CBA28D1CF145BF10EA7A585EF",
+      "preserved": true
+    },
+    "core/execution_firewall_v06.py": {
+      "actual_sha256": "688BCA67810747A053A4251974281AC2D5C435C0CEAC36CBFEF85A65A0D9DEBD",
+      "expected_sha256": "688BCA67810747A053A4251974281AC2D5C435C0CEAC36CBFEF85A65A0D9DEBD",
+      "preserved": true
+    },
+    "core/permit_v02.py": {
+      "actual_sha256": "1BE9CED135D1C3E0498728B5E9AE0853E46E1925EA90EFF70A573E0F516C70A5",
+      "expected_sha256": "1BE9CED135D1C3E0498728B5E9AE0853E46E1925EA90EFF70A573E0F516C70A5",
+      "preserved": true
+    },
+    "tools/broker_v06.py": {
+      "actual_sha256": "B220643B322356345E79EA37359D48BCDE004DCE09727B01F8BEC5E6DFCBE26F",
+      "expected_sha256": "B220643B322356345E79EA37359D48BCDE004DCE09727B01F8BEC5E6DFCBE26F",
+      "preserved": true
+    },
+    "tools/messaging_demo_v06.py": {
+      "actual_sha256": "C976315CB420599ACEC8F2D8E5ED0B4FE4FBB9B1B07CBC8CBBA3CBB3E79A67DE",
+      "expected_sha256": "C976315CB420599ACEC8F2D8E5ED0B4FE4FBB9B1B07CBC8CBBA3CBB3E79A67DE",
+      "preserved": true
+    },
+    "witness/ledger.py": {
+      "actual_sha256": "C940D48351E8F4A06F2008CE720A2187433556E18C49D6378A2FA27E6DCE40E5",
+      "expected_sha256": "C940D48351E8F4A06F2008CE720A2187433556E18C49D6378A2FA27E6DCE40E5",
+      "preserved": true
+    }
+  },
+  "source_identity_preserved": true,
+  "test_id": "P3-F08",
+  "witness": {
+    "chain_errors": [],
+    "chain_valid": true,
+    "record_count": 7
+  }
+}
