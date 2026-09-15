@@ -1,0 +1,26 @@
+﻿{
+  "test_id": "P3-F04",
+  "phase": "PHASE-III-FALSIFICATION",
+  "title": "Post-Resolution Authority Revocation Before Consequence",
+  "antecedent_architecture": "V05",
+  "purpose": "Determine whether authority revocation occurring after V05 has resolved and revalidated ESTABLISHED authority but before the physical demo side effect is committed is detected and contained.",
+  "condition": {
+    "initial_authority": "ACTIVE authority with SEND permission",
+    "boundary_resolution": "ESTABLISHED",
+    "boundary_validation": "Valid against initial authority",
+    "mutation": "Authority revoked after CONSEQUENCE_BOUNDARY_REVALIDATED and before MessagingDemoTool outbox mutation",
+    "second_authority_resolution": "Not assumed",
+    "consequence": "Observed from demo outbox"
+  },
+  "required_observations": [
+    "Initial resolver call returns ESTABLISHED authority",
+    "CONSEQUENCE_BOUNDARY_REVALIDATED occurs before revocation",
+    "Authority changes to REVOKED before demo side effect",
+    "Resolver call count is preserved",
+    "Demo consequence state is measured",
+    "Witness chain validity is measured",
+    "No result is predetermined"
+  ],
+  "predetermined_pass": false,
+  "bounded_claim": "This deterministic local test evaluates only the V05 interval between consequence-boundary authority revalidation and the demo tool side effect. It does not establish real-network race behaviour, distributed revocation propagation, operating-system atomicity, or production transactional guarantees."
+}

@@ -1,0 +1,97 @@
+{
+  "bounded_interpretation": "This deterministic local test evaluates the V05 interval after an ESTABLISHED authority resolution and consequence-boundary revalidation but before the MessagingDemoTool side effect. A finding that consequence was not contained means only that V05 did not perform another authority resolution within this tested local interval. It does not establish behaviour of production networks, distributed revocation systems, operating-system primitives, or transactional external tools.",
+  "classification": "POST_RESOLUTION_AUTHORITY_REVOCATION_CONSEQUENCE_NOT_CONTAINED",
+  "execution_observation": {
+    "consequence_committed": true,
+    "exception_captured": false,
+    "exception_message": "",
+    "exception_type": "",
+    "executed": true,
+    "outbox_after": 1,
+    "outbox_before": 0,
+    "outbox_snapshot": [
+      {
+        "content": "P3-F04 POST-RESOLUTION REVOCATION TEST",
+        "delivery_index": 1,
+        "target": "P3-F04-RECIPIENT"
+      }
+    ],
+    "reasons": [],
+    "result_returned": true,
+    "status": "EXECUTED"
+  },
+  "final_live_authority": {
+    "canonical_payload": {
+      "actor_id": "P3-F04-HUMAN-001",
+      "authority_source": "HUMAN_SOVEREIGN_AUTHORITY",
+      "epoch": 2,
+      "permissions": [],
+      "reason": "P3-F04_POST_BOUNDARY_PRE_CONSEQUENCE_REVOCATION",
+      "status": "REVOKED"
+    },
+    "epoch_advanced": true,
+    "revoked": true,
+    "state_hash": "C37DCFFBA1E74AD948BABC9F15BA8B1F5CC732C5C58FD01E753AD0364D1A523E"
+  },
+  "initial_authority": {
+    "canonical_payload": {
+      "actor_id": "P3-F04-HUMAN-001",
+      "authority_source": "HUMAN_SOVEREIGN_AUTHORITY",
+      "epoch": 1,
+      "permissions": [
+        "SEND"
+      ],
+      "reason": "INITIAL_AUTHORITY_STATE",
+      "status": "ACTIVE"
+    },
+    "state_hash": "50C2996C9346156F3366DB8FD298584762DE754D3B931E522C39943BD92683EA"
+  },
+  "observed_at_utc": "2026-09-15T11:21:06.827503+00:00",
+  "post_resolution_revocation_contained": false,
+  "post_resolution_revocation_not_contained": true,
+  "resolver_observation": {
+    "called_once": true,
+    "calls": 1,
+    "observed_epochs": [
+      1
+    ],
+    "observed_hashes": [
+      "50C2996C9346156F3366DB8FD298584762DE754D3B931E522C39943BD92683EA"
+    ],
+    "observed_statuses": [
+      "ACTIVE"
+    ]
+  },
+  "test_id": "P3-F04",
+  "timeline_observation": {
+    "action_position": 3,
+    "boundary_position": 2,
+    "completion_after_side_effect": true,
+    "completion_position": 6,
+    "ordering_observed": true,
+    "resolver_position": 1,
+    "revocation_before_consequence": true,
+    "revocation_position": 4,
+    "side_effect_position": 5,
+    "timeline": [
+      "WITNESS:PRE_EXECUTION_AUTHORIZED",
+      "RESOLVER:ACTIVE:EPOCH_1",
+      "WITNESS:CONSEQUENCE_BOUNDARY_REVALIDATED",
+      "ACTION_ENTERED",
+      "AUTHORITY_REVOKED:REVOKED:EPOCH_2",
+      "SIDE_EFFECT_COMMITTED",
+      "WITNESS:EXECUTION_COMPLETED"
+    ]
+  },
+  "witness_observation": {
+    "boundary_event_present_once": true,
+    "chain_errors": [],
+    "chain_valid": true,
+    "completion_event_present_once": true,
+    "event_types": [
+      "PRE_EXECUTION_AUTHORIZED",
+      "CONSEQUENCE_BOUNDARY_REVALIDATED",
+      "EXECUTION_COMPLETED"
+    ]
+  }
+}
