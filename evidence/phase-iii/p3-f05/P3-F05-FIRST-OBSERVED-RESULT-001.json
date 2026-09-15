@@ -1,0 +1,162 @@
+{
+  "active_authority": {
+    "canonical_payload": {
+      "actor_id": "P3-F05-HUMAN-001",
+      "authority_source": "HUMAN_SOVEREIGN_AUTHORITY",
+      "epoch": 1,
+      "permissions": [
+        "SEND"
+      ],
+      "reason": "INITIAL_AUTHORITY_STATE",
+      "status": "ACTIVE"
+    },
+    "state_hash": "BE17B8F042850603C3ACE2242972588FB5100440F5E80A258000D149E2D695E6"
+  },
+  "bounded_interpretation": "This local deterministic test asks only whether the native AuthorityResolution representation and V06 runtime enforce coherence between an ESTABLISHED executable authority and the observations carried by that same supplied resolution. It does not establish that a production resolver would generate such a resolution, nor does it prove observation authenticity, distributed consensus, freshness, or external provenance.",
+  "classification": "INCOHERENT_ESTABLISHED_RESOLUTION_EXECUTED__COHERENCE_CONTROL_NOT_ESTABLISHED",
+  "coherence_control_not_established": true,
+  "execution_observation": {
+    "consequence_committed": true,
+    "exception_captured": false,
+    "exception_message": "",
+    "exception_type": "",
+    "executed": true,
+    "normal_execution_observed": true,
+    "outbox_after": 1,
+    "outbox_before": 0,
+    "outbox_snapshot": [
+      {
+        "commit_authority_epoch": 1,
+        "commit_authority_state_hash": "BE17B8F042850603C3ACE2242972588FB5100440F5E80A258000D149E2D695E6",
+        "content": "P3-F05 ESTABLISHED RESOLUTION COHERENCE TEST",
+        "delivery_index": 1,
+        "target": "P3-F05-RECIPIENT"
+      }
+    ],
+    "reasons": [],
+    "receipt_hashes": [
+      "8896492C9EA12D262DA636C20A6F1EED0BE7B8D64834B1221EAB5AB52F3E4CEB",
+      "C6CDFD9BF77992AF13D81036A78B78836C149E04D32DDA339E5C94F8B7AE2CFC",
+      "C6739C17909976CA88F5B6F5115C055889901EDE45FFFF1765D25D116CD14E82",
+      "6E5466858F59E25301B20C6FC04C03DDE92864331488B12D3CA256766E003B43"
+    ],
+    "result_returned": true,
+    "status": "EXECUTED"
+  },
+  "observed_at_utc": "2026-09-15T12:03:50.940372+00:00",
+  "resolution_representation": {
+    "canonical_payload": {
+      "authority": {
+        "actor_id": "P3-F05-HUMAN-001",
+        "authority_source": "HUMAN_SOVEREIGN_AUTHORITY",
+        "epoch": 1,
+        "permissions": [
+          "SEND"
+        ],
+        "reason": "INITIAL_AUTHORITY_STATE",
+        "status": "ACTIVE"
+      },
+      "observations": [
+        {
+          "actor_id": "P3-F05-HUMAN-001",
+          "authority_source": "HUMAN_SOVEREIGN_AUTHORITY",
+          "epoch": 1,
+          "permissions": [
+            "SEND"
+          ],
+          "reason": "INITIAL_AUTHORITY_STATE",
+          "status": "ACTIVE"
+        },
+        {
+          "actor_id": "P3-F05-HUMAN-001",
+          "authority_source": "HUMAN_SOVEREIGN_AUTHORITY",
+          "epoch": 2,
+          "permissions": [],
+          "reason": "P3-F05_CONTRADICTORY_SAME_LINEAGE_REVOKED_OBSERVATION",
+          "status": "REVOKED"
+        }
+      ],
+      "reason": "P3-F05_ESTABLISHED_WITH_CONTRADICTORY_NATIVE_OBSERVATIONS",
+      "status": "ESTABLISHED"
+    },
+    "contradictory_observations_present": true,
+    "epoch_conflict_present": true,
+    "executable_authority_hash": "BE17B8F042850603C3ACE2242972588FB5100440F5E80A258000D149E2D695E6",
+    "hash_conflict_present": true,
+    "native_authority_resolution": true,
+    "native_incoherent_established_representation": true,
+    "observation_count": 2,
+    "observation_hashes": [
+      "BE17B8F042850603C3ACE2242972588FB5100440F5E80A258000D149E2D695E6",
+      "96703ED819ECBDB42900E9B23F97E13B679C6F24AF440C18B96798F2A368E3C3"
+    ],
+    "permission_conflict_present": true,
+    "reason": "P3-F05_ESTABLISHED_WITH_CONTRADICTORY_NATIVE_OBSERVATIONS",
+    "same_lineage": true,
+    "state_hash": "426C72BCA42D49C73CE5D8098CC16CDBC6946567E88F9C90BCAC05876D1951E5",
+    "status": "ESTABLISHED",
+    "status_conflict_present": true
+  },
+  "resolver_observation": {
+    "authority_hashes": [
+      "BE17B8F042850603C3ACE2242972588FB5100440F5E80A258000D149E2D695E6",
+      "BE17B8F042850603C3ACE2242972588FB5100440F5E80A258000D149E2D695E6"
+    ],
+    "both_resolutions_established": true,
+    "called_twice": true,
+    "calls": 2,
+    "observation_hashes": [
+      [
+        "BE17B8F042850603C3ACE2242972588FB5100440F5E80A258000D149E2D695E6",
+        "96703ED819ECBDB42900E9B23F97E13B679C6F24AF440C18B96798F2A368E3C3"
+      ],
+      [
+        "BE17B8F042850603C3ACE2242972588FB5100440F5E80A258000D149E2D695E6",
+        "96703ED819ECBDB42900E9B23F97E13B679C6F24AF440C18B96798F2A368E3C3"
+      ]
+    ],
+    "resolution_hashes": [
+      "426C72BCA42D49C73CE5D8098CC16CDBC6946567E88F9C90BCAC05876D1951E5",
+      "426C72BCA42D49C73CE5D8098CC16CDBC6946567E88F9C90BCAC05876D1951E5"
+    ],
+    "statuses": [
+      "ESTABLISHED",
+      "ESTABLISHED"
+    ]
+  },
+  "revoked_observation": {
+    "canonical_payload": {
+      "actor_id": "P3-F05-HUMAN-001",
+      "authority_source": "HUMAN_SOVEREIGN_AUTHORITY",
+      "epoch": 2,
+      "permissions": [],
+      "reason": "P3-F05_CONTRADICTORY_SAME_LINEAGE_REVOKED_OBSERVATION",
+      "status": "REVOKED"
+    },
+    "state_hash": "96703ED819ECBDB42900E9B23F97E13B679C6F24AF440C18B96798F2A368E3C3"
+  },
+  "test_id": "P3-F05",
+  "witness_observation": {
+    "boundary_event_count": 1,
+    "chain_errors": [],
+    "chain_valid": true,
+    "commit_failure_event_count": 0,
+    "commit_success_event_count": 1,
+    "completion_event_count": 1,
+    "event_types": [
+      "PRE_EXECUTION_AUTHORIZED",
+      "CONSEQUENCE_BOUNDARY_REVALIDATED",
+      "CONSEQUENCE_COMMIT_AUTHORITY_REVALIDATED",
+      "EXECUTION_COMPLETED"
+    ],
+    "refusal_event_count": 0,
+    "timeline": [
+      "WITNESS:PRE_EXECUTION_AUTHORIZED",
+      "RESOLVER_CALL_1:ESTABLISHED:OBSERVATIONS_2",
+      "WITNESS:CONSEQUENCE_BOUNDARY_REVALIDATED",
+      "RESOLVER_CALL_2:ESTABLISHED:OBSERVATIONS_2",
+      "WITNESS:CONSEQUENCE_COMMIT_AUTHORITY_REVALIDATED",
+      "WITNESS:EXECUTION_COMPLETED"
+    ]
+  }
+}

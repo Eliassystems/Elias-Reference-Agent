@@ -1,0 +1,26 @@
+﻿{
+  "test_id": "P3-F05",
+  "phase": "PHASE-III-FALSIFICATION",
+  "title": "ESTABLISHED AuthorityResolution Coherence Falsification",
+  "repository_baseline_commit": "0cc0f62",
+  "v06_source_commit": "4cd1394",
+  "purpose": "Determine whether the native AuthorityResolution representation and V06 consequence path prevent an ESTABLISHED resolution from carrying executable authority while preserving contradictory observations.",
+  "condition": {
+    "executable_authority": "ACTIVE epoch 1 with SEND permission",
+    "observation_1": "ACTIVE epoch 1",
+    "observation_2": "same-lineage REVOKED epoch 2 successor",
+    "resolution_status": "ESTABLISHED",
+    "resolution_authority": "ACTIVE epoch 1",
+    "resolution_observations": "ACTIVE epoch 1 plus REVOKED epoch 2",
+    "resolver_use": "same incoherent native resolution supplied at consequence boundary and commit gate"
+  },
+  "questions": [
+    "Can the native AuthorityResolution constructor represent this condition as ESTABLISHED?",
+    "Does V06 inspect coherence between executable authority and observations?",
+    "Can boundary verification pass using only the executable authority?",
+    "Can commit verification pass using only the executable authority?",
+    "Can the local demo consequence occur while contradictory observations remain present in the supplied ESTABLISHED resolution?"
+  ],
+  "predetermined_pass": false,
+  "bounded_claim": "This test evaluates deterministic local reference-runtime behaviour for an explicitly constructed native AuthorityResolution. It does not establish authenticity, distributed consensus, replica freshness, provenance, or how a production resolver would derive its observations."
+}
