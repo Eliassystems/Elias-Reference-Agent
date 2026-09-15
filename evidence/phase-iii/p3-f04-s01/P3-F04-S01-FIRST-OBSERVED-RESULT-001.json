@@ -1,0 +1,118 @@
+{
+  "bounded_interpretation": "This deterministic local successor test evaluates whether V06 contains the specific P3-F04 condition by requiring authority resolution and permit revalidation inside the registered MessagingDemoToolV06 commit path immediately before local outbox mutation. A containment result establishes only this tested local runtime behaviour. It does not establish distributed consensus, external network revocation propagation, operating-system atomicity, external-service transactionality, or elimination of every possible check-to-use interval.",
+  "classification": "V06_COMMIT_GATE_POST_BOUNDARY_REVOCATION_CONTAINMENT_ESTABLISHED",
+  "execution_observation": {
+    "consequence_contained": true,
+    "exception_captured": false,
+    "exception_message": "",
+    "exception_type": "",
+    "executed": false,
+    "outbox_after": 0,
+    "outbox_before": 0,
+    "outbox_snapshot": [],
+    "reasons": [
+      "COMMIT_AUTHORITY_REVALIDATION_FAILED",
+      "AUTHORITY_EPOCH_CHANGED",
+      "AUTHORITY_STATE_HASH_CHANGED",
+      "CURRENT_PERMISSION_NOT_ESTABLISHED"
+    ],
+    "receipt_hashes": [
+      "819396716DBC35281D9E8C30F14DEA3D1E93F80EC5F3385601B7AEF1DD494DC8",
+      "5F71FA393DD042965552BE0F8AE74D086DD4389B573537B9EF1A51FF28BD1B95",
+      "52A531D47F79FB428C62621FA725DF775A29E429E9A5C8CEF39BE8C22C3EFB38",
+      "A43A0052CBBE5974869C60A5A962E4F3CFCEA1DE4B5F3C45F735D07F2C8C787D"
+    ],
+    "required_reasons_present": true,
+    "result_returned": true,
+    "status": "REFUSED_BEFORE_CONSEQUENCE"
+  },
+  "final_live_authority": {
+    "canonical_payload": {
+      "actor_id": "P3-F04-S01-HUMAN-001",
+      "authority_source": "HUMAN_SOVEREIGN_AUTHORITY",
+      "epoch": 2,
+      "permissions": [],
+      "reason": "P3-F04-S01_POST_BOUNDARY_PRE_COMMIT_GATE_REVOCATION",
+      "status": "REVOKED"
+    },
+    "epoch_advanced": true,
+    "revoked": true,
+    "state_hash": "598E7710DA465ACD7B25417159C8877A3606BDD7410BC84A96D0795AFA5D5E35"
+  },
+  "initial_authority": {
+    "canonical_payload": {
+      "actor_id": "P3-F04-S01-HUMAN-001",
+      "authority_source": "HUMAN_SOVEREIGN_AUTHORITY",
+      "epoch": 1,
+      "permissions": [
+        "SEND"
+      ],
+      "reason": "INITIAL_AUTHORITY_STATE",
+      "status": "ACTIVE"
+    },
+    "state_hash": "BF5DC91780B2BE210462C2C8668ECD938DEF740D55E58206C92994BD194DA89F"
+  },
+  "observed_at_utc": "2026-09-15T11:49:21.381078+00:00",
+  "resolver_observation": {
+    "authority_epochs": [
+      1,
+      2
+    ],
+    "authority_hashes": [
+      "BF5DC91780B2BE210462C2C8668ECD938DEF740D55E58206C92994BD194DA89F",
+      "598E7710DA465ACD7B25417159C8877A3606BDD7410BC84A96D0795AFA5D5E35"
+    ],
+    "authority_statuses": [
+      "ACTIVE",
+      "REVOKED"
+    ],
+    "called_twice": true,
+    "calls": 2,
+    "expected_epoch_sequence_observed": true,
+    "expected_live_state_sequence_observed": true,
+    "resolution_status_sequence_observed": true,
+    "resolution_statuses": [
+      "ESTABLISHED",
+      "ESTABLISHED"
+    ]
+  },
+  "successor_control_defeated": false,
+  "successor_control_established": true,
+  "test_id": "P3-F04-S01",
+  "timeline_observation": {
+    "action_position": 3,
+    "boundary_position": 2,
+    "commit_failure_position": 6,
+    "commit_resolver_position": 5,
+    "initial_resolver_position": 1,
+    "ordering_observed": true,
+    "refusal_position": 7,
+    "revocation_position": 4,
+    "side_effect_position": null,
+    "timeline": [
+      "WITNESS:PRE_EXECUTION_AUTHORIZED",
+      "RESOLVER_CALL_1:ACTIVE:EPOCH_1",
+      "WITNESS:CONSEQUENCE_BOUNDARY_REVALIDATED",
+      "ACTION_ENTERED",
+      "AUTHORITY_REVOKED:REVOKED:EPOCH_2",
+      "RESOLVER_CALL_2:REVOKED:EPOCH_2",
+      "WITNESS:CONSEQUENCE_COMMIT_AUTHORITY_REVALIDATION_FAILED",
+      "WITNESS:EXECUTION_REFUSED"
+    ]
+  },
+  "witness_observation": {
+    "boundary_event_count": 1,
+    "chain_errors": [],
+    "chain_valid": true,
+    "commit_failure_event_count": 1,
+    "commit_success_event_count": 0,
+    "completion_event_count": 0,
+    "event_types": [
+      "PRE_EXECUTION_AUTHORIZED",
+      "CONSEQUENCE_BOUNDARY_REVALIDATED",
+      "CONSEQUENCE_COMMIT_AUTHORITY_REVALIDATION_FAILED",
+      "EXECUTION_REFUSED"
+    ],
+    "refusal_event_count": 1
+  }
+}

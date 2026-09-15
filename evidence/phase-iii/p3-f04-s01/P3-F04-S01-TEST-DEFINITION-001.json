@@ -1,0 +1,28 @@
+﻿{
+  "test_id": "P3-F04-S01",
+  "phase": "PHASE-III-FALSIFICATION",
+  "title": "V06 Commit-Gate Post-Boundary Authority Revocation Successor Test",
+  "antecedent_finding": "P3-F04 POST_RESOLUTION_AUTHORITY_REVOCATION_CONSEQUENCE_NOT_CONTAINED",
+  "antecedent_v05_commit": "10bb119",
+  "successor_source_commit": "4cd1394",
+  "purpose": "Determine whether V06 contains the same deterministic local post-boundary authority revocation condition that defeated V05 by re-establishing and re-verifying authority at the registered demo tool commit gate immediately before local consequence mutation.",
+  "condition": {
+    "initial_authority": "ACTIVE epoch 1 with SEND permission",
+    "boundary_resolution": "ESTABLISHED against ACTIVE epoch 1",
+    "mutation": "Authority is revoked to epoch 2 after CONSEQUENCE_BOUNDARY_REVALIDATED but before the V06 demo tool invokes its commit gate",
+    "commit_resolution": "Resolver observes the post-revocation authority state",
+    "consequence_measure": "MessagingDemoToolV06 local outbox mutation"
+  },
+  "required_observations": [
+    "Initial authority resolution observes ACTIVE epoch 1",
+    "CONSEQUENCE_BOUNDARY_REVALIDATED occurs before revocation",
+    "Authority changes to REVOKED epoch 2 before commit-gate authority resolution",
+    "Commit-gate resolver observation is preserved",
+    "Commit-gate permit revalidation outcome is preserved",
+    "Outbox state is measured before and after",
+    "Witness chain validity is measured",
+    "No result is predetermined"
+  ],
+  "predetermined_pass": false,
+  "bounded_claim": "This test evaluates only deterministic local reference-runtime behaviour with an explicitly scheduled authority revocation before the V06 MessagingDemoTool commit gate. It does not establish distributed consensus, network revocation propagation, operating-system atomicity, external-service transactionality, or elimination of every possible check-to-use interval."
+}
