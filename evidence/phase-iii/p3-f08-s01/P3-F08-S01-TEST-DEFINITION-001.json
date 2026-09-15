@@ -1,0 +1,42 @@
+{
+  "adversarial_condition": "Supply the P3-F08 class of locally constructed divergent AuthorityResolution.CONFLICT without a valid native resolver attestation. The raw semantic conflict must not acquire governance-significant CONFLICT standing merely because it is structurally valid.",
+  "antecedent": "P3-F08",
+  "antecedent_finding": "P3-F08 established that semantic divergence between locally constructible AuthorityState observations was sufficient to form a native CONFLICT and influence consequence refusal even though native provenance or authenticity of the supplied resolution had not been established.",
+  "baseline_commit": "652a3fd147f3fb7ce6f37e25ecd44b752f9940f5",
+  "baseline_source_hashes_sha256": {
+    "core/authority.py": "E949C5C9E75DCB65301701363363AC6D118CD64D3AB38018957DA086EBB6B85C",
+    "core/authority_resolution.py": "D1B052E1F413ADAFA71C8B7D3E0AB470817E901CBA28D1CF145BF10EA7A585EF",
+    "core/execution_firewall_v06.py": "688BCA67810747A053A4251974281AC2D5C435C0CEAC36CBFEF85A65A0D9DEBD",
+    "core/permit_v02.py": "1BE9CED135D1C3E0498728B5E9AE0853E46E1925EA90EFF70A573E0F516C70A5",
+    "tools/broker_v06.py": "B220643B322356345E79EA37359D48BCDE004DCE09727B01F8BEC5E6DFCBE26F"
+  },
+  "bounded_claim": "This successor tests only native provenance standing for authority-resolution outputs at ExecutionFirewallV06's consequence and commit boundaries. It does not establish external resolver security, key custody, distributed consensus, replay resistance, attestation freshness, network identity, production reachability, or protection against compromise of an authorized resolver or signing key. Those remain separate properties.",
+  "governance": {
+    "antecedent_p3_f08_remains_frozen": true,
+    "first_observed_result_controls": true,
+    "no_retrospective_repair": true,
+    "source_unchanged_at_definition_time": true
+  },
+  "governing_question": "Can ExecutionFirewallV06 require verifiable provenance standing for an AuthorityResolution before that resolution is permitted to influence either the consequence boundary or the final commit boundary, while preserving legitimate ESTABLISHED and authentic divergent CONFLICT semantics?",
+  "phase": "III",
+  "positive_controls": [
+    "A correctly attested ESTABLISHED resolution carrying the legitimate active authority must preserve the otherwise-authorized consequence and commit path.",
+    "A correctly attested materially divergent CONFLICT must retain native conflict semantics and produce the existing governed conflict refusal."
+  ],
+  "required_boundaries": [
+    "CONSEQUENCE_AUTHORITY_RESOLUTION",
+    "COMMIT_AUTHORITY_RESOLUTION"
+  ],
+  "required_properties": [
+    "Attestation binds the exact AuthorityResolution.state_hash().",
+    "Attestation identifies the resolver whose authority to supply governance-significant resolution evidence is configured at the firewall trust boundary.",
+    "Invalid, absent, or mismatched attestation cannot cause an unauthenticated raw CONFLICT to be treated as an authenticated authority conflict.",
+    "Existing AuthorityState semantics remain unchanged.",
+    "Existing AuthorityResolution structural coherence controls remain preserved.",
+    "Verification applies independently at both consequence resolution and commit resolution."
+  ],
+  "status": "PRE_EXECUTION_FROZEN",
+  "successor_control": "Introduce an evidence-bearing authority-resolution attestation using the repository's established canonical JSON and HMAC-SHA256 verification pattern. The attestation must bind an authorized resolver identity to the exact AuthorityResolution state hash. ExecutionFirewallV06 must verify that standing before acting on the resolution status at both the consequence boundary and commit gate.",
+  "test_id": "P3-F08-S01",
+  "title": "Authority Resolution Provenance Standing Control"
+}

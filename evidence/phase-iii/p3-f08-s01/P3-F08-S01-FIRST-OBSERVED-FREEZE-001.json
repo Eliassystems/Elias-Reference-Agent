@@ -1,0 +1,14 @@
+{
+  "authentic_conflict_preserved": true,
+  "classification": "UNAUTHENTICATED_RESOLUTION_STANDING_REJECTED_AT_CONSEQUENCE_AND_COMMIT__AUTHENTIC_SEMANTICS_PRESERVED",
+  "control_established": true,
+  "definition_identity_preserved": true,
+  "freeze_type": "FIRST_OBSERVED_RESULT_FREEZE",
+  "no_retrospective_repair": true,
+  "positive_control_passed": true,
+  "repository_baseline_commit": "652a3fd147f3fb7ce6f37e25ecd44b752f9940f5",
+  "source_identity_preserved": true,
+  "test_id": "P3-F08-S01",
+  "unattested_commit_rejected": true,
+  "unattested_consequence_rejected": true
+}

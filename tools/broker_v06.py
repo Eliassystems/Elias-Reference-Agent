@@ -4,7 +4,9 @@ from dataclasses import dataclass
 from typing import Any, Callable, Dict
 
 from core.authority import AuthorityState
-from core.authority_resolution import AuthorityResolution
+from core.authority_resolution_attestation import (
+    AttestedAuthorityResolution,
+)
 from core.execution_firewall_v06 import (
     ExecutionFirewallV06,
     FirewallResultV06,
@@ -21,7 +23,7 @@ class ToolRequestV06:
     current_authority: AuthorityState
     authority_resolver: Callable[
         [],
-        AuthorityResolution,
+        AttestedAuthorityResolution,
     ]
     intent_hash: str
     permission: str

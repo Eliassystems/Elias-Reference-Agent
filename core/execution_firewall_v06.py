@@ -10,6 +10,10 @@ from core.authority_resolution import (
     AuthorityResolution,
     AuthorityResolutionStatus,
 )
+from core.authority_resolution_attestation import (
+    AttestedAuthorityResolution,
+    AuthorityResolutionAttestationVerifier,
+)
 from core.permit_v02 import (
     CONSTITUTION_SHA256,
     ExecutionPermitV02,
@@ -53,10 +57,14 @@ class ExecutionFirewallV06:
         self,
         *,
         verifier: PermitVerifierV02,
+        resolution_attestation_verifier: AuthorityResolutionAttestationVerifier,
         ledger: WitnessLedger,
         constitution_path: Path,
     ):
         self.verifier = verifier
+        self.resolution_attestation_verifier = (
+            resolution_attestation_verifier
+        )
         self.ledger = ledger
         self.constitution_path = Path(
             constitution_path
@@ -133,7 +141,10 @@ class ExecutionFirewallV06:
         expected_tool: str,
         expected_consequence_class: str,
         expected_arguments: Dict[str, Any],
-        authority_resolver: Callable[[], AuthorityResolution],
+        authority_resolver: Callable[
+            [],
+            AttestedAuthorityResolution,
+        ],
         action: Callable[[Callable[[], AuthorityState]], Any],
     ) -> FirewallResultV06:
 
@@ -224,7 +235,7 @@ class ExecutionFirewallV06:
         # -------------------------------------------------
 
         try:
-            execution_resolution = (
+            execution_evidence = (
                 authority_resolver()
             )
         except Exception:
@@ -238,6 +249,29 @@ class ExecutionFirewallV06:
                     pre["receipt_hash"],
                 ),
             )
+
+        execution_attestation_validation = (
+            self.resolution_attestation_verifier.verify(
+                execution_evidence
+            )
+        )
+
+        if not execution_attestation_validation.valid:
+            return self._refuse(
+                permit=permit,
+                authority=current_authority,
+                reasons=(
+                    "CONSEQUENCE_AUTHORITY_RESOLUTION_ATTESTATION_INVALID",
+                    *execution_attestation_validation.reasons,
+                ),
+                prior_receipt_hashes=(
+                    pre["receipt_hash"],
+                ),
+            )
+
+        execution_resolution = (
+            execution_evidence.resolution
+        )
 
         if not isinstance(
             execution_resolution,
@@ -452,7 +486,7 @@ class ExecutionFirewallV06:
             commit_gate_used = True
 
             try:
-                commit_resolution = (
+                commit_evidence = (
                     authority_resolver()
                 )
 
@@ -464,6 +498,26 @@ class ExecutionFirewallV06:
                         "COMMIT_AUTHORITY_RESOLUTION_FAILED",
                     ),
                 )
+
+            commit_attestation_validation = (
+                self.resolution_attestation_verifier.verify(
+                    commit_evidence
+                )
+            )
+
+            if not commit_attestation_validation.valid:
+                raise CommitGateRefusedV06(
+                    authority=
+                        execution_authority,
+                    reasons=(
+                        "COMMIT_AUTHORITY_RESOLUTION_ATTESTATION_INVALID",
+                        *commit_attestation_validation.reasons,
+                    ),
+                )
+
+            commit_resolution = (
+                commit_evidence.resolution
+            )
 
             if not isinstance(
                 commit_resolution,
