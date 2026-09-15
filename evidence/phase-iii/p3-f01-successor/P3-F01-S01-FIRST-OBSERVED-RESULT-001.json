@@ -1,0 +1,101 @@
+{
+  "antecedent_test": "P3-F01",
+  "authority_observation_a": {
+    "canonical_payload": {
+      "actor_id": "P3-F01-S01-HUMAN-001",
+      "authority_source": "HUMAN_SOVEREIGN_AUTHORITY",
+      "epoch": 1,
+      "permissions": [
+        "SEND"
+      ],
+      "reason": "INITIAL_AUTHORITY_STATE",
+      "status": "ACTIVE"
+    },
+    "state_hash": "9165857401645DF5A1B312F4DDD60BFCF9C0FAD08BA0FCC60510FC14A5992C10"
+  },
+  "authority_observation_b": {
+    "canonical_payload": {
+      "actor_id": "P3-F01-S01-HUMAN-001",
+      "authority_source": "HUMAN_SOVEREIGN_AUTHORITY",
+      "epoch": 2,
+      "permissions": [],
+      "reason": "P3-F01-S01_REPLICA_B_REVOCATION",
+      "status": "REVOKED"
+    },
+    "state_hash": "68EF9D0C145FDA195BB751DF7548FFCFC9AE62292BE3E7E1FA3CC8A0535930AF"
+  },
+  "bounded_interpretation": "This deterministic local successor test establishes only whether V05 natively represents an explicit authority conflict, preserves both supplied authentic authority observations, records the conflict in the witness chain, and withholds consequence. It does not establish production distributed consensus, network freshness, replica authenticity, or external authority provenance.",
+  "classification": "NATIVE_AUTHORITY_CONFLICT_REPRESENTATION_AND_CONTAINMENT_ESTABLISHED",
+  "execution_observation": {
+    "consequence_contained": true,
+    "exception_captured": false,
+    "exception_message": "",
+    "exception_type": "",
+    "executed": false,
+    "explicit_conflict_reason": true,
+    "outbox_after": 0,
+    "outbox_before": 0,
+    "reasons": [
+      "CONSEQUENCE_AUTHORITY_CONFLICT"
+    ],
+    "resolver_called_once": true,
+    "resolver_calls": 1,
+    "result_returned": true,
+    "status": "REFUSED_BEFORE_CONSEQUENCE"
+  },
+  "native_conflict_control_established": true,
+  "native_resolution": {
+    "canonical_payload": {
+      "authority": null,
+      "observations": [
+        {
+          "actor_id": "P3-F01-S01-HUMAN-001",
+          "authority_source": "HUMAN_SOVEREIGN_AUTHORITY",
+          "epoch": 1,
+          "permissions": [
+            "SEND"
+          ],
+          "reason": "INITIAL_AUTHORITY_STATE",
+          "status": "ACTIVE"
+        },
+        {
+          "actor_id": "P3-F01-S01-HUMAN-001",
+          "authority_source": "HUMAN_SOVEREIGN_AUTHORITY",
+          "epoch": 2,
+          "permissions": [],
+          "reason": "P3-F01-S01_REPLICA_B_REVOCATION",
+          "status": "REVOKED"
+        }
+      ],
+      "reason": "AUTHENTIC_AUTHORITY_OBSERVATIONS_DISAGREE_CURRENT_STANDING_UNRESOLVED",
+      "status": "CONFLICT"
+    },
+    "executable_authority_absent": true,
+    "is_authority_resolution": true,
+    "state_hash": "410942037DC4BDA3ACE1EF3A4E6D0C986051EE79FC800EAFB0672849869BDA41",
+    "status_is_conflict": true,
+    "two_observations_preserved": true
+  },
+  "observed_at_utc": "2026-09-15T10:56:05.619844+00:00",
+  "test_id": "P3-F01-S01",
+  "witness_observation": {
+    "both_observation_hashes_preserved": true,
+    "chain_errors": [],
+    "chain_valid": true,
+    "conflict_event_present_once": true,
+    "conflict_record_truthful": true,
+    "event_types": [
+      "PRE_EXECUTION_AUTHORIZED",
+      "AUTHORITY_RESOLUTION_CONFLICT",
+      "EXECUTION_REFUSED"
+    ],
+    "expected_observation_hashes": [
+      "9165857401645DF5A1B312F4DDD60BFCF9C0FAD08BA0FCC60510FC14A5992C10",
+      "68EF9D0C145FDA195BB751DF7548FFCFC9AE62292BE3E7E1FA3CC8A0535930AF"
+    ],
+    "recorded_observation_hashes": [
+      "9165857401645DF5A1B312F4DDD60BFCF9C0FAD08BA0FCC60510FC14A5992C10",
+      "68EF9D0C145FDA195BB751DF7548FFCFC9AE62292BE3E7E1FA3CC8A0535930AF"
+    ]
+  }
+}

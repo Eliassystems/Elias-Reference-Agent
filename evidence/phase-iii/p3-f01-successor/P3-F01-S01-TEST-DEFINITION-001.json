@@ -1,0 +1,26 @@
+﻿{
+  "test_id": "P3-F01-S01",
+  "phase": "PHASE-III-FALSIFICATION",
+  "title": "Native Conflicting Authority Representation",
+  "antecedent": "P3-F01",
+  "antecedent_finding": "CONTAINMENT_OBSERVED__CONFLICT_NATIVE_REPRESENTATION_NOT_ESTABLISHED",
+  "purpose": "Determine whether the V05 successor can natively represent conflicting authentic authority observations, preserve those observations, explicitly classify present authority as conflicted, and withhold consequence.",
+  "adversarial_condition": {
+    "observation_a": "Authentic ACTIVE AuthorityState with SEND at epoch 1",
+    "observation_b": "Authentic REVOKED successor AuthorityState at epoch 2",
+    "resolution": "AuthorityResolutionStatus.CONFLICT",
+    "current_standing": "Not established because authentic authority observations disagree"
+  },
+  "required_discriminators": [
+    "Resolver returns native AuthorityResolution",
+    "Resolution status is CONFLICT",
+    "Both authentic authority observations remain preserved",
+    "No consequence occurs",
+    "Refusal reason is CONSEQUENCE_AUTHORITY_CONFLICT",
+    "Witness contains AUTHORITY_RESOLUTION_CONFLICT",
+    "Witness conflict record retains both observation hashes",
+    "Witness chain remains valid"
+  ],
+  "predetermined_pass": false,
+  "bounded_claim": "Success establishes only native conflict representation and consequence containment in this deterministic local test. It does not establish distributed-consensus correctness, production authority provenance, or real network split-brain resolution."
+}
