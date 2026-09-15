@@ -1,0 +1,46 @@
+{
+  "bounded_claim": "This deterministic successor test examines only whether the native AuthorityResolution representation requires at least one observation for an ESTABLISHED executable authority while preserving supplied-observation coherence. It does not establish observation authenticity, resolver correctness, source authority, distributed consensus, jurisdictional freshness, external provenance, or production deployment behavior.",
+  "classification": "OBSERVATIONLESS_ESTABLISHED_RESOLUTION_REJECTED__OBSERVATION_PRESENCE_CONTROL_ESTABLISHED",
+  "coherence_regression_control": {
+    "error": {
+      "message": "ESTABLISHED resolution observations must match executable authority",
+      "type": "ValueError"
+    },
+    "incoherent_constructed": false,
+    "preserved": true
+  },
+  "direct_positive_control": {
+    "error": null,
+    "passed": true
+  },
+  "duplicate_positive_control": {
+    "bounded_semantics": "presence >= 1; exactly-one not established",
+    "error": null,
+    "passed": true
+  },
+  "helper_positive_control": {
+    "error": null,
+    "observation_count": 1,
+    "passed": true
+  },
+  "observationless_control": {
+    "constructed": false,
+    "error": {
+      "message": "ESTABLISHED resolution requires at least one observation",
+      "type": "ValueError"
+    },
+    "rejected": true
+  },
+  "runtime_observation": {
+    "consequence_attempted": false,
+    "reason": "successor control is evaluated at AuthorityResolution representation construction",
+    "runtime_invoked": false
+  },
+  "source_identity": {
+    "actual_sha256": "091997310F5A98F2E160CD1FD0A99D251DB55C1800A415C8B4987DA6554F7857",
+    "expected_sha256": "091997310F5A98F2E160CD1FD0A99D251DB55C1800A415C8B4987DA6554F7857",
+    "preserved": true
+  },
+  "successor_control_established": true,
+  "test_id": "P3-F06-S01"
+}

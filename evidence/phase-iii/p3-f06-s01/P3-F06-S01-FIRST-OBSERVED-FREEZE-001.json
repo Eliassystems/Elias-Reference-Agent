@@ -1,0 +1,11 @@
+{
+  "antecedent_failure_classification": "OBSERVATIONLESS_ESTABLISHED_RESOLUTION_EXECUTED__OBSERVATION_PRESENCE_CONTROL_NOT_ESTABLISHED",
+  "antecedent_failure_preserved": true,
+  "classification": "OBSERVATIONLESS_ESTABLISHED_RESOLUTION_REJECTED__OBSERVATION_PRESENCE_CONTROL_ESTABLISHED",
+  "freeze_type": "SUCCESSOR_CONTROL_FIRST_OBSERVED_FREEZE",
+  "no_retrospective_repair": true,
+  "repository_baseline_commit": "f2a075c67da5764f5508733cb3ed87c9d464f747",
+  "source_sha256": "091997310F5A98F2E160CD1FD0A99D251DB55C1800A415C8B4987DA6554F7857",
+  "successor_control_established": true,
+  "test_id": "P3-F06-S01"
+}

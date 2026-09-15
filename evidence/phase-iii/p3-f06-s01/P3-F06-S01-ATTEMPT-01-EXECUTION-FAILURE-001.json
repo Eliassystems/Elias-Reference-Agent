@@ -1,0 +1,18 @@
+{
+  "attempt": "01",
+  "attempt_01_harness_sha256": "3D59AB0102D205C54A22A8F26EEBDD7D8EE91B91E7A133F6F064325BC40C6773",
+  "classification": "EXECUTION_INFRASTRUCTURE_FAILURE__TEST_LOGIC_NOT_REACHED",
+  "command": "python \".\\tests\\P3-F06-S01-observation-presence-containment.py\"",
+  "disposition": "Preserve Attempt 01 unchanged. Any corrected execution must use a distinct successor attempt harness.",
+  "error_message": "No module named 'core'",
+  "error_type": "ModuleNotFoundError",
+  "failure_stage": "IMPORT_BOOTSTRAP",
+  "first_observed_freeze_artifact_created": false,
+  "first_observed_result_artifact_created": false,
+  "governance_result_established": false,
+  "no_rerun": true,
+  "no_retrospective_repair": true,
+  "record_type": "EXECUTION_INFRASTRUCTURE_FAILURE",
+  "test_id": "P3-F06-S01",
+  "test_logic_reached": false
+}

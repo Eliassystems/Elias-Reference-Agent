@@ -71,6 +71,11 @@ class AuthorityResolution:
                     "ESTABLISHED resolution requires AuthorityState"
                 )
 
+            if len(self.observations) < 1:
+                raise ValueError(
+                    "ESTABLISHED resolution requires at least one observation"
+                )
+
             for observation in self.observations:
                 if observation != self.authority:
                     raise ValueError(

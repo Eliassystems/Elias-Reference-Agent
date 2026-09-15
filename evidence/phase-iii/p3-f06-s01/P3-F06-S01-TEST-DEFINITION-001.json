@@ -1,0 +1,40 @@
+{
+  "antecedent_failure": {
+    "classification": "OBSERVATIONLESS_ESTABLISHED_RESOLUTION_EXECUTED__OBSERVATION_PRESENCE_CONTROL_NOT_ESTABLISHED",
+    "commit": "f2a075c67da5764f5508733cb3ed87c9d464f747",
+    "freeze_sha256": "A860EFA7AAC0234A6D72C534CD97FA74C9364DA163369E87126724F99206BB9E",
+    "result_sha256": "98E46B041E35C3518CBD307B9566271D23A90516A08BFC54DDD4C7381B722D71",
+    "test_id": "P3-F06",
+    "witness_sha256": "B41C8C0C28BCB0A6CB980FCEDF999A2AB48F739597EE8283E7711A3F239E04E2"
+  },
+  "bounded_claim": "This deterministic successor test examines only whether the native AuthorityResolution representation requires at least one observation for an ESTABLISHED executable authority while preserving supplied-observation coherence. It does not establish observation authenticity, resolver correctness, source authority, distributed consensus, jurisdictional freshness, external provenance, or production deployment behavior.",
+  "controls": [
+    "AuthorityResolution.established(active_authority) must remain valid with exactly one observation.",
+    "Direct ESTABLISHED construction with one matching observation must remain valid.",
+    "Direct ESTABLISHED construction with duplicate matching observations remains admissible; this successor does not introduce an exactly-one-observation invariant.",
+    "Direct ESTABLISHED construction with zero observations must be rejected at representation construction.",
+    "Direct ESTABLISHED construction carrying an observation unequal to executable authority must remain rejected under the earlier P3-F05-S01 coherence control."
+  ],
+  "failure_classification": "P3-F06-S01_SUCCESSOR_CONTROL_NOT_ESTABLISHED",
+  "governance": {
+    "antecedent_failure_preserved": true,
+    "no_retrospective_repair": true,
+    "successor_only": true
+  },
+  "governing_question": "Does the P3-F06-S01 successor representation control reject an ESTABLISHED AuthorityResolution carrying zero observations while preserving valid established representations and the P3-F05-S01 supplied-observation coherence control?",
+  "phase": "III",
+  "repository_baseline_commit": "f2a075c67da5764f5508733cb3ed87c9d464f747",
+  "runtime_execution_required": false,
+  "source_under_test": {
+    "antecedent_sha256": "902E6D4FC93204EE7DC799A5F1F110A1B41AC52AF22276E1F4B308BC525CBFF0",
+    "path": "core/authority_resolution.py",
+    "successor_sha256": "091997310F5A98F2E160CD1FD0A99D251DB55C1800A415C8B4987DA6554F7857"
+  },
+  "status": "PRE_EXECUTION_FROZEN",
+  "success_classification": "OBSERVATIONLESS_ESTABLISHED_RESOLUTION_REJECTED__OBSERVATION_PRESENCE_CONTROL_ESTABLISHED",
+  "supporting_source_hashes_sha256": {
+    "core/authority.py": "E949C5C9E75DCB65301701363363AC6D118CD64D3AB38018957DA086EBB6B85C"
+  },
+  "test_id": "P3-F06-S01",
+  "title": "Observation-Presence Containment"
+}

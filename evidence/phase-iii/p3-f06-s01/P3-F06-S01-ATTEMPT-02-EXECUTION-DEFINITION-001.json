@@ -1,0 +1,25 @@
+{
+  "antecedent_attempt": {
+    "attempt": "01",
+    "classification": "EXECUTION_INFRASTRUCTURE_FAILURE__TEST_LOGIC_NOT_REACHED",
+    "failure_record_sha256": "A68BFC79D3C2F93438C4EA3F653B3AAD77B51F932956613BE6C19D84642E3060",
+    "governance_result_established": false,
+    "harness_sha256": "3D59AB0102D205C54A22A8F26EEBDD7D8EE91B91E7A133F6F064325BC40C6773",
+    "no_rerun": true
+  },
+  "attempt": "02",
+  "attempt_02_harness_sha256": "5EE07F76A5F2E709609A9B457D988810523139B63C800106CDD1B9777A6E0EE7",
+  "change_scope": "Add repository-root sys.path bootstrap before importing the local core package. Test logic and successor control remain otherwise unchanged.",
+  "governance": {
+    "attempt_01_preserved": true,
+    "attempt_02_is_distinct": true,
+    "no_retrospective_repair": true
+  },
+  "proven_import_pattern": "ROOT = Path(__file__).resolve().parents[1]; insert ROOT into sys.path before local package imports.",
+  "record_type": "EXECUTION_ATTEMPT_DEFINITION",
+  "repository_baseline_commit": "f2a075c67da5764f5508733cb3ed87c9d464f747",
+  "status": "PRE_EXECUTION_FROZEN",
+  "successor_source_sha256": "091997310F5A98F2E160CD1FD0A99D251DB55C1800A415C8B4987DA6554F7857",
+  "test_definition_sha256": "4961CC2992F0AAED1CF58ADDE886EC4047A25C675F260E176DF4C93F1C79695F",
+  "test_id": "P3-F06-S01"
+}
