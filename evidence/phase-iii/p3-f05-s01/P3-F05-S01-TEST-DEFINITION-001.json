@@ -1,0 +1,21 @@
+{
+    "test_id":  "P3-F05-S01",
+    "predecessor_test_id":  "P3-F05",
+    "predecessor_failure_commit":  "54c2319",
+    "predecessor_failure_classification":  "INCOHERENT_ESTABLISHED_RESOLUTION_EXECUTED__COHERENCE_CONTROL_NOT_ESTABLISHED",
+    "antecedent_authority_resolution_sha256":  "03BAC31B186C054EF0C80BA520D80A83C9836EFC946DC61096DA3AD82DA073E7",
+    "successor_authority_resolution_sha256":  "902E6D4FC93204EE7DC799A5F1F110A1B41AC52AF22276E1F4B308BC525CBFF0",
+    "governing_question":  "Can the native AuthorityResolution representation still construct an ESTABLISHED executable authority while preserving a contradictory same-lineage authority observation?",
+    "successor_control":  "For an ESTABLISHED AuthorityResolution, every supplied observation must equal the executable AuthorityState carried by that resolution.",
+    "negative_control":  "Attempt direct native construction with ACTIVE epoch 1 executable authority plus same-lineage REVOKED epoch 2 observation.",
+    "positive_controls":  [
+                              "AuthorityResolution.established(active_authority) remains constructible.",
+                              "Direct ESTABLISHED construction with duplicate identical observations remains constructible."
+                          ],
+    "expected_negative_result":  "ValueError: ESTABLISHED resolution observations must match executable authority",
+    "expected_pass_classification":  "INCOHERENT_ESTABLISHED_RESOLUTION_REJECTED__COHERENCE_CONTROL_ESTABLISHED",
+    "bounded_claim":  "This successor test establishes only representation-level coherence enforcement for supplied AuthorityResolution observations. It does not establish observation authenticity, resolver correctness, distributed consensus, freshness, external provenance, or production deployment behavior.",
+    "no_retrospective_repair":  true,
+    "predecessor_evidence_preserved":  true,
+    "execute_once":  true
+}

@@ -71,6 +71,13 @@ class AuthorityResolution:
                     "ESTABLISHED resolution requires AuthorityState"
                 )
 
+            for observation in self.observations:
+                if observation != self.authority:
+                    raise ValueError(
+                        "ESTABLISHED resolution observations must "
+                        "match executable authority"
+                    )
+
         else:
             if self.authority is not None:
                 raise ValueError(

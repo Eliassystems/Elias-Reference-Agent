@@ -1,0 +1,57 @@
+{
+  "bounded_interpretation": "This deterministic successor test establishes only that the native AuthorityResolution representation now rejects an ESTABLISHED resolution carrying a supplied observation that differs from its executable authority, while preserving the tested coherent ESTABLISHED constructions. It does not establish observation authenticity, resolver correctness, distributed consensus, freshness, external provenance, or production deployment behavior.",
+  "classification": "INCOHERENT_ESTABLISHED_RESOLUTION_REJECTED__COHERENCE_CONTROL_ESTABLISHED",
+  "negative_control": {
+    "active_authority": {
+      "canonical_payload": {
+        "actor_id": "P3-F05-S01-HUMAN-001",
+        "authority_source": "HUMAN_SOVEREIGN_AUTHORITY",
+        "epoch": 1,
+        "permissions": [
+          "SEND"
+        ],
+        "reason": "INITIAL_AUTHORITY_STATE",
+        "status": "ACTIVE"
+      },
+      "state_hash": "A2452F9E51E2ED53D5B2EADFE548900B838C737D5C2B300256360D0BBFDF205F"
+    },
+    "exception_captured": true,
+    "exception_message": "ESTABLISHED resolution observations must match executable authority",
+    "exception_type": "ValueError",
+    "incoherent_constructed": false,
+    "material_state_conflict_present": true,
+    "passed": true,
+    "revoked_observation": {
+      "canonical_payload": {
+        "actor_id": "P3-F05-S01-HUMAN-001",
+        "authority_source": "HUMAN_SOVEREIGN_AUTHORITY",
+        "epoch": 2,
+        "permissions": [],
+        "reason": "P3-F05-S01_CONTRADICTORY_SAME_LINEAGE_REVOKED_OBSERVATION",
+        "status": "REVOKED"
+      },
+      "state_hash": "BEDF83A65B353BB54D2FC6A33AF52B666F1F8F6AB9F3078A13C1CE11AF1256C0"
+    },
+    "same_lineage": true
+  },
+  "observed_at_utc": "2026-09-15T14:19:31.537756+00:00",
+  "positive_controls": {
+    "duplicate_identical_observations_passed": true,
+    "duplicate_resolution_hash": "3E0CF22FA2803A9923ADF8E8C9B853181D772DD529C3F0E6CFD6116CB9A154D3",
+    "established_helper_passed": true,
+    "helper_resolution_hash": "31CB96B8022C30A9C995131AE7B165468947740B9D148F649F169F62C7C86DB2"
+  },
+  "predecessor": {
+    "failure_classification": "INCOHERENT_ESTABLISHED_RESOLUTION_EXECUTED__COHERENCE_CONTROL_NOT_ESTABLISHED",
+    "failure_commit": "54c2319",
+    "retrospective_repair": false,
+    "test_id": "P3-F05"
+  },
+  "source_identity": {
+    "actual_successor_sha256": "902E6D4FC93204EE7DC799A5F1F110A1B41AC52AF22276E1F4B308BC525CBFF0",
+    "expected_successor_sha256": "902E6D4FC93204EE7DC799A5F1F110A1B41AC52AF22276E1F4B308BC525CBFF0",
+    "preserved": true
+  },
+  "successor_control_established": true,
+  "test_id": "P3-F05-S01"
+}
