@@ -1,0 +1,79 @@
+{
+    "test_id":  "P4-F03-S01",
+    "title":  "Caller identity attestation sequential committed-use replay control",
+    "phase":  "Phase IV",
+    "status":  "PRE_EXECUTION_DEFINITION",
+    "predecessor_test_id":  "P4-F03",
+    "predecessor_classification":  "AUTHENTICATED_CALLER_ATTESTATION_REPLAY_ACCEPTED_ACROSS_FRESH_PERMITS__SINGLE_USE_CONTROL_NOT_ESTABLISHED",
+    "predecessor_evidence_commit":  "f06e191356cf740b175e43f8c19f942f21115a23",
+    "predecessor_result_sha256":  "52B6AE11BA93C097291DB6C02BD60957E008EBF55287D2AF1BFEDAE0BCE11A3D",
+    "predecessor_freeze_sha256":  "6164A4F98E3DF5C090C19AE07AFFEDD84262D0EAB804CF68398D179D0C47598E",
+    "predecessor_witness_sha256":  "94F01504D41C0938F741C5F4A4270774B3E9750AC92B2F35F50F5B81970AFB21",
+    "governing_question":  "After one committed execution has used a valid authenticated caller identity attestation, does the successor execution path natively refuse reuse of that exact same attestation across a separate execution carrying a fresh otherwise-valid permit?",
+    "target_property":  "Sequential committed-use single-use control for authenticated caller identity attestations.",
+    "required_preconditions":  [
+                                   "P4-F03 predecessor evidence identity is preserved.",
+                                   "Both adversarial executions use the same human authority, agent identity, policy context, caller identity issuer, and authenticated subject semantics.",
+                                   "Each adversarial execution receives a fresh distinct otherwise-valid execution permit.",
+                                   "The replayed caller identity attestation remains cryptographically and temporally valid during both uses.",
+                                   "No permit replay is used to obtain the result.",
+                                   "No authority revocation, policy change, identity mismatch, signature tamper, expiry, or unrelated refusal condition is introduced."
+                               ],
+    "positive_control":  {
+                             "description":  "Two separate executions use fresh distinct permits and fresh distinct valid caller identity attestations.",
+                             "required_outcome":  "Both executions commit successfully."
+                         },
+    "adversarial_case":  {
+                             "description":  "Execution one uses caller attestation X with fresh permit P1 and commits. Execution two then presents the exact same still-valid caller attestation X with a separate fresh permit P2.",
+                             "identity_requirements":  [
+                                                           "P1 and P2 have distinct permit identities.",
+                                                           "The exact same caller attestation identity is used in both adversarial executions.",
+                                                           "The replayed attestation remains independently valid during the second execution."
+                                                       ]
+                         },
+    "success_condition":  {
+                              "classification":  "CALLER_ATTESTATION_COMMITTED_USE_REPLAY_REFUSED_ACROSS_FRESH_PERMITS__SEQUENTIAL_SINGLE_USE_CONTROL_ESTABLISHED",
+                              "requirements":  [
+                                                   "The first use of attestation X commits.",
+                                                   "The second use of the exact same attestation X with fresh permit P2 is refused before consequence.",
+                                                   "The refusal is specifically attributable to a native caller-attestation replay or consumed-state control.",
+                                                   "The refusal is not caused by permit replay or another unrelated control.",
+                                                   "Witness evidence preserves reused attestation identity, distinct permit identities, first committed use, and second replay refusal."
+                                               ]
+                          },
+    "failure_condition":  {
+                              "classification":  "CALLER_ATTESTATION_COMMITTED_USE_REPLAY_ACCEPTED_ACROSS_FRESH_PERMITS__SEQUENTIAL_SINGLE_USE_CONTROL_NOT_ESTABLISHED",
+                              "requirements":  [
+                                                   "The first use of attestation X commits.",
+                                                   "The second use of the same still-valid attestation X with a fresh distinct permit also commits."
+                                               ]
+                          },
+    "non_discriminating_conditions":  [
+                                          "Positive control failure.",
+                                          "Permit identities are not distinct.",
+                                          "The replayed caller attestation identity is not identical.",
+                                          "The replayed attestation is expired, tampered, cryptographically invalid, or otherwise independently invalid.",
+                                          "The second execution is refused for an unrelated reason rather than native attestation replay or consumed-state control.",
+                                          "Required predecessor, source, or witness identity cannot be established."
+                                      ],
+    "witness_requirements":  [
+                                 "Preserve caller identity attestation ID for each governed execution.",
+                                 "Preserve permit ID for each governed execution.",
+                                 "Distinguish first committed use from second attempted reuse.",
+                                 "Preserve the native replay-refusal reason when refusal occurs.",
+                                 "Maintain a valid witness chain."
+                             ],
+    "successor_boundary":  [
+                               "Tests sequential reuse after an earlier committed execution.",
+                               "Does not establish atomic protection against simultaneous or concurrent replay.",
+                               "Does not establish network, transport, process, hardware, operating-system, external identity-provider, or credential-compromise resistance.",
+                               "Does not establish tenant isolation, distributed replay protection, production exploitability resistance, or general swarm security."
+                           ],
+    "predecessor_source_identities":  {
+                                          "caller_identity_attestation_sha256":  "AA0F7960733AF9A82B3D0F02D07CCBFBCAB907B42A5282B010D44B2F8576CFDA",
+                                          "execution_firewall_v08_sha256":  "F5DA87C150CAACCACCB875F19B1EC51B4E2BA3051E2DB5643005802131B0DCE9",
+                                          "broker_v08_sha256":  "542E894D72D57FEF58B945AC4726AF104A3690C77678AF639E51B8E23B16A9BE"
+                                      },
+    "execution_rule":  "Freeze this definition before successor implementation or behavioral execution. Preserve predecessor V08 and P4-F03 evidence unchanged.",
+    "created_utc":  "2026-09-16T15:51:12.1327406Z"
+}
