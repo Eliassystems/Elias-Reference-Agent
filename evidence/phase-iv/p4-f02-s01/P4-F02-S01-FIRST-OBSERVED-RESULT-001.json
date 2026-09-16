@@ -1,0 +1,422 @@
+{
+  "bounded_claim": "A successful result establishes only that the tested P4-F02-S01 successor reference path independently verifies a signed caller-identity attestation and requires its authenticated subject agent identity to agree with both the supplied presenting_agent_id and permit-bound agent_id before consequence, while rechecking that caller identity at the tested consequence and commit boundaries. It does not establish network-layer authentication, operating-system process identity, hardware-backed identity, credential isolation, external identity-provider security, tenant isolation, distributed-agent security, swarm security, production exploitability resistance, or protection against compromise of the identity authority, signing key, authorized agent, human authority, resolver, deployment perimeter or tool credential.",
+  "classification": "AUTHENTICATED_CALLER_IDENTITY_BINDING_ESTABLISHED__FALSE_PRESENTER_ASSERTION_REFUSED_BEFORE_CONSEQUENCE",
+  "definition_commit": "25a527019f14885ef7b22cc0f113c141e0c356a3",
+  "definition_identity_preserved": true,
+  "implementation_commit": "0f6f25e96941adb476a92cd0a65ffa32bf563b55",
+  "negative_caller_mismatch": {
+    "attestation_id": "DBE7CA7D771D64062294C27B99EE20879681804D95CE9675D16C907C072C4D87",
+    "attestation_issuer_id": "P4-F02-S01-IDENTITY-AUTHORITY-001",
+    "attestation_tampered": false,
+    "caller_identity_verifier_calls": [
+      {
+        "attestation_id": "DBE7CA7D771D64062294C27B99EE20879681804D95CE9675D16C907C072C4D87",
+        "authenticated_subject_agent_id": "P4-F01-AGENT-B",
+        "issuer_id": "P4-F02-S01-IDENTITY-AUTHORITY-001",
+        "reasons": [],
+        "subject_agent_id": "P4-F01-AGENT-B",
+        "valid": true
+      }
+    ],
+    "case_id": "P4-F02-S01-NEG-CALLER-MISMATCH",
+    "consequence_committed": false,
+    "exception": null,
+    "original_attestation_subject_agent_id": "P4-F01-AGENT-B",
+    "outbox_after": 2,
+    "outbox_before": 2,
+    "permit_bound_agent_id": "P4-F01-AGENT-A",
+    "permit_id": "14C038DBEC93100F3B5DAEC39C92242BC83CC298F2BEAF8513C671747C204AE2",
+    "permit_verifier_calls": [
+      {
+        "expected_agent_id": "P4-F01-AGENT-A",
+        "permit_agent_id": "P4-F01-AGENT-A",
+        "permit_id": "14C038DBEC93100F3B5DAEC39C92242BC83CC298F2BEAF8513C671747C204AE2",
+        "reasons": [],
+        "valid": true
+      }
+    ],
+    "presenting_agent_id": "P4-F01-AGENT-A",
+    "reasons": [
+      "AUTHENTICATED_CALLER_AGENT_MISMATCH"
+    ],
+    "resolver_calls": 0,
+    "resolver_statuses": [],
+    "status": "REFUSED_BEFORE_CONSEQUENCE",
+    "supplied_attestation_subject_agent_id": "P4-F01-AGENT-B",
+    "tamper_preserved_attestation_id": true,
+    "tamper_preserved_signature": true,
+    "witness_end_index": 9,
+    "witness_records_added": 1,
+    "witness_start_index": 8
+  },
+  "negative_tampered_identity": {
+    "attestation_id": "90C5969CF6475208A4B2EF78208D490404585EFECC5ED9ECC4DF96330028FF21",
+    "attestation_issuer_id": "P4-F02-S01-IDENTITY-AUTHORITY-001",
+    "attestation_tampered": true,
+    "caller_identity_verifier_calls": [
+      {
+        "attestation_id": "90C5969CF6475208A4B2EF78208D490404585EFECC5ED9ECC4DF96330028FF21",
+        "authenticated_subject_agent_id": null,
+        "issuer_id": "P4-F02-S01-IDENTITY-AUTHORITY-001",
+        "reasons": [
+          "CALLER_IDENTITY_ATTESTATION_ID_MISMATCH",
+          "CALLER_IDENTITY_SIGNATURE_INVALID"
+        ],
+        "subject_agent_id": "P4-F01-AGENT-A",
+        "valid": false
+      }
+    ],
+    "case_id": "P4-F02-S01-NEG-TAMPERED-IDENTITY",
+    "consequence_committed": false,
+    "exception": null,
+    "original_attestation_subject_agent_id": "P4-F01-AGENT-B",
+    "outbox_after": 2,
+    "outbox_before": 2,
+    "permit_bound_agent_id": "P4-F01-AGENT-A",
+    "permit_id": "A4888C6D949838AE2F16224CF6EEAB2EBD58F37A4E4E54C9BDF9D769BEFABF85",
+    "permit_verifier_calls": [
+      {
+        "expected_agent_id": "P4-F01-AGENT-A",
+        "permit_agent_id": "P4-F01-AGENT-A",
+        "permit_id": "A4888C6D949838AE2F16224CF6EEAB2EBD58F37A4E4E54C9BDF9D769BEFABF85",
+        "reasons": [],
+        "valid": true
+      }
+    ],
+    "presenting_agent_id": "P4-F01-AGENT-A",
+    "reasons": [
+      "CALLER_IDENTITY_ATTESTATION_INVALID",
+      "CALLER_IDENTITY_ATTESTATION_ID_MISMATCH",
+      "CALLER_IDENTITY_SIGNATURE_INVALID"
+    ],
+    "resolver_calls": 0,
+    "resolver_statuses": [],
+    "status": "REFUSED_BEFORE_CONSEQUENCE",
+    "supplied_attestation_subject_agent_id": "P4-F01-AGENT-A",
+    "tamper_preserved_attestation_id": true,
+    "tamper_preserved_signature": true,
+    "witness_end_index": 10,
+    "witness_records_added": 1,
+    "witness_start_index": 9
+  },
+  "positive_control_agent_a": {
+    "attestation_id": "A155DE39154705F22297F274950352D731B25CAE1E8ADD38DCDC1794DA8A5692",
+    "attestation_issuer_id": "P4-F02-S01-IDENTITY-AUTHORITY-001",
+    "attestation_tampered": false,
+    "caller_identity_verifier_calls": [
+      {
+        "attestation_id": "A155DE39154705F22297F274950352D731B25CAE1E8ADD38DCDC1794DA8A5692",
+        "authenticated_subject_agent_id": "P4-F01-AGENT-A",
+        "issuer_id": "P4-F02-S01-IDENTITY-AUTHORITY-001",
+        "reasons": [],
+        "subject_agent_id": "P4-F01-AGENT-A",
+        "valid": true
+      },
+      {
+        "attestation_id": "A155DE39154705F22297F274950352D731B25CAE1E8ADD38DCDC1794DA8A5692",
+        "authenticated_subject_agent_id": "P4-F01-AGENT-A",
+        "issuer_id": "P4-F02-S01-IDENTITY-AUTHORITY-001",
+        "reasons": [],
+        "subject_agent_id": "P4-F01-AGENT-A",
+        "valid": true
+      },
+      {
+        "attestation_id": "A155DE39154705F22297F274950352D731B25CAE1E8ADD38DCDC1794DA8A5692",
+        "authenticated_subject_agent_id": "P4-F01-AGENT-A",
+        "issuer_id": "P4-F02-S01-IDENTITY-AUTHORITY-001",
+        "reasons": [],
+        "subject_agent_id": "P4-F01-AGENT-A",
+        "valid": true
+      }
+    ],
+    "case_id": "P4-F02-S01-PC-A",
+    "consequence_committed": true,
+    "exception": null,
+    "original_attestation_subject_agent_id": "P4-F01-AGENT-A",
+    "outbox_after": 1,
+    "outbox_before": 0,
+    "permit_bound_agent_id": "P4-F01-AGENT-A",
+    "permit_id": "76288B4DC9CBA480E83C07389F55EE2616E0D247660144365FC5370006889780",
+    "permit_verifier_calls": [
+      {
+        "expected_agent_id": "P4-F01-AGENT-A",
+        "permit_agent_id": "P4-F01-AGENT-A",
+        "permit_id": "76288B4DC9CBA480E83C07389F55EE2616E0D247660144365FC5370006889780",
+        "reasons": [],
+        "valid": true
+      },
+      {
+        "expected_agent_id": "P4-F01-AGENT-A",
+        "permit_agent_id": "P4-F01-AGENT-A",
+        "permit_id": "76288B4DC9CBA480E83C07389F55EE2616E0D247660144365FC5370006889780",
+        "reasons": [],
+        "valid": true
+      },
+      {
+        "expected_agent_id": "P4-F01-AGENT-A",
+        "permit_agent_id": "P4-F01-AGENT-A",
+        "permit_id": "76288B4DC9CBA480E83C07389F55EE2616E0D247660144365FC5370006889780",
+        "reasons": [],
+        "valid": true
+      }
+    ],
+    "presenting_agent_id": "P4-F01-AGENT-A",
+    "reasons": [],
+    "resolver_calls": 2,
+    "resolver_statuses": [
+      "ESTABLISHED",
+      "ESTABLISHED"
+    ],
+    "status": "EXECUTED",
+    "supplied_attestation_subject_agent_id": "P4-F01-AGENT-A",
+    "tamper_preserved_attestation_id": true,
+    "tamper_preserved_signature": true,
+    "witness_end_index": 4,
+    "witness_records_added": 4,
+    "witness_start_index": 0
+  },
+  "positive_control_agent_b": {
+    "attestation_id": "6004B969989BC6C7CBE441FD8B5560C5BA7BDCC39D52E32FB7DC7F9826683C93",
+    "attestation_issuer_id": "P4-F02-S01-IDENTITY-AUTHORITY-001",
+    "attestation_tampered": false,
+    "caller_identity_verifier_calls": [
+      {
+        "attestation_id": "6004B969989BC6C7CBE441FD8B5560C5BA7BDCC39D52E32FB7DC7F9826683C93",
+        "authenticated_subject_agent_id": "P4-F01-AGENT-B",
+        "issuer_id": "P4-F02-S01-IDENTITY-AUTHORITY-001",
+        "reasons": [],
+        "subject_agent_id": "P4-F01-AGENT-B",
+        "valid": true
+      },
+      {
+        "attestation_id": "6004B969989BC6C7CBE441FD8B5560C5BA7BDCC39D52E32FB7DC7F9826683C93",
+        "authenticated_subject_agent_id": "P4-F01-AGENT-B",
+        "issuer_id": "P4-F02-S01-IDENTITY-AUTHORITY-001",
+        "reasons": [],
+        "subject_agent_id": "P4-F01-AGENT-B",
+        "valid": true
+      },
+      {
+        "attestation_id": "6004B969989BC6C7CBE441FD8B5560C5BA7BDCC39D52E32FB7DC7F9826683C93",
+        "authenticated_subject_agent_id": "P4-F01-AGENT-B",
+        "issuer_id": "P4-F02-S01-IDENTITY-AUTHORITY-001",
+        "reasons": [],
+        "subject_agent_id": "P4-F01-AGENT-B",
+        "valid": true
+      }
+    ],
+    "case_id": "P4-F02-S01-PC-B",
+    "consequence_committed": true,
+    "exception": null,
+    "original_attestation_subject_agent_id": "P4-F01-AGENT-B",
+    "outbox_after": 2,
+    "outbox_before": 1,
+    "permit_bound_agent_id": "P4-F01-AGENT-B",
+    "permit_id": "C95F05030318ECF9CEDC9586AC459845DD6D409457104B99236F71FD26B017E0",
+    "permit_verifier_calls": [
+      {
+        "expected_agent_id": "P4-F01-AGENT-B",
+        "permit_agent_id": "P4-F01-AGENT-B",
+        "permit_id": "C95F05030318ECF9CEDC9586AC459845DD6D409457104B99236F71FD26B017E0",
+        "reasons": [],
+        "valid": true
+      },
+      {
+        "expected_agent_id": "P4-F01-AGENT-B",
+        "permit_agent_id": "P4-F01-AGENT-B",
+        "permit_id": "C95F05030318ECF9CEDC9586AC459845DD6D409457104B99236F71FD26B017E0",
+        "reasons": [],
+        "valid": true
+      },
+      {
+        "expected_agent_id": "P4-F01-AGENT-B",
+        "permit_agent_id": "P4-F01-AGENT-B",
+        "permit_id": "C95F05030318ECF9CEDC9586AC459845DD6D409457104B99236F71FD26B017E0",
+        "reasons": [],
+        "valid": true
+      }
+    ],
+    "presenting_agent_id": "P4-F01-AGENT-B",
+    "reasons": [],
+    "resolver_calls": 2,
+    "resolver_statuses": [
+      "ESTABLISHED",
+      "ESTABLISHED"
+    ],
+    "status": "EXECUTED",
+    "supplied_attestation_subject_agent_id": "P4-F01-AGENT-B",
+    "tamper_preserved_attestation_id": true,
+    "tamper_preserved_signature": true,
+    "witness_end_index": 8,
+    "witness_records_added": 4,
+    "witness_start_index": 4
+  },
+  "predecessor_evidence_commit": "e245ea362e87e2b050a8d55715e75bab6bd271d4",
+  "predecessor_evidence_identity_preserved": true,
+  "predecessor_identity": {
+    "evidence/phase-iv/p4-f02/P4-F02-FIRST-OBSERVED-FREEZE-001.json": {
+      "actual_sha256": "5C62B0C14F46E983CE8A0D2C8A0D08ED2D01B1E525E71590278B93E48BC0438E",
+      "expected_sha256": "5C62B0C14F46E983CE8A0D2C8A0D08ED2D01B1E525E71590278B93E48BC0438E",
+      "preserved": true
+    },
+    "evidence/phase-iv/p4-f02/P4-F02-FIRST-OBSERVED-RESULT-001.json": {
+      "actual_sha256": "CC10C5B86864290B053D06F345EA05C0E4B17A5C6F13874F6BD7483B6D70D3DB",
+      "expected_sha256": "CC10C5B86864290B053D06F345EA05C0E4B17A5C6F13874F6BD7483B6D70D3DB",
+      "preserved": true
+    },
+    "evidence/phase-iv/p4-f02/P4-F02-WITNESS-001.jsonl": {
+      "actual_sha256": "E89BFBBC7A0858599B348D267449FE23AEAA9FA8D12791A73981D7EA43029F8D",
+      "expected_sha256": "E89BFBBC7A0858599B348D267449FE23AEAA9FA8D12791A73981D7EA43029F8D",
+      "preserved": true
+    }
+  },
+  "required_observations": {
+    "authenticated_caller_binding_control_established": true,
+    "false_presenter_mismatch_refused": true,
+    "mismatch_witness_identity_preserved": true,
+    "positive_a_witness_identity_preserved": true,
+    "positive_agent_a_valid": true,
+    "positive_agent_b_valid": true,
+    "positive_b_witness_identity_preserved": true,
+    "tampered_identity_refused": true,
+    "tampered_witness_identity_preserved": true,
+    "witness_chain_valid": true,
+    "witness_distinguishes_identities": true
+  },
+  "source_identity": {
+    "constitution/constitution.yaml": {
+      "actual_sha256": "6FF2C14C67DF4B009F81551AD55ECD4C1EA314B5827D7B039D0E21AD934D302A",
+      "expected_sha256": "6FF2C14C67DF4B009F81551AD55ECD4C1EA314B5827D7B039D0E21AD934D302A",
+      "preserved": true
+    },
+    "core/authority.py": {
+      "actual_sha256": "E949C5C9E75DCB65301701363363AC6D118CD64D3AB38018957DA086EBB6B85C",
+      "expected_sha256": "E949C5C9E75DCB65301701363363AC6D118CD64D3AB38018957DA086EBB6B85C",
+      "preserved": true
+    },
+    "core/authority_resolution.py": {
+      "actual_sha256": "D1B052E1F413ADAFA71C8B7D3E0AB470817E901CBA28D1CF145BF10EA7A585EF",
+      "expected_sha256": "D1B052E1F413ADAFA71C8B7D3E0AB470817E901CBA28D1CF145BF10EA7A585EF",
+      "preserved": true
+    },
+    "core/authority_resolution_attestation.py": {
+      "actual_sha256": "9A40FF86E7F1C84864CB8AAC881F85CBCF5585FA2C5DA8FBF04BA2BA368A0F62",
+      "expected_sha256": "9A40FF86E7F1C84864CB8AAC881F85CBCF5585FA2C5DA8FBF04BA2BA368A0F62",
+      "preserved": true
+    },
+    "core/caller_identity_attestation.py": {
+      "actual_sha256": "AA0F7960733AF9A82B3D0F02D07CCBFBCAB907B42A5282B010D44B2F8576CFDA",
+      "expected_sha256": "AA0F7960733AF9A82B3D0F02D07CCBFBCAB907B42A5282B010D44B2F8576CFDA",
+      "preserved": true
+    },
+    "core/execution_firewall_v07.py": {
+      "actual_sha256": "A43FEFA0834D405BB0CF07D1D6FE23FE2BF81DF34237574F778AECA2F6E5D948",
+      "expected_sha256": "A43FEFA0834D405BB0CF07D1D6FE23FE2BF81DF34237574F778AECA2F6E5D948",
+      "preserved": true
+    },
+    "core/execution_firewall_v08.py": {
+      "actual_sha256": "F5DA87C150CAACCACCB875F19B1EC51B4E2BA3051E2DB5643005802131B0DCE9",
+      "expected_sha256": "F5DA87C150CAACCACCB875F19B1EC51B4E2BA3051E2DB5643005802131B0DCE9",
+      "preserved": true
+    },
+    "core/permit_v03.py": {
+      "actual_sha256": "B33702D6E0D9CC397E1B57E54FF5E9FB39A3A40C1E683737DEFB6FFB67D6EE0B",
+      "expected_sha256": "B33702D6E0D9CC397E1B57E54FF5E9FB39A3A40C1E683737DEFB6FFB67D6EE0B",
+      "preserved": true
+    },
+    "tools/broker_v07.py": {
+      "actual_sha256": "87288780B248260B7F7EE16851198FEFD4B71B9AA25AA361651A460514300340",
+      "expected_sha256": "87288780B248260B7F7EE16851198FEFD4B71B9AA25AA361651A460514300340",
+      "preserved": true
+    },
+    "tools/broker_v08.py": {
+      "actual_sha256": "542E894D72D57FEF58B945AC4726AF104A3690C77678AF639E51B8E23B16A9BE",
+      "expected_sha256": "542E894D72D57FEF58B945AC4726AF104A3690C77678AF639E51B8E23B16A9BE",
+      "preserved": true
+    },
+    "tools/messaging_demo_v06.py": {
+      "actual_sha256": "C976315CB420599ACEC8F2D8E5ED0B4FE4FBB9B1B07CBC8CBBA3CBB3E79A67DE",
+      "expected_sha256": "C976315CB420599ACEC8F2D8E5ED0B4FE4FBB9B1B07CBC8CBBA3CBB3E79A67DE",
+      "preserved": true
+    },
+    "witness/ledger.py": {
+      "actual_sha256": "C940D48351E8F4A06F2008CE720A2187433556E18C49D6378A2FA27E6DCE40E5",
+      "expected_sha256": "C940D48351E8F4A06F2008CE720A2187433556E18C49D6378A2FA27E6DCE40E5",
+      "preserved": true
+    }
+  },
+  "source_identity_preserved": true,
+  "successor_schema": {
+    "attestation_schema_complete": true,
+    "caller_identity_attestation_fields": [
+      "attestation_id",
+      "subject_agent_id",
+      "issuer_id",
+      "issued_at",
+      "expires_at",
+      "nonce",
+      "signature"
+    ],
+    "firewall_execute_parameters": [
+      "self",
+      "permit",
+      "current_authority",
+      "presenting_agent_id",
+      "caller_identity_attestation",
+      "expected_intent_hash",
+      "expected_permission",
+      "expected_policy_version",
+      "expected_target",
+      "expected_tool",
+      "expected_consequence_class",
+      "expected_arguments",
+      "authority_resolver",
+      "action"
+    ],
+    "firewall_has_caller_attestation": true,
+    "firewall_has_presenter": true,
+    "request_has_caller_attestation": true,
+    "request_has_presenter": true,
+    "successor_schema_present": true,
+    "tool_request_fields": [
+      "permit",
+      "current_authority",
+      "presenting_agent_id",
+      "caller_identity_attestation",
+      "authority_resolver",
+      "intent_hash",
+      "permission",
+      "policy_version",
+      "target",
+      "tool_name",
+      "consequence_class",
+      "arguments"
+    ]
+  },
+  "test_id": "P4-F02-S01",
+  "timeline": [
+    "HARNESS:P4-F02-S01-PC-A:PERMIT:P4-F01-AGENT-A:PRESENTER:P4-F01-AGENT-A:ATTESTED_SUBJECT:P4-F01-AGENT-A",
+    "WITNESS:PRE_EXECUTION_AUTHORIZED",
+    "RESOLVER:ESTABLISHED:ATTESTED",
+    "WITNESS:CONSEQUENCE_BOUNDARY_REVALIDATED",
+    "RESOLVER:ESTABLISHED:ATTESTED",
+    "WITNESS:CONSEQUENCE_COMMIT_AUTHORITY_REVALIDATED",
+    "WITNESS:EXECUTION_COMPLETED",
+    "HARNESS:P4-F02-S01-PC-B:PERMIT:P4-F01-AGENT-B:PRESENTER:P4-F01-AGENT-B:ATTESTED_SUBJECT:P4-F01-AGENT-B",
+    "WITNESS:PRE_EXECUTION_AUTHORIZED",
+    "RESOLVER:ESTABLISHED:ATTESTED",
+    "WITNESS:CONSEQUENCE_BOUNDARY_REVALIDATED",
+    "RESOLVER:ESTABLISHED:ATTESTED",
+    "WITNESS:CONSEQUENCE_COMMIT_AUTHORITY_REVALIDATED",
+    "WITNESS:EXECUTION_COMPLETED",
+    "HARNESS:P4-F02-S01-NEG-CALLER-MISMATCH:PERMIT:P4-F01-AGENT-A:PRESENTER:P4-F01-AGENT-A:ATTESTED_SUBJECT:P4-F01-AGENT-B",
+    "WITNESS:EXECUTION_REFUSED",
+    "HARNESS:P4-F02-S01-NEG-TAMPERED-IDENTITY:PERMIT:P4-F01-AGENT-A:PRESENTER:P4-F01-AGENT-A:ATTESTED_SUBJECT:P4-F01-AGENT-A",
+    "WITNESS:EXECUTION_REFUSED"
+  ],
+  "witness": {
+    "chain_errors": [],
+    "chain_valid": true,
+    "record_count": 10
+  }
+}
