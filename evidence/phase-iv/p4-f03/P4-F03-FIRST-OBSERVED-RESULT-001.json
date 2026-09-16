@@ -1,0 +1,411 @@
+{
+  "bounded_claim": "P4-F03 observes only whether the frozen V08 reference path permits reuse of the same still-valid authenticated caller-identity attestation across separate executions carrying fresh execution permits. It does not establish distributed replay behavior, stolen-credential resistance, network authentication, external identity-provider security, process or hardware identity, tenant isolation, swarm security, or production exploitability resistance.",
+  "classification": "AUTHENTICATED_CALLER_ATTESTATION_REPLAY_ACCEPTED_ACROSS_FRESH_PERMITS__SINGLE_USE_CONTROL_NOT_ESTABLISHED",
+  "definition_commit": "3a6c3db2dc954bc89296559b0b7ee0a498906458",
+  "definition_identity_preserved": true,
+  "positive_control_first": {
+    "caller_attestation": {
+      "attestation_id": "47B114A2BE9CBF7EAFA3BC90059E2C8710B87A2064723373FE0ABCAE51F58011",
+      "expires_at": "2026-09-16T15:52:04.437163Z",
+      "issued_at": "2026-09-16T15:37:04.437163Z",
+      "issuer_id": "P4-F02-S01-IDENTITY-AUTHORITY-001",
+      "nonce": "P4-F03-PC-ATTESTATION-001",
+      "signature": "75BC514AD73A34C4E570FDF0CCBBA3C845354D3382CBB219901E1FDBE80BC1F5",
+      "subject_agent_id": "P4-F01-AGENT-A"
+    },
+    "caller_identity_verifier_calls": [
+      {
+        "attestation_id": "47B114A2BE9CBF7EAFA3BC90059E2C8710B87A2064723373FE0ABCAE51F58011",
+        "authenticated_subject_agent_id": "P4-F01-AGENT-A",
+        "issuer_id": "P4-F02-S01-IDENTITY-AUTHORITY-001",
+        "nonce": "P4-F03-PC-ATTESTATION-001",
+        "reasons": [],
+        "signature": "75BC514AD73A34C4E570FDF0CCBBA3C845354D3382CBB219901E1FDBE80BC1F5",
+        "subject_agent_id": "P4-F01-AGENT-A",
+        "valid": true
+      },
+      {
+        "attestation_id": "47B114A2BE9CBF7EAFA3BC90059E2C8710B87A2064723373FE0ABCAE51F58011",
+        "authenticated_subject_agent_id": "P4-F01-AGENT-A",
+        "issuer_id": "P4-F02-S01-IDENTITY-AUTHORITY-001",
+        "nonce": "P4-F03-PC-ATTESTATION-001",
+        "reasons": [],
+        "signature": "75BC514AD73A34C4E570FDF0CCBBA3C845354D3382CBB219901E1FDBE80BC1F5",
+        "subject_agent_id": "P4-F01-AGENT-A",
+        "valid": true
+      },
+      {
+        "attestation_id": "47B114A2BE9CBF7EAFA3BC90059E2C8710B87A2064723373FE0ABCAE51F58011",
+        "authenticated_subject_agent_id": "P4-F01-AGENT-A",
+        "issuer_id": "P4-F02-S01-IDENTITY-AUTHORITY-001",
+        "nonce": "P4-F03-PC-ATTESTATION-001",
+        "reasons": [],
+        "signature": "75BC514AD73A34C4E570FDF0CCBBA3C845354D3382CBB219901E1FDBE80BC1F5",
+        "subject_agent_id": "P4-F01-AGENT-A",
+        "valid": true
+      }
+    ],
+    "case_id": "P4-F03-PC-01",
+    "consequence_committed": true,
+    "exception": null,
+    "outbox_after": 1,
+    "outbox_before": 0,
+    "permit_agent_id": "P4-F01-AGENT-A",
+    "permit_id": "2BCB9E4FE35031235D35098B3EE0ED4FDBFB21626E4B3C2D59A8ED09D9E111B4",
+    "permit_verifier_calls": [
+      {
+        "expected_agent_id": "P4-F01-AGENT-A",
+        "permit_agent_id": "P4-F01-AGENT-A",
+        "permit_id": "2BCB9E4FE35031235D35098B3EE0ED4FDBFB21626E4B3C2D59A8ED09D9E111B4",
+        "reasons": [],
+        "valid": true
+      },
+      {
+        "expected_agent_id": "P4-F01-AGENT-A",
+        "permit_agent_id": "P4-F01-AGENT-A",
+        "permit_id": "2BCB9E4FE35031235D35098B3EE0ED4FDBFB21626E4B3C2D59A8ED09D9E111B4",
+        "reasons": [],
+        "valid": true
+      },
+      {
+        "expected_agent_id": "P4-F01-AGENT-A",
+        "permit_agent_id": "P4-F01-AGENT-A",
+        "permit_id": "2BCB9E4FE35031235D35098B3EE0ED4FDBFB21626E4B3C2D59A8ED09D9E111B4",
+        "reasons": [],
+        "valid": true
+      }
+    ],
+    "reasons": [],
+    "resolver_calls": 2,
+    "status": "EXECUTED",
+    "witness_end_index": 4,
+    "witness_records_added": 4,
+    "witness_start_index": 0
+  },
+  "positive_control_second": {
+    "caller_attestation": {
+      "attestation_id": "9734B2EE7565AF838EBCBE0F00790780D1B8D2072FFCB902B29F1B6C24E87BDA",
+      "expires_at": "2026-09-16T15:52:04.437369Z",
+      "issued_at": "2026-09-16T15:37:04.437369Z",
+      "issuer_id": "P4-F02-S01-IDENTITY-AUTHORITY-001",
+      "nonce": "P4-F03-PC-ATTESTATION-002",
+      "signature": "33D3ACED60842CA7C1DDA5BC9A448B2C7A933BA22B516EBA144A34608A7CF95F",
+      "subject_agent_id": "P4-F01-AGENT-A"
+    },
+    "caller_identity_verifier_calls": [
+      {
+        "attestation_id": "9734B2EE7565AF838EBCBE0F00790780D1B8D2072FFCB902B29F1B6C24E87BDA",
+        "authenticated_subject_agent_id": "P4-F01-AGENT-A",
+        "issuer_id": "P4-F02-S01-IDENTITY-AUTHORITY-001",
+        "nonce": "P4-F03-PC-ATTESTATION-002",
+        "reasons": [],
+        "signature": "33D3ACED60842CA7C1DDA5BC9A448B2C7A933BA22B516EBA144A34608A7CF95F",
+        "subject_agent_id": "P4-F01-AGENT-A",
+        "valid": true
+      },
+      {
+        "attestation_id": "9734B2EE7565AF838EBCBE0F00790780D1B8D2072FFCB902B29F1B6C24E87BDA",
+        "authenticated_subject_agent_id": "P4-F01-AGENT-A",
+        "issuer_id": "P4-F02-S01-IDENTITY-AUTHORITY-001",
+        "nonce": "P4-F03-PC-ATTESTATION-002",
+        "reasons": [],
+        "signature": "33D3ACED60842CA7C1DDA5BC9A448B2C7A933BA22B516EBA144A34608A7CF95F",
+        "subject_agent_id": "P4-F01-AGENT-A",
+        "valid": true
+      },
+      {
+        "attestation_id": "9734B2EE7565AF838EBCBE0F00790780D1B8D2072FFCB902B29F1B6C24E87BDA",
+        "authenticated_subject_agent_id": "P4-F01-AGENT-A",
+        "issuer_id": "P4-F02-S01-IDENTITY-AUTHORITY-001",
+        "nonce": "P4-F03-PC-ATTESTATION-002",
+        "reasons": [],
+        "signature": "33D3ACED60842CA7C1DDA5BC9A448B2C7A933BA22B516EBA144A34608A7CF95F",
+        "subject_agent_id": "P4-F01-AGENT-A",
+        "valid": true
+      }
+    ],
+    "case_id": "P4-F03-PC-02",
+    "consequence_committed": true,
+    "exception": null,
+    "outbox_after": 2,
+    "outbox_before": 1,
+    "permit_agent_id": "P4-F01-AGENT-A",
+    "permit_id": "60AD9449A5A24398528F1E8775C4454378C0D9F478A2DCA4D88DF80CD4DF1359",
+    "permit_verifier_calls": [
+      {
+        "expected_agent_id": "P4-F01-AGENT-A",
+        "permit_agent_id": "P4-F01-AGENT-A",
+        "permit_id": "60AD9449A5A24398528F1E8775C4454378C0D9F478A2DCA4D88DF80CD4DF1359",
+        "reasons": [],
+        "valid": true
+      },
+      {
+        "expected_agent_id": "P4-F01-AGENT-A",
+        "permit_agent_id": "P4-F01-AGENT-A",
+        "permit_id": "60AD9449A5A24398528F1E8775C4454378C0D9F478A2DCA4D88DF80CD4DF1359",
+        "reasons": [],
+        "valid": true
+      },
+      {
+        "expected_agent_id": "P4-F01-AGENT-A",
+        "permit_agent_id": "P4-F01-AGENT-A",
+        "permit_id": "60AD9449A5A24398528F1E8775C4454378C0D9F478A2DCA4D88DF80CD4DF1359",
+        "reasons": [],
+        "valid": true
+      }
+    ],
+    "reasons": [],
+    "resolver_calls": 2,
+    "status": "EXECUTED",
+    "witness_end_index": 8,
+    "witness_records_added": 4,
+    "witness_start_index": 4
+  },
+  "predecessor_evidence_commit": "15aa88dca989cc1694f99352db2d7d1191b93d75",
+  "predecessor_evidence_identity_preserved": true,
+  "predecessor_identity": {
+    "evidence/phase-iv/p4-f02-s01/P4-F02-S01-FIRST-OBSERVED-FREEZE-001.json": {
+      "actual_sha256": "55DDB7A9AF7C784F7B74732F3A6955D3BF27F33D2EBC2B506127AE6ED702D4DA",
+      "expected_sha256": "55DDB7A9AF7C784F7B74732F3A6955D3BF27F33D2EBC2B506127AE6ED702D4DA",
+      "preserved": true
+    },
+    "evidence/phase-iv/p4-f02-s01/P4-F02-S01-FIRST-OBSERVED-RESULT-001.json": {
+      "actual_sha256": "2FB4B6893852D0AAC7A7D5940E4F79FC2CE24A574EE7CA1B4909913546AFBBC9",
+      "expected_sha256": "2FB4B6893852D0AAC7A7D5940E4F79FC2CE24A574EE7CA1B4909913546AFBBC9",
+      "preserved": true
+    },
+    "evidence/phase-iv/p4-f02-s01/P4-F02-S01-WITNESS-001.jsonl": {
+      "actual_sha256": "5ACFA70BB4EA216F19611F8CB181F62BFF4861447884AE7A3B82EA14E39D5B9B",
+      "expected_sha256": "5ACFA70BB4EA216F19611F8CB181F62BFF4861447884AE7A3B82EA14E39D5B9B",
+      "preserved": true
+    }
+  },
+  "required_observations": {
+    "fresh_permits_confirmed": true,
+    "positive_control_valid": true,
+    "replayed_attestation_still_valid": true,
+    "reuse_first_valid": true,
+    "reuse_second_committed": true,
+    "reuse_second_reasons": [],
+    "reuse_second_refused_before_consequence": false,
+    "same_attestation_reused": true,
+    "witness_chain_valid": true
+  },
+  "reuse_first": {
+    "caller_attestation": {
+      "attestation_id": "E48923E814817A0198902FD408FED6C3810D6E4B38F39774E90E153FE92CD512",
+      "expires_at": "2026-09-16T15:52:04.450006Z",
+      "issued_at": "2026-09-16T15:37:04.450006Z",
+      "issuer_id": "P4-F02-S01-IDENTITY-AUTHORITY-001",
+      "nonce": "P4-F03-REUSED-ATTESTATION-001",
+      "signature": "F3703ACF8668DC2607AFA7ACBFDB08F0FEF3C39B75A900B66534656118279F54",
+      "subject_agent_id": "P4-F01-AGENT-A"
+    },
+    "caller_identity_verifier_calls": [
+      {
+        "attestation_id": "E48923E814817A0198902FD408FED6C3810D6E4B38F39774E90E153FE92CD512",
+        "authenticated_subject_agent_id": "P4-F01-AGENT-A",
+        "issuer_id": "P4-F02-S01-IDENTITY-AUTHORITY-001",
+        "nonce": "P4-F03-REUSED-ATTESTATION-001",
+        "reasons": [],
+        "signature": "F3703ACF8668DC2607AFA7ACBFDB08F0FEF3C39B75A900B66534656118279F54",
+        "subject_agent_id": "P4-F01-AGENT-A",
+        "valid": true
+      },
+      {
+        "attestation_id": "E48923E814817A0198902FD408FED6C3810D6E4B38F39774E90E153FE92CD512",
+        "authenticated_subject_agent_id": "P4-F01-AGENT-A",
+        "issuer_id": "P4-F02-S01-IDENTITY-AUTHORITY-001",
+        "nonce": "P4-F03-REUSED-ATTESTATION-001",
+        "reasons": [],
+        "signature": "F3703ACF8668DC2607AFA7ACBFDB08F0FEF3C39B75A900B66534656118279F54",
+        "subject_agent_id": "P4-F01-AGENT-A",
+        "valid": true
+      },
+      {
+        "attestation_id": "E48923E814817A0198902FD408FED6C3810D6E4B38F39774E90E153FE92CD512",
+        "authenticated_subject_agent_id": "P4-F01-AGENT-A",
+        "issuer_id": "P4-F02-S01-IDENTITY-AUTHORITY-001",
+        "nonce": "P4-F03-REUSED-ATTESTATION-001",
+        "reasons": [],
+        "signature": "F3703ACF8668DC2607AFA7ACBFDB08F0FEF3C39B75A900B66534656118279F54",
+        "subject_agent_id": "P4-F01-AGENT-A",
+        "valid": true
+      }
+    ],
+    "case_id": "P4-F03-REUSE-FIRST",
+    "consequence_committed": true,
+    "exception": null,
+    "outbox_after": 3,
+    "outbox_before": 2,
+    "permit_agent_id": "P4-F01-AGENT-A",
+    "permit_id": "319E590F816BEEC0029246D8420611FFBEF4F1AE9FF27B0158E8B9B118C92271",
+    "permit_verifier_calls": [
+      {
+        "expected_agent_id": "P4-F01-AGENT-A",
+        "permit_agent_id": "P4-F01-AGENT-A",
+        "permit_id": "319E590F816BEEC0029246D8420611FFBEF4F1AE9FF27B0158E8B9B118C92271",
+        "reasons": [],
+        "valid": true
+      },
+      {
+        "expected_agent_id": "P4-F01-AGENT-A",
+        "permit_agent_id": "P4-F01-AGENT-A",
+        "permit_id": "319E590F816BEEC0029246D8420611FFBEF4F1AE9FF27B0158E8B9B118C92271",
+        "reasons": [],
+        "valid": true
+      },
+      {
+        "expected_agent_id": "P4-F01-AGENT-A",
+        "permit_agent_id": "P4-F01-AGENT-A",
+        "permit_id": "319E590F816BEEC0029246D8420611FFBEF4F1AE9FF27B0158E8B9B118C92271",
+        "reasons": [],
+        "valid": true
+      }
+    ],
+    "reasons": [],
+    "resolver_calls": 2,
+    "status": "EXECUTED",
+    "witness_end_index": 12,
+    "witness_records_added": 4,
+    "witness_start_index": 8
+  },
+  "reuse_second": {
+    "caller_attestation": {
+      "attestation_id": "E48923E814817A0198902FD408FED6C3810D6E4B38F39774E90E153FE92CD512",
+      "expires_at": "2026-09-16T15:52:04.450006Z",
+      "issued_at": "2026-09-16T15:37:04.450006Z",
+      "issuer_id": "P4-F02-S01-IDENTITY-AUTHORITY-001",
+      "nonce": "P4-F03-REUSED-ATTESTATION-001",
+      "signature": "F3703ACF8668DC2607AFA7ACBFDB08F0FEF3C39B75A900B66534656118279F54",
+      "subject_agent_id": "P4-F01-AGENT-A"
+    },
+    "caller_identity_verifier_calls": [
+      {
+        "attestation_id": "E48923E814817A0198902FD408FED6C3810D6E4B38F39774E90E153FE92CD512",
+        "authenticated_subject_agent_id": "P4-F01-AGENT-A",
+        "issuer_id": "P4-F02-S01-IDENTITY-AUTHORITY-001",
+        "nonce": "P4-F03-REUSED-ATTESTATION-001",
+        "reasons": [],
+        "signature": "F3703ACF8668DC2607AFA7ACBFDB08F0FEF3C39B75A900B66534656118279F54",
+        "subject_agent_id": "P4-F01-AGENT-A",
+        "valid": true
+      },
+      {
+        "attestation_id": "E48923E814817A0198902FD408FED6C3810D6E4B38F39774E90E153FE92CD512",
+        "authenticated_subject_agent_id": "P4-F01-AGENT-A",
+        "issuer_id": "P4-F02-S01-IDENTITY-AUTHORITY-001",
+        "nonce": "P4-F03-REUSED-ATTESTATION-001",
+        "reasons": [],
+        "signature": "F3703ACF8668DC2607AFA7ACBFDB08F0FEF3C39B75A900B66534656118279F54",
+        "subject_agent_id": "P4-F01-AGENT-A",
+        "valid": true
+      },
+      {
+        "attestation_id": "E48923E814817A0198902FD408FED6C3810D6E4B38F39774E90E153FE92CD512",
+        "authenticated_subject_agent_id": "P4-F01-AGENT-A",
+        "issuer_id": "P4-F02-S01-IDENTITY-AUTHORITY-001",
+        "nonce": "P4-F03-REUSED-ATTESTATION-001",
+        "reasons": [],
+        "signature": "F3703ACF8668DC2607AFA7ACBFDB08F0FEF3C39B75A900B66534656118279F54",
+        "subject_agent_id": "P4-F01-AGENT-A",
+        "valid": true
+      }
+    ],
+    "case_id": "P4-F03-REUSE-SECOND",
+    "consequence_committed": true,
+    "exception": null,
+    "outbox_after": 4,
+    "outbox_before": 3,
+    "permit_agent_id": "P4-F01-AGENT-A",
+    "permit_id": "84430A631CBA1F2222263E0C54DECA68253483CDCD739CA1B88E70D384EA6094",
+    "permit_verifier_calls": [
+      {
+        "expected_agent_id": "P4-F01-AGENT-A",
+        "permit_agent_id": "P4-F01-AGENT-A",
+        "permit_id": "84430A631CBA1F2222263E0C54DECA68253483CDCD739CA1B88E70D384EA6094",
+        "reasons": [],
+        "valid": true
+      },
+      {
+        "expected_agent_id": "P4-F01-AGENT-A",
+        "permit_agent_id": "P4-F01-AGENT-A",
+        "permit_id": "84430A631CBA1F2222263E0C54DECA68253483CDCD739CA1B88E70D384EA6094",
+        "reasons": [],
+        "valid": true
+      },
+      {
+        "expected_agent_id": "P4-F01-AGENT-A",
+        "permit_agent_id": "P4-F01-AGENT-A",
+        "permit_id": "84430A631CBA1F2222263E0C54DECA68253483CDCD739CA1B88E70D384EA6094",
+        "reasons": [],
+        "valid": true
+      }
+    ],
+    "reasons": [],
+    "resolver_calls": 2,
+    "status": "EXECUTED",
+    "witness_end_index": 16,
+    "witness_records_added": 4,
+    "witness_start_index": 12
+  },
+  "source_identity": {
+    "constitution/constitution.yaml": {
+      "actual_sha256": "6FF2C14C67DF4B009F81551AD55ECD4C1EA314B5827D7B039D0E21AD934D302A",
+      "expected_sha256": "6FF2C14C67DF4B009F81551AD55ECD4C1EA314B5827D7B039D0E21AD934D302A",
+      "preserved": true
+    },
+    "core/authority.py": {
+      "actual_sha256": "E949C5C9E75DCB65301701363363AC6D118CD64D3AB38018957DA086EBB6B85C",
+      "expected_sha256": "E949C5C9E75DCB65301701363363AC6D118CD64D3AB38018957DA086EBB6B85C",
+      "preserved": true
+    },
+    "core/authority_resolution.py": {
+      "actual_sha256": "D1B052E1F413ADAFA71C8B7D3E0AB470817E901CBA28D1CF145BF10EA7A585EF",
+      "expected_sha256": "D1B052E1F413ADAFA71C8B7D3E0AB470817E901CBA28D1CF145BF10EA7A585EF",
+      "preserved": true
+    },
+    "core/authority_resolution_attestation.py": {
+      "actual_sha256": "9A40FF86E7F1C84864CB8AAC881F85CBCF5585FA2C5DA8FBF04BA2BA368A0F62",
+      "expected_sha256": "9A40FF86E7F1C84864CB8AAC881F85CBCF5585FA2C5DA8FBF04BA2BA368A0F62",
+      "preserved": true
+    },
+    "core/caller_identity_attestation.py": {
+      "actual_sha256": "AA0F7960733AF9A82B3D0F02D07CCBFBCAB907B42A5282B010D44B2F8576CFDA",
+      "expected_sha256": "AA0F7960733AF9A82B3D0F02D07CCBFBCAB907B42A5282B010D44B2F8576CFDA",
+      "preserved": true
+    },
+    "core/execution_firewall_v08.py": {
+      "actual_sha256": "F5DA87C150CAACCACCB875F19B1EC51B4E2BA3051E2DB5643005802131B0DCE9",
+      "expected_sha256": "F5DA87C150CAACCACCB875F19B1EC51B4E2BA3051E2DB5643005802131B0DCE9",
+      "preserved": true
+    },
+    "core/permit_v03.py": {
+      "actual_sha256": "B33702D6E0D9CC397E1B57E54FF5E9FB39A3A40C1E683737DEFB6FFB67D6EE0B",
+      "expected_sha256": "B33702D6E0D9CC397E1B57E54FF5E9FB39A3A40C1E683737DEFB6FFB67D6EE0B",
+      "preserved": true
+    },
+    "tools/broker_v08.py": {
+      "actual_sha256": "542E894D72D57FEF58B945AC4726AF104A3690C77678AF639E51B8E23B16A9BE",
+      "expected_sha256": "542E894D72D57FEF58B945AC4726AF104A3690C77678AF639E51B8E23B16A9BE",
+      "preserved": true
+    },
+    "tools/messaging_demo_v06.py": {
+      "actual_sha256": "C976315CB420599ACEC8F2D8E5ED0B4FE4FBB9B1B07CBC8CBBA3CBB3E79A67DE",
+      "expected_sha256": "C976315CB420599ACEC8F2D8E5ED0B4FE4FBB9B1B07CBC8CBBA3CBB3E79A67DE",
+      "preserved": true
+    },
+    "witness/ledger.py": {
+      "actual_sha256": "C940D48351E8F4A06F2008CE720A2187433556E18C49D6378A2FA27E6DCE40E5",
+      "expected_sha256": "C940D48351E8F4A06F2008CE720A2187433556E18C49D6378A2FA27E6DCE40E5",
+      "preserved": true
+    }
+  },
+  "source_identity_preserved": true,
+  "test_id": "P4-F03",
+  "witness": {
+    "chain_errors": [],
+    "chain_valid": true,
+    "record_count": 16
+  }
+}
