@@ -1,0 +1,123 @@
+{
+  "test_id": "P4-F02-S01",
+  "title": "Authenticated Caller Identity Binding",
+  "phase": "IV",
+  "status": "PRE_EXECUTION_FROZEN",
+  "predecessor": {
+    "test_id": "P4-F02",
+    "evidence_freeze_commit": "e245ea362e87e2b050a8d55715e75bab6bd271d4",
+    "classification": "UNAUTHENTICATED_PRESENTER_ASSERTION_ACCEPTED__CALLER_AUTHENTICITY_NOT_NATIVELY_BOUND",
+    "preserved_seam": "The tested V07 path verified that permit.agent_id matched the caller-supplied presenting_agent_id but did not independently authenticate who supplied that presenter identifier."
+  },
+  "successor_question": "Can a successor execution path consume a separately signed caller-identity attestation, verify that attestation independently of the permit, require the authenticated caller agent identity to agree with both presenting_agent_id and permit.agent_id, and refuse a false presenter assertion before consequence?",
+  "actors": {
+    "human_authority": "P4-F01-HUMAN-001",
+    "agent_a": "P4-F01-AGENT-A",
+    "agent_b": "P4-F01-AGENT-B",
+    "identity_authority": "P4-F02-S01-IDENTITY-AUTHORITY-001"
+  },
+  "required_successor_controls": [
+    "Introduce a successor caller-identity attestation object signed by a caller-identity authority independently from the execution permit.",
+    "The caller-identity attestation must cryptographically bind at minimum subject_agent_id, issuer_id, issued_at, expires_at and nonce.",
+    "The caller-identity attestation verifier must reject an invalid signature, an unauthorized issuer, an empty subject identity or an expired attestation.",
+    "A successor tool request must carry caller_identity_attestation separately from presenting_agent_id and separately from the execution permit.",
+    "A successor execution firewall must independently verify the caller-identity attestation.",
+    "The authenticated subject_agent_id must equal presenting_agent_id.",
+    "The authenticated subject_agent_id must equal permit.agent_id.",
+    "The caller-identity check must occur before consequential execution.",
+    "Successful execution must preserve the caller-identity check through the consequence and commit boundaries rather than dropping the authenticated identity after initial admission.",
+    "Witness evidence must preserve permit-bound agent identity, supplied presenter identity, authenticated caller identity, identity-attestation identifier and identity issuer.",
+    "Existing V03 permit and V07 execution behavior must not be retrospectively modified."
+  ],
+  "expected_refusal_reasons": {
+    "authenticated_identity_mismatch": "AUTHENTICATED_CALLER_AGENT_MISMATCH",
+    "invalid_identity_attestation": "CALLER_IDENTITY_ATTESTATION_INVALID"
+  },
+  "cases": [
+    {
+      "case_id": "S01-PC-A",
+      "permit_agent_id": "P4-F01-AGENT-A",
+      "presenting_agent_id": "P4-F01-AGENT-A",
+      "authenticated_caller_agent_id": "P4-F01-AGENT-A",
+      "expected": "AUTHORIZED_CONSEQUENCE_AND_COMMIT"
+    },
+    {
+      "case_id": "S01-PC-B",
+      "permit_agent_id": "P4-F01-AGENT-B",
+      "presenting_agent_id": "P4-F01-AGENT-B",
+      "authenticated_caller_agent_id": "P4-F01-AGENT-B",
+      "expected": "AUTHORIZED_CONSEQUENCE_AND_COMMIT"
+    },
+    {
+      "case_id": "S01-NEG-CALLER-MISMATCH",
+      "permit_agent_id": "P4-F01-AGENT-A",
+      "presenting_agent_id": "P4-F01-AGENT-A",
+      "authenticated_caller_agent_id": "P4-F01-AGENT-B",
+      "expected": "REFUSED_BEFORE_CONSEQUENCE",
+      "required_reason": "AUTHENTICATED_CALLER_AGENT_MISMATCH",
+      "purpose": "Direct successor discrimination for the P4-F02 seam: the execution permit and supplied presenter both claim Agent A while the independently authenticated caller identity is Agent B."
+    },
+    {
+      "case_id": "S01-NEG-TAMPERED-IDENTITY",
+      "permit_agent_id": "P4-F01-AGENT-A",
+      "presenting_agent_id": "P4-F01-AGENT-A",
+      "authenticated_caller_agent_id_before_tamper": "P4-F01-AGENT-B",
+      "tampered_subject_agent_id": "P4-F01-AGENT-A",
+      "expected": "REFUSED_BEFORE_CONSEQUENCE",
+      "required_reason": "CALLER_IDENTITY_ATTESTATION_INVALID",
+      "purpose": "Demonstrate that an independently signed Agent-B caller attestation cannot simply be relabelled as Agent A without invalidating its cryptographic standing."
+    }
+  ],
+  "required_discrimination": [
+    "S01-PC-A commits.",
+    "S01-PC-B commits.",
+    "S01-NEG-CALLER-MISMATCH does not commit.",
+    "S01-NEG-CALLER-MISMATCH is refused before consequence for AUTHENTICATED_CALLER_AGENT_MISMATCH.",
+    "S01-NEG-TAMPERED-IDENTITY does not commit.",
+    "S01-NEG-TAMPERED-IDENTITY is refused before consequence for CALLER_IDENTITY_ATTESTATION_INVALID.",
+    "Successful cases exercise caller-identity verification at initial, consequence and commit verification boundaries.",
+    "Witness evidence distinguishes permit_agent_id, presenting_agent_id and authenticated_caller_agent_id.",
+    "Witness chain remains valid."
+  ],
+  "source_identity_to_preserve": {
+    "constitution/constitution.yaml": "6FF2C14C67DF4B009F81551AD55ECD4C1EA314B5827D7B039D0E21AD934D302A",
+    "core/authority.py": "E949C5C9E75DCB65301701363363AC6D118CD64D3AB38018957DA086EBB6B85C",
+    "core/authority_resolution.py": "D1B052E1F413ADAFA71C8B7D3E0AB470817E901CBA28D1CF145BF10EA7A585EF",
+    "core/authority_resolution_attestation.py": "9A40FF86E7F1C84864CB8AAC881F85CBCF5585FA2C5DA8FBF04BA2BA368A0F62",
+    "core/permit_v03.py": "B33702D6E0D9CC397E1B57E54FF5E9FB39A3A40C1E683737DEFB6FFB67D6EE0B",
+    "core/execution_firewall_v07.py": "A43FEFA0834D405BB0CF07D1D6FE23FE2BF81DF34237574F778AECA2F6E5D948",
+    "tools/broker_v07.py": "87288780B248260B7F7EE16851198FEFD4B71B9AA25AA361651A460514300340",
+    "tools/messaging_demo_v06.py": "C976315CB420599ACEC8F2D8E5ED0B4FE4FBB9B1B07CBC8CBBA3CBB3E79A67DE",
+    "witness/ledger.py": "C940D48351E8F4A06F2008CE720A2187433556E18C49D6378A2FA27E6DCE40E5"
+  },
+  "predecessor_evidence_identity_to_preserve": {
+    "evidence/phase-iv/p4-f02/P4-F02-FIRST-OBSERVED-RESULT-001.json": "CC10C5B86864290B053D06F345EA05C0E4B17A5C6F13874F6BD7483B6D70D3DB",
+    "evidence/phase-iv/p4-f02/P4-F02-FIRST-OBSERVED-FREEZE-001.json": "5C62B0C14F46E983CE8A0D2C8A0D08ED2D01B1E525E71590278B93E48BC0438E",
+    "evidence/phase-iv/p4-f02/P4-F02-WITNESS-001.jsonl": "E89BFBBC7A0858599B348D267449FE23AEAA9FA8D12791A73981D7EA43029F8D"
+  },
+  "success_classification": "AUTHENTICATED_CALLER_IDENTITY_BINDING_ESTABLISHED__FALSE_PRESENTER_ASSERTION_REFUSED_BEFORE_CONSEQUENCE",
+  "bounded_success_claim": "A successful result establishes only that the tested successor reference path independently verifies a signed caller-identity attestation and requires its authenticated subject agent identity to agree with both the supplied presenter identifier and the permit-bound agent identity before consequence, while preserving that identity through the tested consequence and commit boundaries.",
+  "explicit_exclusions": [
+    "Does not establish network-layer authentication.",
+    "Does not establish operating-system process identity.",
+    "Does not establish hardware-backed identity.",
+    "Does not establish credential isolation.",
+    "Does not establish resistance to theft of a valid Agent-A identity credential or attestation.",
+    "Does not establish external identity-provider security.",
+    "Does not establish tenant isolation.",
+    "Does not establish distributed-agent security.",
+    "Does not establish swarm security.",
+    "Does not establish production exploitability resistance.",
+    "Does not establish protection against compromise of the identity authority, signing key, authorized agent, human authority, resolver, deployment perimeter or tool credential."
+  ],
+  "prohibited_shortcuts": [
+    "Do not modify or rerun P4-F02.",
+    "Do not modify P4-F01 or P4-F01-S01 evidence.",
+    "Do not change V03 or V07 retrospectively.",
+    "Do not derive authenticated caller identity from presenting_agent_id.",
+    "Do not derive authenticated caller identity from permit.agent_id.",
+    "Do not hard-code Agent B rejection.",
+    "Do not treat an unsigned caller label as authentication.",
+    "Do not claim that a signed reference-runtime identity attestation proves the identity of a network process or production workload."
+  ]
+}
