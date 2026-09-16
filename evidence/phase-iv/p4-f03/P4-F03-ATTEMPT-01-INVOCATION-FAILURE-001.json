@@ -1,0 +1,20 @@
+{
+    "test_id":  "P4-F03",
+    "attempt_id":  "P4-F03-ATTEMPT-01",
+    "status":  "PRE_TEST_INVOCATION_FAILURE",
+    "behavioral_result_observed":  false,
+    "definition_commit":  "3a6c3db2dc954bc89296559b0b7ee0a498906458",
+    "definition_sha256":  "D07DC914CBBC7DDEBD48B364216A0A06C83CE73505CB2F4D2ADA41E7615FE34D",
+    "harness_commit":  "647902ad3f00dab0f4104c9d9bf8dc3178a2eafa",
+    "harness_sha256":  "0D62276E945C7A21AA589F33765CD70533A8D3F1DC581F4916A430B6CCB09FB9",
+    "invocation":  "python \".\\tests\\P4-F03-caller-attestation-reuse.py\"",
+    "failure_type":  "ModuleNotFoundError",
+    "failure_message":  "No module named \u0027core\u0027",
+    "failure_location":  "tests/P4-F03-caller-attestation-reuse.py line 7 during import of core.authority",
+    "test_logic_entered":  false,
+    "first_observed_artifacts_created":  false,
+    "same_harness_rerun_permitted":  false,
+    "disposition":  "PRESERVE_ATTEMPT_01_AND_CONSTITUTE_FRESH_ATTEMPT_02",
+    "record_created_after_observation_utc":  "2026-09-16T15:06:15.7078608Z",
+    "pre_normalization_sha256":  "FCED7442663593B5A6BE4FD9731FC05A40B342563FD2D205B49DCD6884E9E241"
+}
