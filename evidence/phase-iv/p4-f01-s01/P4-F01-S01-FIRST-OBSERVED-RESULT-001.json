@@ -1,0 +1,217 @@
+{
+  "agent_presenter_binding_control_established": true,
+  "bounded_claim": "This successor test examines whether the reference runtime can bind a permit cryptographically to an upstream agent identifier supplied to the governed execution path, selectively distinguish correctly bound Agent A and Agent B presentations, refuse cross-agent relay, and preserve that distinction in witness evidence while the underlying legitimate human authority remains otherwise unchanged. A successful result establishes this bounded presenter-binding control only. It does not establish that the supplied agent identity was independently authenticated by an external identity provider or network boundary, and does not establish swarm security, distributed-agent security, credential isolation, concurrency safety, production exploitability resistance, network identity security, tenant isolation, or protection against compromise of an authorized human, agent, resolver, signing key, deployment perimeter or tool credential.",
+  "classification": "AGENT_PRESENTER_BINDING_ESTABLISHED__CROSS_AGENT_RELAY_REFUSED_BEFORE_CONSEQUENCE",
+  "cryptographic_agent_binding_established": true,
+  "cryptographic_binding_proof": {
+    "agent_a_recomputed_permit_id": "D4AAFCAF70CD7A8E9A97F7D61952192761D31C13F93C08552E0652A6EEFF2017",
+    "agent_a_recomputed_signature": "CEFFBE4D07338BAE783ABB0DA8AA7AAED21F41B667B05B5A4D37238F8A51FF67",
+    "agent_b_recomputed_permit_id": "E38DCC0B287C1464620708162009F838D36F4BB1ED1BAEF24C69EE98B21813C7",
+    "agent_b_recomputed_signature": "59D7E8877D4A565F5CF3ACB0CB48DCF8B545A4D0E8639342AE93893BE2BAA134",
+    "agent_change_changes_permit_id": true,
+    "agent_change_changes_signature": true,
+    "changed_fields": [
+      "agent_id"
+    ],
+    "only_agent_id_changed": true,
+    "reference_agent_normalized": true,
+    "runtime_permit_id_matches_independent_recomputation": true,
+    "runtime_signature_matches_independent_recomputation": true
+  },
+  "definition_identity_preserved": true,
+  "negative_cross_agent_relay": {
+    "case_id": "S01-NEG-RELAY",
+    "consequence_committed": false,
+    "exception": null,
+    "human_actor_id": "P4-F01-HUMAN-001",
+    "human_authority_state_hash": "37C2A93F2100EE38B26BEFB60948FEE01E2A5ECC13AC9D0C5E35360FF10E4E15",
+    "outbox_after": 2,
+    "outbox_before": 2,
+    "permit_bound_agent_id": "P4-F01-AGENT-A",
+    "permit_id": "5963A6C1C1D0A12E42C1DFF3A2F08215E2D6377656EF8ECC73D209E91AB4A0D0",
+    "presenting_agent_id": "P4-F01-AGENT-B",
+    "reasons": [
+      "AGENT_ID_BINDING_MISMATCH"
+    ],
+    "resolver_calls": 0,
+    "resolver_statuses": [],
+    "status": "REFUSED_BEFORE_CONSEQUENCE",
+    "witness_end_index": 9,
+    "witness_records_added": 1,
+    "witness_start_index": 8
+  },
+  "positive_control_agent_a": {
+    "case_id": "S01-PC-A",
+    "consequence_committed": true,
+    "exception": null,
+    "human_actor_id": "P4-F01-HUMAN-001",
+    "human_authority_state_hash": "37C2A93F2100EE38B26BEFB60948FEE01E2A5ECC13AC9D0C5E35360FF10E4E15",
+    "outbox_after": 1,
+    "outbox_before": 0,
+    "permit_bound_agent_id": "P4-F01-AGENT-A",
+    "permit_id": "EF7EC26499C6A342350429748B79D15DEF1E0CCDC9AA612B815BF6480B623BA3",
+    "presenting_agent_id": "P4-F01-AGENT-A",
+    "reasons": [],
+    "resolver_calls": 2,
+    "resolver_statuses": [
+      "ESTABLISHED",
+      "ESTABLISHED"
+    ],
+    "status": "EXECUTED",
+    "witness_end_index": 4,
+    "witness_records_added": 4,
+    "witness_start_index": 0
+  },
+  "positive_control_agent_b": {
+    "case_id": "S01-PC-B",
+    "consequence_committed": true,
+    "exception": null,
+    "human_actor_id": "P4-F01-HUMAN-001",
+    "human_authority_state_hash": "37C2A93F2100EE38B26BEFB60948FEE01E2A5ECC13AC9D0C5E35360FF10E4E15",
+    "outbox_after": 2,
+    "outbox_before": 1,
+    "permit_bound_agent_id": "P4-F01-AGENT-B",
+    "permit_id": "0EC525A46653420463758B4BDBAA70A6A234878A2B3E34A63683A21B743F3A31",
+    "presenting_agent_id": "P4-F01-AGENT-B",
+    "reasons": [],
+    "resolver_calls": 2,
+    "resolver_statuses": [
+      "ESTABLISHED",
+      "ESTABLISHED"
+    ],
+    "status": "EXECUTED",
+    "witness_end_index": 8,
+    "witness_records_added": 4,
+    "witness_start_index": 4
+  },
+  "predecessor_commit": "cb37a4269e60f505df5f55d69857019daa522f88",
+  "required_discrimination": {
+    "agent_a_bound_presented_by_a_commits": true,
+    "agent_a_bound_presented_by_b_commits": false,
+    "agent_a_bound_presented_by_b_refused": true,
+    "agent_a_positive_exercised_dynamic_boundaries": true,
+    "agent_b_bound_presented_by_b_commits": true,
+    "agent_b_positive_exercised_dynamic_boundaries": true,
+    "relay_refusal_agent_specific": true,
+    "witness_chain_valid": true,
+    "witness_distinguishes_bound_and_presenting_agent": true
+  },
+  "source_identity": {
+    "constitution/constitution.yaml": {
+      "actual_sha256": "6FF2C14C67DF4B009F81551AD55ECD4C1EA314B5827D7B039D0E21AD934D302A",
+      "expected_sha256": "6FF2C14C67DF4B009F81551AD55ECD4C1EA314B5827D7B039D0E21AD934D302A",
+      "preserved": true
+    },
+    "core/authority.py": {
+      "actual_sha256": "E949C5C9E75DCB65301701363363AC6D118CD64D3AB38018957DA086EBB6B85C",
+      "expected_sha256": "E949C5C9E75DCB65301701363363AC6D118CD64D3AB38018957DA086EBB6B85C",
+      "preserved": true
+    },
+    "core/authority_resolution.py": {
+      "actual_sha256": "D1B052E1F413ADAFA71C8B7D3E0AB470817E901CBA28D1CF145BF10EA7A585EF",
+      "expected_sha256": "D1B052E1F413ADAFA71C8B7D3E0AB470817E901CBA28D1CF145BF10EA7A585EF",
+      "preserved": true
+    },
+    "core/authority_resolution_attestation.py": {
+      "actual_sha256": "9A40FF86E7F1C84864CB8AAC881F85CBCF5585FA2C5DA8FBF04BA2BA368A0F62",
+      "expected_sha256": "9A40FF86E7F1C84864CB8AAC881F85CBCF5585FA2C5DA8FBF04BA2BA368A0F62",
+      "preserved": true
+    },
+    "core/execution_firewall_v07.py": {
+      "actual_sha256": "A43FEFA0834D405BB0CF07D1D6FE23FE2BF81DF34237574F778AECA2F6E5D948",
+      "expected_sha256": "A43FEFA0834D405BB0CF07D1D6FE23FE2BF81DF34237574F778AECA2F6E5D948",
+      "preserved": true
+    },
+    "core/permit_v03.py": {
+      "actual_sha256": "B33702D6E0D9CC397E1B57E54FF5E9FB39A3A40C1E683737DEFB6FFB67D6EE0B",
+      "expected_sha256": "B33702D6E0D9CC397E1B57E54FF5E9FB39A3A40C1E683737DEFB6FFB67D6EE0B",
+      "preserved": true
+    },
+    "tools/broker_v07.py": {
+      "actual_sha256": "87288780B248260B7F7EE16851198FEFD4B71B9AA25AA361651A460514300340",
+      "expected_sha256": "87288780B248260B7F7EE16851198FEFD4B71B9AA25AA361651A460514300340",
+      "preserved": true
+    },
+    "tools/messaging_demo_v06.py": {
+      "actual_sha256": "C976315CB420599ACEC8F2D8E5ED0B4FE4FBB9B1B07CBC8CBBA3CBB3E79A67DE",
+      "expected_sha256": "C976315CB420599ACEC8F2D8E5ED0B4FE4FBB9B1B07CBC8CBBA3CBB3E79A67DE",
+      "preserved": true
+    },
+    "witness/ledger.py": {
+      "actual_sha256": "C940D48351E8F4A06F2008CE720A2187433556E18C49D6378A2FA27E6DCE40E5",
+      "expected_sha256": "C940D48351E8F4A06F2008CE720A2187433556E18C49D6378A2FA27E6DCE40E5",
+      "preserved": true
+    }
+  },
+  "source_identity_preserved": true,
+  "successor_implementation_commit": "5d3be3be0f2410aa1dfcf38a387ae686d1286369",
+  "successor_schema_observation": {
+    "permit_agent_binding_field_present": true,
+    "permit_fields": [
+      "permit_id",
+      "intent_hash",
+      "action_hash",
+      "agent_id",
+      "actor_id",
+      "authority_source",
+      "authority_epoch",
+      "authority_state_hash",
+      "permission",
+      "policy_version",
+      "constitution_id",
+      "constitution_version",
+      "constitution_sha256",
+      "target",
+      "tool",
+      "consequence_class",
+      "issued_at",
+      "expires_at",
+      "nonce",
+      "signature"
+    ],
+    "request_fields": [
+      "permit",
+      "current_authority",
+      "presenting_agent_id",
+      "authority_resolver",
+      "intent_hash",
+      "permission",
+      "policy_version",
+      "target",
+      "tool_name",
+      "consequence_class",
+      "arguments"
+    ],
+    "request_presenter_field_present": true,
+    "successor_schema_present": true
+  },
+  "test_id": "P4-F01-S01",
+  "timeline": [
+    "HARNESS:BOUND:P4-F01-AGENT-A:PRESENTER:P4-F01-AGENT-A",
+    "WITNESS:PRE_EXECUTION_AUTHORIZED",
+    "RESOLVER:ESTABLISHED:ATTESTED",
+    "WITNESS:CONSEQUENCE_BOUNDARY_REVALIDATED",
+    "RESOLVER:ESTABLISHED:ATTESTED",
+    "WITNESS:CONSEQUENCE_COMMIT_AUTHORITY_REVALIDATED",
+    "WITNESS:EXECUTION_COMPLETED",
+    "HARNESS:BOUND:P4-F01-AGENT-B:PRESENTER:P4-F01-AGENT-B",
+    "WITNESS:PRE_EXECUTION_AUTHORIZED",
+    "RESOLVER:ESTABLISHED:ATTESTED",
+    "WITNESS:CONSEQUENCE_BOUNDARY_REVALIDATED",
+    "RESOLVER:ESTABLISHED:ATTESTED",
+    "WITNESS:CONSEQUENCE_COMMIT_AUTHORITY_REVALIDATED",
+    "WITNESS:EXECUTION_COMPLETED",
+    "HARNESS:BOUND:P4-F01-AGENT-A:PRESENTER:P4-F01-AGENT-B",
+    "WITNESS:EXECUTION_REFUSED"
+  ],
+  "witness": {
+    "agent_a_bound_a_presented": true,
+    "agent_a_bound_b_presented": true,
+    "agent_b_bound_b_presented": true,
+    "chain_errors": [],
+    "chain_valid": true,
+    "distinguishes_bound_and_presenting_agent": true,
+    "negative_refusal_specific": true,
+    "record_count": 9
+  }
+}

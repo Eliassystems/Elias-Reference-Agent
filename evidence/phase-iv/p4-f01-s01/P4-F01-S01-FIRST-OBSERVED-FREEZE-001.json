@@ -1,0 +1,20 @@
+{
+  "agent_a_bound_presented_by_a_commits": true,
+  "agent_a_bound_presented_by_b_commits": false,
+  "agent_b_bound_presented_by_b_commits": true,
+  "agent_presenter_binding_control_established": true,
+  "classification": "AGENT_PRESENTER_BINDING_ESTABLISHED__CROSS_AGENT_RELAY_REFUSED_BEFORE_CONSEQUENCE",
+  "cryptographic_agent_binding_established": true,
+  "definition_identity_preserved": true,
+  "freeze_type": "FIRST_OBSERVED_RESULT_FREEZE",
+  "no_retrospective_repair": true,
+  "predecessor_commit": "cb37a4269e60f505df5f55d69857019daa522f88",
+  "predecessor_test_rerun": false,
+  "relay_refusal_agent_specific": true,
+  "relay_refused": true,
+  "source_identity_preserved": true,
+  "successor_implementation_commit": "5d3be3be0f2410aa1dfcf38a387ae686d1286369",
+  "test_id": "P4-F01-S01",
+  "witness_chain_valid": true,
+  "witness_distinguishes_bound_and_presenting_agent": true
+}
