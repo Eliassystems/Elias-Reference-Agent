@@ -1,0 +1,21 @@
+{
+  "antecedent_evidence_commit": "59a55b6b5b2c090ffc10bdf7bc8c5507a6d29ac2",
+  "antecedent_evidence_identity_preserved": true,
+  "antecedent_test_rerun": false,
+  "classification": "UNAUTHENTICATED_PRESENTER_ASSERTION_ACCEPTED__CALLER_AUTHENTICITY_NOT_NATIVELY_BOUND",
+  "definition_commit": "ba42d618f5abbc92225ffa8b345d894087eb49fb",
+  "definition_identity_preserved": true,
+  "explicit_independent_caller_identity_surface_observed": false,
+  "false_presenter_assertion_committed": true,
+  "false_presenter_assertion_refused": false,
+  "freeze_type": "FIRST_OBSERVED_RESULT_FREEZE",
+  "no_retrospective_repair": true,
+  "positive_agent_a_valid": true,
+  "positive_agent_b_valid": true,
+  "seam_observed": true,
+  "source_identity_preserved": true,
+  "test_id": "P4-F02",
+  "v03_v07_modified_before_observation": false,
+  "witness_chain_valid": true,
+  "witness_native_actual_caller_identity_observed": false
+}
