@@ -1,0 +1,17 @@
+{
+  "agent_presenter_control_established": false,
+  "agent_specific_refusal_observed": false,
+  "classification": "CROSS_AGENT_EXECUTION_MATERIAL_ACCEPTED__UPSTREAM_AGENT_PRESENTER_STANDING_NOT_NATIVELY_BOUND",
+  "cross_agent_relay_committed": true,
+  "cross_agent_relay_refused": false,
+  "definition_identity_preserved": true,
+  "freeze_type": "FIRST_OBSERVED_RESULT_FREEZE",
+  "native_agent_identity_field_present": false,
+  "no_retrospective_repair": true,
+  "positive_control_passed": true,
+  "repository_baseline_commit": "ea1472c5a07cf01d8f20db5fd828a2df67ec0769",
+  "source_identity_preserved": true,
+  "test_id": "P4-F01",
+  "witness_chain_valid": true,
+  "witness_distinguishes_upstream_agents": false
+}

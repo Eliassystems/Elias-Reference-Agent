@@ -1,0 +1,180 @@
+{
+  "agent_presenter_control_established": false,
+  "agent_specific_refusal_observed": false,
+  "bounded_claim": "This deterministic test examines only whether the frozen ExecutionFirewallV06 / ToolBrokerV06 path natively binds consequential standing to a distinct upstream agent or presenter identity when the underlying human authority and all existing execution-bound material remain otherwise valid. The positive and relay cases use fresh permits so durable permit-consumption replay controls do not confound the agent-presenter question. Harness-level Agent A / Agent B labels are observations external to the tested runtime and do not themselves establish a production identity system. This test does not establish swarm security, production exploitability, concurrency safety, external authentication, network identity, credential isolation, distributed-agent security, or protection against compromise of authorized humans, agents, resolvers, signing keys, deployment perimeters, or tool credentials.",
+  "classification": "CROSS_AGENT_EXECUTION_MATERIAL_ACCEPTED__UPSTREAM_AGENT_PRESENTER_STANDING_NOT_NATIVELY_BOUND",
+  "cross_agent_relay_case": {
+    "case_id": "P4-F01-CROSS-AGENT-RELAY",
+    "consequence_committed": true,
+    "exception": null,
+    "human_actor_id": "P4-F01-HUMAN-001",
+    "human_authority_state_hash": "37C2A93F2100EE38B26BEFB60948FEE01E2A5ECC13AC9D0C5E35360FF10E4E15",
+    "originating_agent_id": "P4-F01-AGENT-A",
+    "outbox_after": 2,
+    "outbox_before": 1,
+    "permit_id": "A1A8A324949D5BB1AD72D2C10B687B65E17A5795A12902890E4361257EFDB9F6",
+    "presenting_agent_id": "P4-F01-AGENT-B",
+    "reasons": [],
+    "resolver_calls": 2,
+    "resolver_statuses": [
+      "ESTABLISHED",
+      "ESTABLISHED"
+    ],
+    "same_agent": false,
+    "status": "EXECUTED"
+  },
+  "cross_agent_relay_committed": true,
+  "cross_agent_relay_refused": false,
+  "definition_identity_preserved": true,
+  "native_schema_observation": {
+    "native_agent_identity_field_present": false,
+    "permit_agent_identity_field_present": false,
+    "permit_fields": [
+      "permit_id",
+      "intent_hash",
+      "action_hash",
+      "actor_id",
+      "authority_source",
+      "authority_epoch",
+      "authority_state_hash",
+      "permission",
+      "policy_version",
+      "constitution_id",
+      "constitution_version",
+      "constitution_sha256",
+      "target",
+      "tool",
+      "consequence_class",
+      "issued_at",
+      "expires_at",
+      "nonce",
+      "signature"
+    ],
+    "request_agent_identity_field_present": false,
+    "tool_request_fields": [
+      "permit",
+      "current_authority",
+      "authority_resolver",
+      "intent_hash",
+      "permission",
+      "policy_version",
+      "target",
+      "tool_name",
+      "consequence_class",
+      "arguments"
+    ],
+    "witness_agent_identity_field_present": false,
+    "witness_append_parameters": [
+      "self",
+      "event_type",
+      "constitution_version",
+      "actor_identity",
+      "authority_source",
+      "authority_epoch",
+      "intent_hash",
+      "target",
+      "tool",
+      "consequence_class",
+      "governance_verdict",
+      "verdict_reason",
+      "execution_result",
+      "permit_id",
+      "details"
+    ]
+  },
+  "positive_control": {
+    "case_id": "P4-F01-POSITIVE-A",
+    "consequence_committed": true,
+    "exception": null,
+    "human_actor_id": "P4-F01-HUMAN-001",
+    "human_authority_state_hash": "37C2A93F2100EE38B26BEFB60948FEE01E2A5ECC13AC9D0C5E35360FF10E4E15",
+    "originating_agent_id": "P4-F01-AGENT-A",
+    "outbox_after": 1,
+    "outbox_before": 0,
+    "permit_id": "02332729942A65BE97728DCFB8ACDB0D5E8564985F896FB45C82701AF596B63A",
+    "presenting_agent_id": "P4-F01-AGENT-A",
+    "reasons": [],
+    "resolver_calls": 2,
+    "resolver_statuses": [
+      "ESTABLISHED",
+      "ESTABLISHED"
+    ],
+    "same_agent": true,
+    "status": "EXECUTED"
+  },
+  "positive_control_passed": true,
+  "repository_baseline_commit": "ea1472c5a07cf01d8f20db5fd828a2df67ec0769",
+  "source_identity": {
+    "constitution/constitution.yaml": {
+      "actual_sha256": "6FF2C14C67DF4B009F81551AD55ECD4C1EA314B5827D7B039D0E21AD934D302A",
+      "expected_sha256": "6FF2C14C67DF4B009F81551AD55ECD4C1EA314B5827D7B039D0E21AD934D302A",
+      "preserved": true
+    },
+    "core/authority.py": {
+      "actual_sha256": "E949C5C9E75DCB65301701363363AC6D118CD64D3AB38018957DA086EBB6B85C",
+      "expected_sha256": "E949C5C9E75DCB65301701363363AC6D118CD64D3AB38018957DA086EBB6B85C",
+      "preserved": true
+    },
+    "core/authority_resolution.py": {
+      "actual_sha256": "D1B052E1F413ADAFA71C8B7D3E0AB470817E901CBA28D1CF145BF10EA7A585EF",
+      "expected_sha256": "D1B052E1F413ADAFA71C8B7D3E0AB470817E901CBA28D1CF145BF10EA7A585EF",
+      "preserved": true
+    },
+    "core/authority_resolution_attestation.py": {
+      "actual_sha256": "9A40FF86E7F1C84864CB8AAC881F85CBCF5585FA2C5DA8FBF04BA2BA368A0F62",
+      "expected_sha256": "9A40FF86E7F1C84864CB8AAC881F85CBCF5585FA2C5DA8FBF04BA2BA368A0F62",
+      "preserved": true
+    },
+    "core/execution_firewall_v06.py": {
+      "actual_sha256": "5191C0AAE4B9A538C503B28210ACA7AE9D28330DA3898AEFF798A3E8A7A97E2D",
+      "expected_sha256": "5191C0AAE4B9A538C503B28210ACA7AE9D28330DA3898AEFF798A3E8A7A97E2D",
+      "preserved": true
+    },
+    "core/permit_v02.py": {
+      "actual_sha256": "1BE9CED135D1C3E0498728B5E9AE0853E46E1925EA90EFF70A573E0F516C70A5",
+      "expected_sha256": "1BE9CED135D1C3E0498728B5E9AE0853E46E1925EA90EFF70A573E0F516C70A5",
+      "preserved": true
+    },
+    "tools/broker_v06.py": {
+      "actual_sha256": "F722E4554D6FF300E7036BD1E1C73FD09DA47F2E1053DAA63F1C622FC443F6A6",
+      "expected_sha256": "F722E4554D6FF300E7036BD1E1C73FD09DA47F2E1053DAA63F1C622FC443F6A6",
+      "preserved": true
+    },
+    "tools/messaging_demo_v06.py": {
+      "actual_sha256": "C976315CB420599ACEC8F2D8E5ED0B4FE4FBB9B1B07CBC8CBBA3CBB3E79A67DE",
+      "expected_sha256": "C976315CB420599ACEC8F2D8E5ED0B4FE4FBB9B1B07CBC8CBBA3CBB3E79A67DE",
+      "preserved": true
+    },
+    "witness/ledger.py": {
+      "actual_sha256": "C940D48351E8F4A06F2008CE720A2187433556E18C49D6378A2FA27E6DCE40E5",
+      "expected_sha256": "C940D48351E8F4A06F2008CE720A2187433556E18C49D6378A2FA27E6DCE40E5",
+      "preserved": true
+    }
+  },
+  "source_identity_preserved": true,
+  "test_id": "P4-F01",
+  "timeline": [
+    "HARNESS:ORIGIN:P4-F01-AGENT-A:PRESENTER:P4-F01-AGENT-A",
+    "WITNESS:PRE_EXECUTION_AUTHORIZED",
+    "RESOLVER:ESTABLISHED:ATTESTED",
+    "WITNESS:CONSEQUENCE_BOUNDARY_REVALIDATED",
+    "RESOLVER:ESTABLISHED:ATTESTED",
+    "WITNESS:CONSEQUENCE_COMMIT_AUTHORITY_REVALIDATED",
+    "WITNESS:EXECUTION_COMPLETED",
+    "HARNESS:ORIGIN:P4-F01-AGENT-A:PRESENTER:P4-F01-AGENT-B",
+    "WITNESS:PRE_EXECUTION_AUTHORIZED",
+    "RESOLVER:ESTABLISHED:ATTESTED",
+    "WITNESS:CONSEQUENCE_BOUNDARY_REVALIDATED",
+    "RESOLVER:ESTABLISHED:ATTESTED",
+    "WITNESS:CONSEQUENCE_COMMIT_AUTHORITY_REVALIDATED",
+    "WITNESS:EXECUTION_COMPLETED"
+  ],
+  "witness": {
+    "chain_errors": [],
+    "chain_valid": true,
+    "contains_agent_a": false,
+    "contains_agent_b": false,
+    "distinguishes_upstream_agents": false,
+    "record_count": 8
+  }
+}
