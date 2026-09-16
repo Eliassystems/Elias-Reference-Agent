@@ -1,0 +1,90 @@
+{
+  "test_id": "P4-F01-S01",
+  "title": "Cryptographically Bound Upstream Agent Presenter Standing",
+  "phase": "IV",
+  "status": "PRE_EXECUTION_FROZEN",
+  "predecessor_test": "P4-F01",
+  "predecessor_commit": "cb37a4269e60f505df5f55d69857019daa522f88",
+  "predecessor_classification": "CROSS_AGENT_EXECUTION_MATERIAL_ACCEPTED__UPSTREAM_AGENT_PRESENTER_STANDING_NOT_NATIVELY_BOUND",
+  "predecessor_evidence": {
+    "definition_sha256": "2FEDED4DA6245D265D134877E573D80E1E2C6F331109B601A9059981E206808D",
+    "result_sha256": "6B481DFAB5291A2061F3A1519D9374B8C189F84CDA04E4312F9FE551DAEC815A",
+    "freeze_sha256": "2F80E6CA9FF15CD3D46F667B0DFE215A3BA8C71D0918F391AF29E02FD55B1906",
+    "witness_sha256": "F13C39E74284BFC94B94AEE88B1784ADA532B2C175D4542B9F75CF01B08D4918"
+  },
+  "antecedent_source_identity": {
+    "core/authority.py": "E949C5C9E75DCB65301701363363AC6D118CD64D3AB38018957DA086EBB6B85C",
+    "core/authority_resolution.py": "D1B052E1F413ADAFA71C8B7D3E0AB470817E901CBA28D1CF145BF10EA7A585EF",
+    "core/authority_resolution_attestation.py": "9A40FF86E7F1C84864CB8AAC881F85CBCF5585FA2C5DA8FBF04BA2BA368A0F62",
+    "core/permit_v02.py": "1BE9CED135D1C3E0498728B5E9AE0853E46E1925EA90EFF70A573E0F516C70A5",
+    "core/execution_firewall_v06.py": "5191C0AAE4B9A538C503B28210ACA7AE9D28330DA3898AEFF798A3E8A7A97E2D",
+    "tools/broker_v06.py": "F722E4554D6FF300E7036BD1E1C73FD09DA47F2E1053DAA63F1C622FC443F6A6",
+    "tools/messaging_demo_v06.py": "C976315CB420599ACEC8F2D8E5ED0B4FE4FBB9B1B07CBC8CBBA3CBB3E79A67DE",
+    "witness/ledger.py": "C940D48351E8F4A06F2008CE720A2187433556E18C49D6378A2FA27E6DCE40E5",
+    "constitution/constitution.yaml": "6FF2C14C67DF4B009F81551AD55ECD4C1EA314B5827D7B039D0E21AD934D302A"
+  },
+  "governing_question": "Can a successor execution path cryptographically bind execution material to a specific upstream agent identity, preserve that identity through intake, consequence-time revalidation, commit-time revalidation and witness evidence, selectively permit correctly bound presenters, and refuse cross-agent relay under otherwise unchanged legitimate human authority?",
+  "successor_design_under_test": {
+    "permit_successor": "ExecutionPermitV03",
+    "firewall_successor": "ExecutionFirewallV07",
+    "broker_successor": "ToolBrokerV07",
+    "ledger_schema_change_required": false,
+    "required_controls": [
+      "ExecutionPermitV03 contains a normalized bound agent identity in its signed unsigned_payload material.",
+      "Permit identity and signature therefore cryptographically change when the bound agent identity changes.",
+      "ToolRequestV07 carries a presenting agent identity separately from the human authority identity.",
+      "ExecutionFirewallV07 supplies the presenting agent identity to permit verification at initial permit verification.",
+      "ExecutionFirewallV07 supplies the same presenting agent identity to permit verification after consequence-time authority resolution.",
+      "ExecutionFirewallV07 supplies the same presenting agent identity to permit verification at the commit gate.",
+      "A mismatch between permit-bound agent identity and presenting agent identity produces an agent-specific refusal before consequential commit.",
+      "Witness evidence preserves both permit-bound agent identity and presenting agent identity using existing details payloads."
+    ]
+  },
+  "actors": {
+    "human_authority": "P4-F01-HUMAN-001",
+    "agent_a": "P4-F01-AGENT-A",
+    "agent_b": "P4-F01-AGENT-B"
+  },
+  "cases": [
+    {
+      "case_id": "S01-PC-A",
+      "description": "Agent A presents fresh execution material cryptographically bound to Agent A beneath legitimate active human authority.",
+      "expected": "AUTHORIZED_CONSEQUENCE_AND_COMMIT"
+    },
+    {
+      "case_id": "S01-PC-B",
+      "description": "Agent B presents fresh execution material cryptographically bound to Agent B beneath the same legitimate active human authority.",
+      "expected": "AUTHORIZED_CONSEQUENCE_AND_COMMIT"
+    },
+    {
+      "case_id": "S01-NEG-RELAY",
+      "description": "Agent B presents otherwise-valid fresh execution material cryptographically bound to Agent A while human authority, intent, policy, target, tool, arguments and authority-resolution evidence remain otherwise valid.",
+      "expected": "REFUSED_FOR_AGENT_PRESENTER_BINDING_MISMATCH_BEFORE_CONSEQUENTIAL_COMMIT"
+    }
+  ],
+  "required_discrimination": {
+    "agent_a_bound_presented_by_a_commits": true,
+    "agent_b_bound_presented_by_b_commits": true,
+    "agent_a_bound_presented_by_b_commits": false,
+    "relay_refusal_must_be_agent_specific": true,
+    "witness_must_distinguish_bound_and_presenting_agent": true,
+    "witness_chain_must_remain_valid": true
+  },
+  "required_boundaries": [
+    "PERMIT_VERIFICATION",
+    "CONSEQUENCE_AUTHORITY_RESOLUTION",
+    "CONSEQUENCE_BOUNDARY_REVALIDATION",
+    "COMMIT_AUTHORITY_RESOLUTION",
+    "COMMIT_BOUNDARY_REVALIDATION",
+    "WITNESS_ATTESTATION"
+  ],
+  "prohibited_shortcuts": [
+    "Do not hard-code rejection of Agent B.",
+    "Do not derive agent identity from the human actor_id.",
+    "Do not treat an unsigned broker-only label as sufficient permit binding.",
+    "Do not remove or weaken existing human-authority, replay, intent, action, policy, consequence, authority-resolution or commit-gate controls.",
+    "Do not modify or rerun frozen P4-F01 evidence.",
+    "Do not retrospectively modify ExecutionPermitV02, ExecutionFirewallV06 or ToolBrokerV06 to erase the predecessor seam."
+  ],
+  "bounded_claim": "This successor test examines whether the reference runtime can bind a permit cryptographically to an upstream agent identifier supplied to the governed execution path, selectively distinguish correctly bound Agent A and Agent B presentations, refuse cross-agent relay, and preserve that distinction in witness evidence while the underlying legitimate human authority remains otherwise unchanged. A successful result would establish this bounded presenter-binding control only. It would not establish that the supplied agent identity was independently authenticated by an external identity provider or network boundary, and would not establish swarm security, distributed-agent security, credential isolation, concurrency safety, production exploitability resistance, network identity security, tenant isolation, or protection against compromise of an authorized human, agent, resolver, signing key, deployment perimeter or tool credential."
+}
