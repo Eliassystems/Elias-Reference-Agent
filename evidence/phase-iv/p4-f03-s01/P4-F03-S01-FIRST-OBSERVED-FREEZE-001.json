@@ -1,0 +1,26 @@
+{
+  "classification": "CALLER_ATTESTATION_COMMITTED_USE_REPLAY_REFUSED_ACROSS_FRESH_PERMITS__SEQUENTIAL_SINGLE_USE_CONTROL_ESTABLISHED",
+  "definition_commit": "bd2d7aa64ca479e893aa3e9e1ea2e0366db0ef7c",
+  "definition_identity_preserved": true,
+  "freeze_type": "FIRST_OBSERVED_RESULT_FREEZE",
+  "fresh_permits_confirmed": true,
+  "implementation_commit": "d6c7fa9c60d744138c8f2c79b9a7e155cd6773c5",
+  "native_replay_refusal_confirmed": true,
+  "no_retrospective_repair": true,
+  "positive_control_valid": true,
+  "predecessor_evidence_commit": "f06e191356cf740b175e43f8c19f942f21115a23",
+  "predecessor_evidence_identity_preserved": true,
+  "predecessor_test_rerun": false,
+  "replayed_attestation_still_valid": true,
+  "reuse_first_valid": true,
+  "reuse_second_committed": false,
+  "reuse_second_reasons": [
+    "CALLER_IDENTITY_ATTESTATION_ALREADY_USED"
+  ],
+  "reuse_second_refused_before_consequence": true,
+  "same_attestation_reused": true,
+  "source_identity_preserved": true,
+  "test_id": "P4-F03-S01",
+  "v09_modified": false,
+  "witness_chain_valid": true
+}
